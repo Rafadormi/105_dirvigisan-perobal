@@ -1,0 +1,80 @@
+CNAE,CONDICAO_ID,TEXTO_CONDICAO,RESPOSTA_SIM,RESPOSTA_NAO,ORDEM
+1031-7/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1032-5/99,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1043-1/00,1,O produto fabricado será comestível?,Médio Risco,Baixo Risco,1
+1061-9/01,1,O beneficiamento do produto será industrial?,Alto Risco,Médio Risco,1
+1063-5/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1064-3/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1065-1/01,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1069-4/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1071-6/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1072-4/02,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1081-3/01,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1092-9/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1093-7/01,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1093-7/02,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1094-5/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1095-3/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1096-1/00,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1099-6/04,1,O gelo fabricado será para consumo humano ou entrará em contato com alimentos e bebidas?,Alto Risco,Baixo Risco,1
+1099-6/05,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1122-4/03,1,O resultado do exercício da atividade econômica será diferente de produto artesanal?,Alto Risco,Médio Risco,1
+1731-1/00,1,O produto se destina a entrar em contato com alimento ou será usado para embalar produto a ser esterilizado?,Alto Risco,Baixo Risco,1
+1732-0/00,1,O produto se destina a entrar em contato com alimento ou produto para saúde?,Alto Risco,Baixo Risco,1
+1733-8/00,1,O produto se destina a entrar em contato com alimento ou produto para saúde?,Alto Risco,Baixo Risco,1
+2014-2/00,1,O gás fabricado será usado para fim terapêutico?,Alto Risco,Baixo Risco,1
+2019-3/99,1,O resultado do exercício da atividade será produto de uso ou aplicação como aditivo de alimentos?,Alto Risco,Baixo Risco,1
+2029-1/00,1,O resultado do exercício da atividade será produto de uso ou aplicação como aditivo de alimentos?,Alto Risco,Baixo Risco,1
+2071-1/00,1,O resultado do exercício da atividade será tintas, vernizes, esmaltes, lacas, pigmentos e/ou corantes que utilizam precursores sujeitos a controle especial no processo de síntese química nestes compostos?,Alto Risco,Baixo Risco,1
+2091-6/00,1,O resultado do exercício da atividade será utilizado para o revestimento interno de embalagens que entram em contato com alimentos?,Alto Risco,Baixo Risco,1
+2093-2/00,1,O resultado do exercício da atividade será aditivo alimentar ou insumo farmacêutico?,Alto Risco,Baixo Risco,1
+2099-1/99,1,Haverá fabricação de obra odontológica utilizada como produto para saúde?,Alto Risco,Baixo Risco,1
+2219-6/00,1,Haverá a fabricação de produtos para saúde (como preservativos, luvas para procedimentos médicos, odontológicos ou hospitalares)?,Alto Risco,Baixo Risco,1
+2219-6/00,2,Haverá fabricação de embalagem que entra em contato com alimento?,Alto Risco,Baixo Risco,2
+2222-6/00,1,Haverá fabricação de produto para saúde ou de embalagem de material plástico que entra em contato com alimento?,Alto Risco,Baixo Risco,1
+2312-5/00,1,Haverá a fabricação de embalagens de vidro que entram em contato com alimento?,Alto Risco,Baixo Risco,1
+2341-9/00,1,Haverá a fabricação de produtos utilizados como embalagem que entram em contato com alimento?,Alto Risco,Baixo Risco,1
+2349-4/99,1,Haverá a fabricação de produtos utilizados como embalagem que entram em contato com alimento?,Alto Risco,Baixo Risco,1
+2591-8/00,1,Haverá a fabricação de embalagens metálicas que entram em contato com alimento?,Alto Risco,Baixo Risco,1
+2829-1/99,1,Haverá fabricação de produto para saúde?,Alto Risco,Baixo Risco,1
+3092-0/00,1,Haverá fabricação de produto para saúde?,Alto Risco,Baixo Risco,1
+3104-7/00,1,Haverá fabricação de produto para saúde?,Alto Risco,Baixo Risco,1
+3250-7/07,1,Haverá fabricação de produto para saúde?,Alto Risco,Baixo Risco,1
+3291-4/00,1,Haverá no exercício a fabricação de escova dental?,Alto Risco,Baixo Risco,1
+3292-2/02,1,Haverá no exercício da atividade a fabricação de artefatos de tecido não tecido para uso odonto-médico-hospitalar?,Alto Risco,Baixo Risco,1
+3299-0/06,1,Haverá no exercício da atividade a fabricação de velas, sebo e/ou estearina utilizadas como cosmético ou saneante?,Alto Risco,Baixo Risco,1
+4623-1/99,1,Haverá o comércio atacadista de ervas medicinais?,Alto Risco,Baixo Risco,1
+4632-0/03,1,Haverá no exercício da atividade a realização de fracionamento, acondicionamento, embalagem e/ou rotulagem, consideradas etapas do processo produtivo?,Alto Risco,Médio Risco,1
+4635-4/03,1,Haverá a realização de atividade de engarrafamento e/ou rotulagem consideradas etapas do processo produtivo de água mineral?,Alto Risco,Médio Risco,1
+4664-8/00,1,O resultado do exercício da atividade compreenderá a comercialização de produtos para a saúde?,Alto Risco,Baixo Risco,1
+4930-2/01,1,Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que necessitem de condições especiais de temperatura e umidade (perecíveis), medicamento, cosmético, perfume, produto de higiene, saneante, produto para saúde e/ou materiais biológicos?,Alto Risco,ver condição 2,1
+4930-2/01,2,Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que não necessitem de condições especiais de temperatura e umidade?,Médio Risco,Baixo Risco,2
+4930-2/02,1,Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que necessitem de condições especiais de temperatura e umidade (perecíveis), medicamento, cosmético, perfume, produto de higiene, saneante, produto para saúde e/ou materiais biológicos?,Alto Risco,ver condição 2,1
+4930-2/02,2,Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que não necessitem de condições especiais de temperatura e umidade?,Médio Risco,Baixo Risco,2
+5120-0/00,1,Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que necessitem de condições especiais de umidade (perecíveis), medicamento, perfume, produto de higiene, saneante, produto para saúde e/ou materiais biológicos?,Alto Risco,ver condição 2,1
+5120-0/00,2,Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que não necessitem de condições especiais de umidade?,Médio Risco,Baixo Risco,2
+5211-7/01,1,Haverá no exercício da atividade o armazenamento de alimentos que necessitem de condições especiais de temperatura e umidade (perecíveis), medicamento, cosmético, perfume, produto de higiene, saneante, produto para saúde e/ou materiais biológicos?,Alto Risco,ver condição 2,1
+5211-7/01,2,Haverá no exercício da atividade o armazenamento de alimentos que não necessitem de condições especiais de temperatura e umidade?,Médio Risco,Baixo Risco,2
+5211-7/99,1,Haverá no exercício da atividade o armazenamento de alimentos que necessitem de condições especiais de temperatura e umidade (perecíveis), medicamento, cosmético, perfume, produto de higiene, saneante, produto para saúde e/ou materiais biológicos?,Alto Risco,ver condição 2,1
+5211-7/99,2,Haverá no exercício da atividade o armazenamento de alimentos que não necessitem de condições especiais de temperatura e umidade?,Médio Risco,Baixo Risco,2
+6203-1/00,1,Haverá o desenvolvimento de softwares que realizam ou influenciam diretamente no diagnóstico, monitoramento, terapia (tratamento) para a saúde?,Alto Risco,Baixo Risco,1
+7120-1/00,1,Haverá no exercício da atividade a análise de produto sujeito à Vigilância Sanitária?,Alto Risco,Baixo Risco,1
+7500-1/00,1,Haverá a comercialização e/ou uso de medicamentos controlados e/ou uso de radiação ionizante?,Alto Risco,Baixo Risco,1
+8129-0/00,1,Haverá a prestação de serviços de esterilização e/ou reprocessamento de produtos relacionados à saúde por: gás óxido de etileno ou suas misturas, radiação ionizante, ou outro meio de esterilização?,Alto Risco,Baixo Risco,1
+8129-0/00,2,Haverá a prestação de serviços de irradiação de alimentos por radiação ionizante?,Alto Risco,Baixo Risco,2
+8423-0/00,1,Haverá a prestação de serviços relacionados a administração de penitenciárias e o fornecimento de serviços correcionais, inclusive de reabilitação?,ver condição 2,Baixo Risco,1
+8423-0/00,2,Haverá no exercício da atividade a prestação de serviços de assistência à saúde que envolvam a realização de procedimentos invasivos e/ou odontológicos?,Alto Risco,Médio Risco,2
+8292-0/00,1,Haverá no exercício da atividade o envase, fracionamento e/ou embalagem de alimentos, medicamento, cosmético, perfume, produto de higiene, saneante e/ou produto para saúde?,Alto Risco,Baixo Risco,1
+8599-6/99,1,Haverá no exercício da atividade o ensino de culinária e/ou estética?,ver condição 2,Baixo Risco,1
+8599-6/99,2,Haverá o ensino de atividades que envolva procedimentos invasivos?,Alto Risco,Médio Risco,2
+8630-5/03,1,Haverá no exercício da atividade a realização de procedimentos invasivos?,Alto Risco,Médio Risco,1
+8630-5/99,1,Haverá no exercício da atividade a realização de procedimentos invasivos?,Alto Risco,Médio Risco,1
+8650-0/01,1,Haverá no exercício da atividade a realização de procedimentos invasivos?,Alto Risco,Médio Risco,1
+8650-0/04,1,Haverá no exercício da atividade a realização de procedimentos invasivos?,Alto Risco,Médio Risco,1
+8650-0/99,1,Haverá no exercício da atividade a realização de procedimentos invasivos?,Alto Risco,Médio Risco,1
+8690-9/99,1,Haverá no exercício da atividade a realização de procedimentos invasivos?,Alto Risco,Médio Risco,1
+8711-5/05,1,Haverá no exercício da atividade o fornecimento de serviços de alimentação, assistência diária ao idoso e/ou serviços de enfermagem?,Alto Risco,Baixo Risco,1
+9601-7/01,1,O exercício da atividade compreenderá lavanderia, autônoma e independente de outro estabelecimento, que processa roupa hospitalar?,Alto Risco,Médio Risco,1
+9601-7/02,1,Haverá no exercício da atividade o processamento de roupa hospitalar?,Alto Risco,Médio Risco,1
+9601-7/03,1,Haverá no exercício da atividade o processamento de roupa hospitalar?,Alto Risco,Médio Risco,1
+9602-5/02,1,Haverá no exercício da atividade a realização de procedimentos invasivos?,Alto Risco,Médio Risco,1

@@ -1,0 +1,896 @@
+
+<!-- NO PRINT: Interface de Usuário -->
+<div class="no-print min-h-screen bg-slate-100 font-sans text-slate-800">
+  
+  <!-- Sidebar -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-white border-r border-slate-200 z-10 hidden md:block">
+    <div class="p-6 border-b border-slate-100 flex flex-col items-center">
+      <img src="https://i.postimg.cc/y8hTCLrG/logo-administracao-sem-fundo.png" alt="Logo Administração" class="h-16 mb-4">
+      <div class="w-full">
+        <h1 class="text-xl font-bold text-[#004a99] flex items-center gap-2">
+          <span class="material-symbols-outlined">security</span>
+          DirVigiSan
+        </h1>
+        <p class="text-xs text-slate-500 mt-1">Perobal - PR</p>
+      </div>
+    </div>
+    
+    <nav class="p-4 space-y-1">
+      <button (click)="navigate('dashboard')" 
+              [class]="view === 'dashboard' ? 'w-full text-left px-4 py-3 rounded-lg bg-blue-50 text-[#004a99] font-medium transition-all' : 'w-full text-left px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:translate-x-1 transition-all'">
+        Dashboard
+      </button>
+      <button (click)="navigate('search')" 
+              [class]="view === 'search' ? 'w-full text-left px-4 py-3 rounded-lg bg-blue-50 text-[#004a99] font-medium transition-all' : 'w-full text-left px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:translate-x-1 transition-all'">
+        Consulta Receita
+      </button>
+      <button (click)="navigate('batch')" 
+              [class]="view === 'batch' ? 'w-full text-left px-4 py-3 rounded-lg bg-blue-50 text-[#004a99] font-medium transition-all' : 'w-full text-left px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:translate-x-1 transition-all'">
+        Consulta em Lote
+      </button>
+      <button (click)="navigate('history')"
+              [class]="view === 'history' ? 'w-full text-left px-4 py-3 rounded-lg bg-blue-50 text-[#004a99] font-medium transition-all' : 'w-full text-left px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:translate-x-1 transition-all'">
+        Histórico / Processos
+      </button>
+      <button (click)="navigate('settings')"
+              [class]="view === 'settings' ? 'w-full text-left px-4 py-3 rounded-lg bg-blue-50 text-[#004a99] font-medium transition-all' : 'w-full text-left px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:translate-x-1 transition-all'">
+        Configurações
+      </button>
+      <div class="mt-4 pt-4 border-t border-slate-100">
+        <button (click)="navigate('empresas')" 
+              [class]="view === 'empresas' ? 'w-full text-left px-4 py-3 rounded-lg bg-blue-50 text-[#004a99] font-medium transition-all' : 'w-full text-left px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:translate-x-1 transition-all'">
+            <span class="font-bold">Empresas (Local)</span>
+        </button>
+        <button (click)="navigate('cnaes')" 
+              [class]="view === 'cnaes' ? 'w-full text-left px-4 py-3 rounded-lg bg-blue-50 text-[#004a99] font-medium transition-all' : 'w-full text-left px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:translate-x-1 transition-all'">
+            <span class="font-bold text-blue-800">BASE CNAEs</span>
+        </button>
+      </div>
+    </nav>
+    
+    <!-- API Status Indicator in Sidebar -->
+    <div [title]="apiStatusTooltip()" class="absolute bottom-4 left-4 right-4 p-3 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-3 shadow-sm cursor-help whitespace-pre-line">
+        <span class="material-symbols-outlined text-3xl 
+            {{ apiStatus() === 'active' ? 'text-green-500' : '' }}
+            {{ apiStatus() === 'verifying' ? 'text-yellow-500 animate-pulse' : '' }}
+            {{ apiStatus() === 'error' ? 'text-red-500' : '' }}
+        ">
+            {{ apiStatus() === 'active' ? 'cloud_done' : (apiStatus() === 'verifying' ? 'cloud_sync' : 'cloud_off') }}
+        </span>
+        <div class="min-w-0">
+            <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Status da API</p>
+            <p class="text-sm font-bold text-slate-800 truncate">{{ getApiStatusText() }}</p>
+        </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Header -->
+  <div class="md:hidden bg-[#004a99] text-white p-4 flex justify-between items-center shadow-md">
+    <h1 class="font-bold">DirVigiSan Perobal</h1>
+    <div class="flex gap-2">
+      <button (click)="navigate('search')" class="text-sm font-medium underline">Consulta</button>
+      <button (click)="navigate('history')" class="text-sm font-medium underline">Histórico</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="md:ml-64 p-4 md:p-8">
+    
+    <!-- DASHBOARD VIEW -->
+    @if (view === 'dashboard') {
+      <div class="animate-fade-in">
+        <header class="mb-8">
+          <h2 class="text-2xl font-bold text-slate-800">Visão Geral</h2>
+          <p class="text-slate-500">Monitoramento em tempo real da Vigilância Sanitária</p>
+        </header>
+
+        <!-- Stat Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <app-stat-card 
+            icon="database" 
+            [value]="cnaeRulesCount()" 
+            label="Regras de CNAE"
+            colorClass="bg-blue-100 text-[#004a99]"
+          />
+          <app-stat-card 
+            icon="business_center" 
+            [value]="totalCompanies()" 
+            label="Empresas Cadastradas"
+            colorClass="bg-green-100 text-green-600"
+          />
+          <app-stat-card 
+            icon="local_hospital" 
+            [value]="cnesEstablishmentsCount()" 
+            label="Estab. de Saúde (CNES)"
+            colorClass="bg-cyan-100 text-cyan-600"
+          />
+          <app-stat-card 
+            icon="warning" 
+            [value]="highRiskCompanies()" 
+            label="Processos de Alto Risco"
+            colorClass="bg-red-100 text-red-600"
+          />
+        </div>
+
+        <!-- Action Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <app-action-card
+            title="Iniciar Nova Análise"
+            description="Sistema para classificar empresas instantaneamente com base na legislação sanitária vigente."
+            buttonText="Consultar Receita"
+            (action)="navigate('search')"
+            theme="primary"
+          />
+          <app-action-card
+            title="Relatório de Pendências"
+            description="Gere um relatório de todos os CNAEs sem classificação encontrados no histórico de consultas."
+            buttonText="Gerar Relatório"
+            icon="summarize"
+            (action)="generateMissingCnaesReport()"
+            theme="secondary"
+          />
+        </div>
+      </div>
+    } @else if (view === 'settings') {
+      <div class="animate-fade-in max-w-2xl mx-auto">
+        <header class="mb-8">
+          <h2 class="text-2xl font-bold text-slate-800">Configurações do Sistema</h2>
+          <p class="text-slate-500">API ReceitaWS (Fonte Exclusiva)</p>
+        </header>
+
+        <!-- Status Card Principal -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <h3 class="text-lg font-bold text-slate-700 flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined">key</span>
+                Fonte de Dados: ReceitaWS
+            </h3>
+            
+            <!-- Status Details -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border border-slate-200 bg-slate-50 rounded-lg p-4 mb-6">
+                <div>
+                    <p class="text-xs font-bold text-slate-500 uppercase">Status do Token</p>
+                    <span [class]="'px-2 py-0.5 mt-1 inline-block rounded-full text-xs font-bold flex items-center gap-1.5 w-fit ' + (apiStatus() === 'active' ? 'text-green-800 bg-green-100' : apiStatus() === 'verifying' ? 'text-yellow-800 bg-yellow-100' : 'text-red-800 bg-red-100')">
+                      <span class="material-symbols-outlined text-[14px]">{{ apiStatus() === 'active' ? 'verified' : (apiStatus() === 'verifying' ? 'hourglass_top' : 'error') }}</span>
+                      {{ getApiStatusText() }}
+                    </span>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-slate-500 uppercase">Data de Expiração</p>
+                    @if (apiStatus() === 'active' && tokenExpiresAt()) {
+                        <p class="text-sm font-medium text-slate-800 mt-1">{{ formatJustDate(tokenExpiresAt()) }}</p>
+                    } @else if (apiStatus() === 'active' && receitaWsToken()) {
+                        <p class="text-sm font-medium text-slate-800 mt-1">Não aplicável</p>
+                    } @else {
+                        <p class="text-sm font-medium text-slate-500 mt-1">-</p>
+                    }
+                </div>
+                <div class="sm:col-span-2">
+                    <p class="text-xs font-bold text-slate-500 uppercase">Mensagem</p>
+                    <p class="text-sm text-slate-600 mt-1">{{ apiStatusMessage() }}</p>
+                </div>
+            </div>
+
+            <!-- Token Input -->
+            <div>
+                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Chave de Acesso (Token)</label>
+                <div class="relative">
+                    <input 
+                      [type]="isTokenVisible() ? 'text' : 'password'" 
+                      [ngModel]="receitaWsToken()"
+                      (ngModelChange)="receitaWsToken.set($event)"
+                      class="w-full border border-slate-300 rounded-lg p-2 pr-10 font-mono text-sm focus:ring-2 focus:ring-blue-500 outline-none"
+                      placeholder="Insira seu token pessoal da ReceitaWS"
+                    >
+                     <button (click)="toggleTokenVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+                       <span class="material-symbols-outlined text-lg">{{ isTokenVisible() ? 'visibility_off' : 'visibility' }}</span>
+                    </button>
+                </div>
+                
+                @if (!receitaWsToken()) {
+                  <div class="mt-4 p-4 rounded-lg bg-blue-50 border border-blue-200 text-sm text-blue-900">
+                    <h4 class="font-bold flex items-center gap-2 mb-1">
+                      <span class="material-symbols-outlined text-base">info</span>
+                      Modo de API Pública
+                    </h4>
+                    <p class="text-xs leading-relaxed">
+                      Você está usando a versão gratuita da API ReceitaWS, que tem um limite de 3 consultas por minuto. Para evitar bloqueios, este sistema aplica uma <strong>pausa automática de 28 segundos</strong> após cada consulta. Para remover este limite, insira um token comercial.
+                    </p>
+                  </div>
+                } @else {
+                  <p class="text-xs text-slate-500 mt-2">
+                     Seu token comercial está ativo. Para voltar ao modo público, remova a chave e salve.
+                  </p>
+                }
+            </div>
+            
+            <!-- Buttons -->
+            <div class="flex flex-wrap gap-3 justify-end pt-6 border-t border-slate-200 mt-6">
+               <button (click)="triggerTestToken()" [disabled]="isTestingToken() || apiStatus() === 'verifying' || searchCooldown() > 0" class="text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-bold text-sm transition-colors border border-transparent hover:border-blue-100 flex items-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                 @if (isTestingToken() || apiStatus() === 'verifying') { 
+                   <span class="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></span>
+                   Testando...
+                 } @else {
+                    <span class="material-symbols-outlined text-lg">wifi_protected_setup</span>
+                    Testar Conexão
+                 }
+               </button>
+               <button (click)="saveToken()" class="bg-[#004a99] text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-blue-800 transition-colors shadow-md">
+                 Salvar Alterações
+               </button>
+            </div>
+        </div>
+      </div>
+    } @else if (view === 'search') {
+      <div class="animate-fade-in">
+        <div class="bg-white p-6 rounded-xl shadow-sm mb-6 border border-slate-200">
+          <div class="flex gap-4">
+            <div class="flex-grow">
+              <label class="block text-sm font-medium text-slate-700 mb-1">CNPJ da Empresa</label>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  [value]="cnpjInput()" 
+                  (input)="updateCnpj($event)"
+                  (keyup.enter)="search()"
+                  class="bg-white text-slate-800 w-full border border-slate-300 rounded-lg p-3 pl-12 font-mono text-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                  placeholder="00.000.000/0000-00"
+                  maxlength="18"
+                >
+                <span class="material-symbols-outlined absolute left-4 top-3.5 text-slate-400">search</span>
+              </div>
+            </div>
+            <div class="flex items-end">
+              <button (click)="search()" 
+                      [disabled]="loading() || searchCooldown() > 0"
+                      class="bg-[#004a99] text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-md">
+                 @if (loading()) {
+                   <span class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                 }
+                 {{ searchCooldown() > 0 ? 'Aguarde ' + searchCooldown() + 's' : 'Analisar' }}
+              </button>
+            </div>
+          </div>
+          @if (errorMessage()) {
+            <div class="mt-4 bg-red-50 text-red-700 p-4 rounded-lg flex items-center gap-2 border border-red-100">
+              <span class="material-symbols-outlined">error</span>
+              {{ errorMessage() }}
+            </div>
+          }
+        </div>
+
+        @if (companyData() && riskResult()) {
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fade-in">
+            <!-- LEFT COL: Company Data -->
+            <div class="lg:col-span-2 space-y-6">
+              <!-- Header Card -->
+              <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 relative overflow-hidden">
+                 <div class="absolute top-0 left-0 w-full h-1 bg-[#004a99]"></div>
+                 <div class="flex justify-between items-start mb-4">
+                   <div>
+                     <h2 class="text-xl font-bold text-slate-800">{{ companyData()?.razao_social }}</h2>
+                     <div class="flex items-center gap-2 mt-1">
+                       <span class="font-mono text-slate-600 bg-slate-100 px-2 py-0.5 rounded text-sm">{{ formatCnpj(companyData()?.cnpj || '') }}</span>
+                       <span [class]="'text-xs font-bold px-2 py-0.5 rounded uppercase ' + (companyData()?.descricao_situacao_cadastral === 'ATIVA' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700')">
+                         {{ companyData()?.descricao_situacao_cadastral }}
+                       </span>
+                     </div>
+                   </div>
+                   <div class="text-right">
+                      <p class="text-xs text-slate-400 uppercase font-bold">Data da Consulta</p>
+                      <p class="text-sm text-slate-600">{{ formatDate(companyData()?.fetchedAt || '') }}</p>
+                   </div>
+                 </div>
+                 
+                 <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <span class="block text-xs font-bold text-slate-500 uppercase">Nome Fantasia</span>
+                      <span class="block text-slate-800">{{ companyData()?.nome_fantasia || '-' }}</span>
+                    </div>
+                    <div>
+                      <span class="block text-xs font-bold text-slate-500 uppercase">Município / UF</span>
+                      <span class="block text-slate-800">{{ companyData()?.municipio }} / {{ companyData()?.uf }}</span>
+                    </div>
+                    <div class="col-span-2">
+                      <span class="block text-xs font-bold text-slate-500 uppercase">Endereço</span>
+                      <span class="block text-slate-800">{{ companyData()?.logradouro }}, {{ companyData()?.numero }} - {{ companyData()?.bairro }}</span>
+                    </div>
+                 </div>
+              </div>
+
+              <!-- CNAE Analysis Table -->
+              <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                 <div class="p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+                   <h3 class="font-bold text-slate-700 flex items-center gap-2">
+                     <span class="material-symbols-outlined text-base">list_alt</span>
+                     Análise de Atividades ({{ riskResult()?.cnaeDetails?.length }})
+                   </h3>
+                   <button (click)="showAllCnaes.set(!showAllCnaes())" class="text-xs font-bold text-blue-600 hover:text-blue-800 uppercase">
+                     {{ showAllCnaes() ? 'Ver Menos' : 'Ver Todos' }}
+                   </button>
+                 </div>
+                 <div class="overflow-x-auto">
+                   <table class="w-full text-left text-sm">
+                     <thead class="bg-white text-slate-500 font-bold border-b border-slate-100">
+                       <tr>
+                         <th class="p-3 w-20">CNAE</th>
+                         <th class="p-3">Descrição</th>
+                         <th class="p-3 w-32">Risco</th>
+                       </tr>
+                     </thead>
+                     <tbody class="divide-y divide-slate-50">
+                       @for (item of riskResult()?.cnaeDetails; track item.code; let i = $index) {
+                         @if (showAllCnaes() || i < 5) {
+                           <tr class="hover:bg-blue-50/50">
+                             <td class="p-3 font-mono text-xs text-slate-600">{{ item.code }}</td>
+                             <td class="p-3 text-slate-800 relative">
+                               {{ getCnaeDescription(item.code) }}
+                               @if (item.sourceRule?.requiresPba) {
+                                 <span class="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-700" title="Exige Projeto Básico de Arquitetura">PBA</span>
+                               }
+                               @if (item.isFallback) {
+                                 <div class="mt-1 flex items-center gap-1 text-[10px] text-orange-700 font-medium">
+                                   <span class="material-symbols-outlined text-[12px]">warning</span>
+                                   Analogia Regulatória (Regra 1)
+                                 </div>
+                               }
+                             </td>
+                             <td class="p-3">
+                               <span [class]="getBadgeClass(item.risk)">{{ item.risk }}</span>
+                             </td>
+                           </tr>
+                         }
+                       }
+                       @if (!showAllCnaes() && (riskResult()?.cnaeDetails?.length || 0) > 5) {
+                         <tr>
+                           <td colspan="3" class="p-2 text-center text-xs text-slate-400 bg-slate-50/50">
+                             + {{ (riskResult()?.cnaeDetails?.length || 0) - 5 }} atividades ocultas
+                           </td>
+                         </tr>
+                       }
+                     </tbody>
+                   </table>
+                 </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COL: Risk Result -->
+            <div class="space-y-6">
+              <!-- Risk Card -->
+              <div [class]="getRiskCardClass(riskResult()?.riskLevel || 'BAIXO') + ' relative'">
+                 <div class="flex justify-between items-start mb-2">
+                    <div>
+                      <p class="text-xs font-bold opacity-80 uppercase tracking-wider mb-1">Classificação Final</p>
+                      <h2 class="text-3xl font-black uppercase tracking-tight">{{ riskResult()?.riskLevel }}</h2>
+                    </div>
+                    <div class="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
+                      <span class="material-symbols-outlined text-2xl">
+                        {{ riskResult()?.riskLevel === 'BAIXO' ? 'check_circle' : (riskResult()?.riskLevel === 'ALTO' ? 'warning' : 'help') }}
+                      </span>
+                    </div>
+                 </div>
+                 
+                 <div class="mt-6 pt-6 border-t border-white/20 space-y-3">
+                   <div class="flex justify-between items-center">
+                     <span class="text-sm font-medium opacity-90">Competência</span>
+                     <span class="text-sm font-bold bg-white/20 px-2 py-1 rounded">{{ riskResult()?.competence }}</span>
+                   </div>
+                   <div class="flex justify-between items-center">
+                     <span class="text-sm font-medium opacity-90">Exige PBA?</span>
+                     <span class="text-sm font-bold bg-white/20 px-2 py-1 rounded">{{ riskResult()?.requiresPba ? 'SIM' : 'NÃO' }}</span>
+                   </div>
+                 </div>
+
+                  @if (riskResult()?.override) {
+                   <div class="mt-4 bg-white/20 p-3 rounded text-xs">
+                     <p class="font-bold mb-1">⚠ Classificação Manual</p>
+                     <p>Original: {{ riskResult()?.override?.originalRisk }}</p>
+                     <p>Motivo: {{ riskResult()?.override?.reason }}</p>
+                   </div>
+                 }
+
+                 <!-- Edit Button (Discreet) -->
+                 <button (click)="openOverrideModal()" class="absolute top-4 right-16 p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors" title="Editar Classificação Manualmente">
+                    <span class="material-symbols-outlined text-sm">edit</span>
+                 </button>
+              </div>
+              
+              @if (riskResult()?.observation?.includes('Fallback')) {
+                <div class="bg-yellow-50 text-yellow-800 text-xs p-3 rounded-lg border border-yellow-200 flex items-start gap-2">
+                  <span class="material-symbols-outlined text-sm mt-0.5">info</span>
+                  <div>
+                    <strong>Nota do Sistema:</strong> Classificação contém itens definidos por analogia regulatória (Fallback).
+                  </div>
+                </div>
+              }
+
+              <!-- Pending Resolutions (Only Conditions now) -->
+              @if (riskResult()?.pendingResolutions?.length) {
+                <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl animate-fade-in shadow-sm">
+                  <h3 class="font-bold text-orange-800 text-lg mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined">assignment_late</span>
+                    Perguntas Pendentes ({{ riskResult()?.pendingResolutions?.length }})
+                  </h3>
+                  <div class="space-y-4">
+                    @for (item of riskResult()?.pendingResolutions; track item.cnae) {
+                      <div class="bg-white p-4 rounded-lg border border-orange-100 shadow-sm">
+                         <div class="mb-2 flex justify-between items-start">
+                           <div>
+                             <span class="font-mono text-xs font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded">{{ item.cnae }}</span>
+                             <span class="text-xs font-bold text-orange-600 bg-orange-100 px-2 py-1 rounded ml-2">Condicionante</span>
+                           </div>
+                         </div>
+                         <p class="text-sm text-slate-800 mb-4 font-medium">{{ item.question }}</p>
+                         
+                         <div class="grid grid-cols-2 gap-3">
+                           <button (click)="answerCondition(item, true)" class="bg-orange-600 text-white py-2.5 rounded-lg font-bold text-sm hover:bg-orange-700 transition-colors shadow-sm">SIM (Risco Alto)</button>
+                           <button (click)="answerCondition(item, false)" class="bg-slate-100 text-slate-700 border border-slate-300 py-2.5 rounded-lg font-bold text-sm hover:bg-slate-200 transition-colors">NÃO (Risco Baixo/Médio)</button>
+                         </div>
+                      </div>
+                    }
+                  </div>
+                </div>
+              }
+              
+              <!-- Licensing Card -->
+              <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <h3 class="font-bold text-slate-700 mb-4 text-sm flex items-center gap-2">
+                  <span class="material-symbols-outlined text-base">verified</span>
+                  Licenciamento Sanitário
+                </h3>
+                <div class="space-y-4 text-sm">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Status</label>
+                    <select [ngModel]="licenseStatus()" (ngModelChange)="licenseStatus.set($event)" class="w-full border border-slate-300 rounded-lg p-2 outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                      <option [ngValue]="undefined">Não definido</option>
+                      <option value="Ativa">Ativa</option>
+                      <option value="Vencida">Vencida</option>
+                      <option value="Em Renovação">Em Renovação</option>
+                      <option value="Suspensa">Suspensa</option>
+                      <option value="Pendente">Pendente</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Número da Licença</label>
+                    <input type="text" [ngModel]="licenseNumber()" (ngModelChange)="licenseNumber.set($event)" class="w-full border border-slate-300 rounded-lg p-2 outline-none focus:ring-2 focus:ring-blue-500">
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Data de Emissão</label>
+                      <input type="date" [ngModel]="licenseIssueDate()" (ngModelChange)="licenseIssueDate.set($event)" class="w-full border border-slate-300 rounded-lg p-2 outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Data de Vencimento</label>
+                      <input type="date" [ngModel]="licenseExpiryDate()" (ngModelChange)="licenseExpiryDate.set($event)" class="w-full border border-slate-300 rounded-lg p-2 outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Responsible Persons Card -->
+              <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <h3 class="font-bold text-slate-700 mb-4 text-sm flex items-center gap-2">
+                  <span class="material-symbols-outlined text-base">person</span>
+                  Responsáveis
+                </h3>
+                <div class="space-y-4 text-sm">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Responsável Legal</label>
+                    <input type="text" [ngModel]="legalRepresentative()" (ngModelChange)="legalRepresentative.set($event)" class="w-full border border-slate-300 rounded-lg p-2 outline-none focus:ring-2 focus:ring-blue-500">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Responsável Técnico</label>
+                    <input type="text" [ngModel]="technicalRepresentative()" (ngModelChange)="technicalRepresentative.set($event)" class="w-full border border-slate-300 rounded-lg p-2 outline-none focus:ring-2 focus:ring-blue-500">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="space-y-3">
+                <div class="relative">
+                   <textarea [ngModel]="processNotes()" (ngModelChange)="processNotes.set($event)" placeholder="Observações do processo..." class="w-full text-sm p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none min-h-[80px]"></textarea>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-3">
+                   <button (click)="openArgosReportWindow()" class="col-span-2 bg-white border border-slate-300 text-slate-700 py-2.5 rounded-lg font-bold text-sm hover:bg-slate-50 flex items-center justify-center gap-2">
+                     <span class="material-symbols-outlined text-lg">open_in_new</span>
+                     Gerar Relatório Técnico (ARGOS)
+                   </button>
+                   <button (click)="saveProcess()" class="col-span-2 bg-[#004a99] text-white py-3 rounded-lg font-bold hover:bg-blue-800 shadow-md">
+                     Salvar / Atualizar Processo
+                   </button>
+                   <button (click)="reset()" class="col-span-2 text-slate-500 text-sm hover:text-slate-700">
+                     Limpar / Nova Consulta
+                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    } @else if (view === 'history') {
+      <div class="animate-fade-in">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold text-slate-800">Histórico de Processos</h2>
+          <div class="relative w-64">
+            <input type="text" [ngModel]="historySearchTerm()" (ngModelChange)="historySearchTerm.set($event)" placeholder="Buscar no histórico..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:border-blue-500">
+            <span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-lg">search</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-slate-50 text-slate-600 uppercase text-xs font-bold">
+              <tr>
+                <th class="p-4 border-b">Data</th>
+                <th class="p-4 border-b">CNPJ</th>
+                <th class="p-4 border-b">Razão Social</th>
+                <th class="p-4 border-b">Risco</th>
+                <th class="p-4 border-b text-right">Ações</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              @for (item of filteredHistory(); track item.id) {
+                <tr 
+                  class="hover:bg-slate-50 transition-colors cursor-pointer" 
+                  (click)="loadProcess(item)"
+                  [title]="item.isLegacy ? 'Registro legado. Clique para analisar e obter dados completos.' : ''"
+                >
+                  <td class="p-4 text-sm text-slate-500">{{ formatDate(item.timestamp) }}</td>
+                  <td class="p-4 font-mono text-sm">{{ formatCnpj(item.id) }}</td>
+                  <td class="p-4 font-medium text-slate-800">{{ item.company.razao_social }}</td>
+                  <td class="p-4">
+                    @if (item.isLegacy) {
+                      <span class="px-2 py-1 rounded text-xs font-bold bg-blue-100 text-blue-800 border border-blue-200">
+                        Análise Pendente
+                      </span>
+                    } @else {
+                      <span [class]="getBadgeClass(item.riskAnalysis.riskLevel)">
+                        {{ item.riskAnalysis.riskLevel }}
+                      </span>
+                    }
+                  </td>
+                  <td class="p-4 text-right">
+                     <button (click)="requestDelete($event, item.id)" class="text-slate-400 hover:text-red-600 p-2" title="Excluir">
+                       <span class="material-symbols-outlined">delete</span>
+                     </button>
+                  </td>
+                </tr>
+              }
+              @if (filteredHistory().length === 0) {
+                <tr>
+                  <td colspan="5" class="p-8 text-center text-slate-500">Nenhum processo encontrado.</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    } @else if (view === 'batch') {
+       <div class="animate-fade-in">
+        <header class="mb-6">
+          <h2 class="text-2xl font-bold text-slate-800">Consulta em Lote</h2>
+          <p class="text-slate-500">Processe múltiplos CNPJs automaticamente via ReceitaWS</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[calc(100vh-200px)]">
+           <!-- INPUT AREA -->
+           <div class="lg:col-span-1 bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col h-full">
+              <label class="font-bold text-slate-700 mb-2 block">Lista de CNPJs</label>
+              <textarea 
+                [ngModel]="batchInputText()" 
+                (ngModelChange)="batchInputText.set($event)"
+                placeholder="Cole aqui os CNPJs (um por linha, ou separados por vírgula)..." 
+                class="flex-grow w-full p-4 bg-slate-50 border border-slate-300 rounded-lg font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 outline-none mb-4"
+              ></textarea>
+              
+              @if (!isBatchProcessing()) {
+                <button (click)="processBatch()" class="w-full bg-[#004a99] text-white py-3 rounded-lg font-bold hover:bg-blue-800">
+                  Iniciar Processamento
+                </button>
+              } @else {
+                <button (click)="stopBatch()" class="w-full bg-red-600 text-white py-3 rounded-lg font-bold hover:bg-red-700">
+                  Cancelar
+                </button>
+              }
+           </div>
+
+           <!-- RESULTS AREA -->
+           <div class="lg:col-span-2 flex flex-col gap-6 h-full">
+              <!-- Progress & Log -->
+              <div class="bg-slate-900 text-slate-300 p-4 rounded-xl font-mono text-xs h-48 flex flex-col shadow-inner">
+                 <div class="flex justify-between items-center mb-2 border-b border-slate-700 pb-2">
+                   <span class="font-bold text-white">CONSOLE DE SISTEMA</span>
+                   <span>{{ batchProgress() }} / {{ batchTotal() }}</span>
+                 </div>
+                 <div #logContainer class="flex-grow overflow-y-auto space-y-1 pr-2">
+                   @for (log of batchLog(); track $index) {
+                     <p [class]="getLogClass(log)">{{ log }}</p>
+                   }
+                 </div>
+              </div>
+
+              <!-- Table Results -->
+              <div class="bg-white rounded-xl shadow-sm border border-slate-200 flex-grow overflow-hidden flex flex-col">
+                 <div class="p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+                    <h3 class="font-bold text-slate-700">Resultados</h3>
+                    <div class="flex gap-2">
+                       <button (click)="exportBatchCSV()" [disabled]="batchResults().length === 0" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 disabled:opacity-50">
+                         <span class="material-symbols-outlined text-sm">download</span> CSV
+                       </button>
+                    </div>
+                 </div>
+                 
+                 <div class="overflow-auto flex-grow">
+                   <table class="w-full text-left text-sm">
+                     <thead class="bg-white sticky top-0 z-10 shadow-sm text-slate-500 text-xs uppercase font-bold">
+                       <tr>
+                         <th class="p-3 cursor-pointer hover:bg-slate-50" (click)="sortBatch('cnpj')">CNPJ</th>
+                         <th class="p-3 cursor-pointer hover:bg-slate-50" (click)="sortBatch('razao_social')">Razão Social</th>
+                         <th class="p-3 cursor-pointer hover:bg-slate-50" (click)="sortBatch('risk')">Risco</th>
+                         <th class="p-3 text-right">Status</th>
+                       </tr>
+                     </thead>
+                     <tbody class="divide-y divide-slate-100">
+                       @for (res of paginatedBatchResults(); track res.cnpj) {
+                         <tr class="hover:bg-slate-50">
+                           <td class="p-3 font-mono text-xs">{{ formatCnpj(res.cnpj) }}</td>
+                           <td class="p-3 truncate max-w-[200px]">{{ res.company?.razao_social || '-' }}</td>
+                           <td class="p-3">
+                             @if (res.risk) {
+                               <span [class]="getBadgeClass(res.risk.riskLevel)">{{ res.risk.riskLevel }}</span>
+                             }
+                           </td>
+                           <td class="p-3 text-right">
+                             @if (res.status === 'loading') { <span class="text-slate-400">...</span> }
+                             @else if (res.status === 'success') { <span class="material-symbols-outlined text-green-500 text-sm">check_circle</span> }
+                             @else { <span class="material-symbols-outlined text-red-500 text-sm" [title]="res.errorMsg">error</span> }
+                           </td>
+                         </tr>
+                       }
+                       @if (paginatedBatchResults().length === 0 && batchResults().length > 0) {
+                         <tr>
+                           <td colspan="4" class="p-8 text-center text-slate-400">
+                             Nenhum resultado para a página atual.
+                           </td>
+                         </tr>
+                       }
+                       @if (batchResults().length === 0 && !isBatchProcessing()) {
+                         <tr>
+                           <td colspan="4" class="p-8 text-center text-slate-400">
+                             Aguardando início do processamento...
+                           </td>
+                         </tr>
+                       }
+                     </tbody>
+                   </table>
+                 </div>
+                 
+                 <!-- Pagination -->
+                 <div class="p-2 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
+                    <span>Página {{ batchPage() }} de {{ totalBatchPages() }}</span>
+                    <div class="flex gap-2">
+                      <button (click)="changeBatchPage(-1)" [disabled]="batchPage() === 1" class="px-2 py-1 rounded hover:bg-slate-100 disabled:opacity-50">Anterior</button>
+                      <button (click)="changeBatchPage(1)" [disabled]="batchPage() === totalBatchPages()" class="px-2 py-1 rounded hover:bg-slate-100 disabled:opacity-50">Próxima</button>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+       </div>
+    } @else if (view === 'empresas') {
+      <div class="animate-fade-in">
+        <header class="mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-800">Empresas Cadastradas</h2>
+                <p class="text-slate-500">Banco de dados local de empresas analisadas.</p>
+            </div>
+            <div class="relative w-full md:w-72">
+                <input type="text" [ngModel]="empresasSearchTerm()" (ngModelChange)="empresasSearchTerm.set($event)" placeholder="Buscar por nome ou CNPJ..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:border-blue-500 shadow-sm">
+                <span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-lg">search</span>
+            </div>
+        </header>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          @for (item of filteredEmpresas(); track item.id) {
+            <div (click)="loadProcess(item)" class="bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md hover:border-blue-300 transition-all cursor-pointer p-5 relative overflow-hidden group">
+               <div [class]="'absolute left-0 top-0 bottom-0 w-1 ' + (item.riskAnalysis.riskLevel === 'ALTO' ? 'bg-red-500' : (item.riskAnalysis.riskLevel === 'MÉDIO' ? 'bg-yellow-500' : 'bg-green-500'))"></div>
+               
+               <div class="flex justify-between items-start mb-2 pl-2">
+                 <span class="font-mono text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">{{ formatCnpj(item.id) }}</span>
+                 <span [class]="getBadgeClass(item.riskAnalysis.riskLevel)">{{ item.riskAnalysis.riskLevel }}</span>
+               </div>
+               
+               <h3 class="font-bold text-slate-800 mb-1 pl-2 truncate" [title]="item.company.razao_social">{{ item.company.razao_social }}</h3>
+               <p class="text-xs text-slate-500 pl-2 mb-3 truncate">{{ item.company.nome_fantasia || 'Sem Nome Fantasia' }}</p>
+               
+               <div class="flex justify-between items-end pl-2 pt-2 border-t border-slate-100 mt-2">
+                 <div>
+                   <p class="text-[10px] text-slate-400 uppercase font-bold">Licença</p>
+                   <span [class]="'text-xs font-bold ' + (item.licenseStatus === 'Ativa' ? 'text-green-600' : 'text-slate-600')">
+                     {{ item.licenseStatus || 'Não Definida' }}
+                   </span>
+                 </div>
+                 <span class="text-[10px] text-slate-400">{{ formatDate(item.timestamp) }}</span>
+               </div>
+            </div>
+          }
+          @if (filteredEmpresas().length === 0) {
+            <div class="col-span-full py-12 text-center text-slate-500 bg-white rounded-xl border border-dashed border-slate-300">
+              <span class="material-symbols-outlined text-4xl mb-2 text-slate-300">search_off</span>
+              <p>Nenhuma empresa encontrada com os critérios atuais.</p>
+            </div>
+          }
+        </div>
+      </div>
+    } @else if (view === 'cnaes') {
+      <div class="animate-fade-in">
+        <header class="mb-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-800">Base de Conhecimento: CNAEs</h2>
+                <p class="text-slate-500">Regras de classificação de risco sanitário (SESA 1034/2020).</p>
+            </div>
+            <div class="relative w-full md:w-96">
+                <input type="text" [ngModel]="cnaeSearchTerm()" (ngModelChange)="cnaeSearchTerm.set($event)" placeholder="Buscar código ou descrição..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:border-blue-500 shadow-sm">
+                <span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-lg">search</span>
+            </div>
+        </header>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-[calc(100vh-220px)]">
+           <div class="overflow-auto flex-grow">
+             <table class="w-full text-left text-sm">
+               <thead class="bg-slate-50 text-slate-600 uppercase text-xs font-bold sticky top-0 shadow-sm z-10">
+                 <tr>
+                   <th class="p-4 border-b w-32">Código</th>
+                   <th class="p-4 border-b">Descrição</th>
+                   <th class="p-4 border-b w-40">Risco</th>
+                   <th class="p-4 border-b w-32 text-center">PBA</th>
+                   <th class="p-4 border-b w-32">Competência</th>
+                 </tr>
+               </thead>
+               <tbody class="divide-y divide-slate-100">
+                 @for (rule of filteredCnaes(); track rule.cnae) {
+                   <tr class="hover:bg-slate-50">
+                     <td class="p-4 font-mono font-bold text-slate-600">{{ rule.cnae }}</td>
+                     <td class="p-4 text-slate-800">
+                       {{ rule.description }}
+                       @if(rule.question) {
+                         <div class="mt-1 text-xs text-orange-600 bg-orange-50 p-2 rounded border border-orange-100">
+                           <strong>Condição:</strong> {{ rule.question }}
+                         </div>
+                       }
+                     </td>
+                     <td class="p-4">
+                       <span [class]="getBadgeClass(rule.risk)">{{ rule.risk }}</span>
+                     </td>
+                     <td class="p-4 text-center">
+                       @if(rule.requiresPba) {
+                         <span class="text-xs font-bold text-purple-600 bg-purple-100 px-2 py-1 rounded">SIM</span>
+                       } @else {
+                         <span class="text-xs text-slate-400">-</span>
+                       }
+                     </td>
+                     <td class="p-4 text-xs font-medium text-slate-600 uppercase">{{ rule.competencePorte1 }}</td>
+                   </tr>
+                 }
+                 @if (filteredCnaes().length === 0) {
+                   <tr>
+                     <td colspan="5" class="p-12 text-center text-slate-500">
+                       Nenhum CNAE encontrado para a busca.
+                     </td>
+                   </tr>
+                 }
+               </tbody>
+             </table>
+           </div>
+           <div class="p-3 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 text-right">
+             Total de {{ filteredCnaes().length }} registros encontrados.
+           </div>
+        </div>
+      </div>
+    }
+
+  </main>
+</div>
+
+<!-- DELETE MODAL -->
+@if (showDeleteModal()) {
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+    <div class="bg-white rounded-xl shadow-2xl p-6 max-w-sm w-full">
+       <h3 class="text-lg font-bold text-slate-800 mb-2">Confirmar Exclusão</h3>
+       <p class="text-slate-600 mb-6">Tem certeza que deseja remover este registro do histórico?</p>
+       <div class="flex justify-end gap-3">
+         <button (click)="closeDeleteModal()" class="px-4 py-2 text-slate-600 font-bold hover:bg-slate-100 rounded-lg">Cancelar</button>
+         <button (click)="confirmDelete()" class="px-4 py-2 bg-red-600 text-white font-bold hover:bg-red-700 rounded-lg">Excluir</button>
+       </div>
+    </div>
+  </div>
+}
+
+<!-- MISSING CNAES REPORT MODAL -->
+@if (showMissingCnaesReport()) {
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+     <div class="bg-white rounded-xl shadow-2xl p-6 max-w-4xl w-full max-h-[90vh] flex flex-col">
+        <div class="flex justify-between items-center mb-4 border-b pb-4">
+           <div>
+             <h3 class="text-xl font-bold text-slate-800">CNAEs Pendentes de Regra</h3>
+             <p class="text-sm text-slate-500">Lista consolidada de atividades sem classificação no banco de dados</p>
+           </div>
+           <button (click)="closeMissingCnaesReport()" class="text-slate-400 hover:text-slate-600">
+             <span class="material-symbols-outlined">close</span>
+           </button>
+        </div>
+        
+        <div class="flex-grow overflow-auto mb-4">
+           <table class="w-full text-left text-sm border border-slate-200">
+             <thead class="bg-slate-50 font-bold text-slate-700 sticky top-0">
+               <tr>
+                 <th class="p-3 border-b">CNAE</th>
+                 <th class="p-3 border-b">Descrição (ReceitaWS)</th>
+                 <th class="p-3 border-b">Encontrado Em</th>
+               </tr>
+             </thead>
+             <tbody class="divide-y divide-slate-100">
+               @for (item of missingCnaes(); track item.code) {
+                 <tr>
+                   <td class="p-3 font-mono text-slate-600">{{ item.code }}</td>
+                   <td class="p-3">{{ item.description }}</td>
+                   <td class="p-3">
+                     <div class="text-xs">
+                       <span class="font-bold block">{{ item.foundIn.name }}</span>
+                       <span class="font-mono text-slate-500">{{ formatCnpj(item.foundIn.cnpj) }}</span>
+                     </div>
+                   </td>
+                 </tr>
+               }
+               @if (missingCnaes().length === 0) {
+                 <tr><td colspan="3" class="p-8 text-center text-slate-500">Nenhuma pendência encontrada no histórico atual.</td></tr>
+               }
+             </tbody>
+           </table>
+        </div>
+        
+        <div class="flex justify-end pt-4 border-t">
+           <button (click)="exportMissingCnaesCSV()" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 flex items-center gap-2">
+             <span class="material-symbols-outlined">download</span> Exportar CSV
+           </button>
+        </div>
+     </div>
+  </div>
+}
+
+<!-- OVERRIDE MODAL -->
+@if (showOverrideModal()) {
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+    <div class="bg-white rounded-xl shadow-2xl p-6 max-w-md w-full">
+       <div class="mb-4 border-b pb-2">
+         <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+            <span class="material-symbols-outlined text-purple-600">edit_note</span>
+            Alteração Manual de Risco
+         </h3>
+         <p class="text-xs text-slate-500 mt-1">Apenas para uso da autoridade sanitária competente.</p>
+       </div>
+       
+       <div class="space-y-4">
+         <div>
+            <label class="block text-sm font-bold text-slate-700 mb-1">Novo Nível de Risco</label>
+            <select [ngModel]="selectedManualRisk()" (ngModelChange)="selectedManualRisk.set($event)" class="w-full border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-purple-500">
+               <option [ngValue]="null">Selecione...</option>
+               <option value="BAIXO">BAIXO</option>
+               <option value="MÉDIO">MÉDIO</option>
+               <option value="ALTO">ALTO</option>
+               <option value="CONDICIONADO">CONDICIONADO</option>
+            </select>
+         </div>
+         <div>
+            <label class="block text-sm font-bold text-slate-700 mb-1">Justificativa Técnica (Obrigatória)</label>
+            <textarea [ngModel]="manualOverrideReason()" (ngModelChange)="manualOverrideReason.set($event)" rows="3" class="w-full border border-slate-300 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-purple-500 text-sm" placeholder="Cite a base legal ou motivo da alteração..."></textarea>
+         </div>
+       </div>
+
+       <div class="flex justify-end gap-3 mt-6 pt-4 border-t">
+         <button (click)="closeOverrideModal()" class="px-4 py-2 text-slate-600 font-bold hover:bg-slate-100 rounded-lg">Cancelar</button>
+         <button (click)="applyManualOverride()" class="px-4 py-2 bg-purple-600 text-white font-bold hover:bg-purple-700 rounded-lg">Aplicar Alteração</button>
+       </div>
+    </div>
+  </div>
+}

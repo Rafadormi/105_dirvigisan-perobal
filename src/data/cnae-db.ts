@@ -1,0 +1,8706 @@
+/**
+ * Interface para dados de regras de CNAE
+ */
+export interface CnaeRuleData {
+  cnae: string;
+  description: string;
+  risk: 'BAIXO' | 'MÉDIO' | 'ALTO' | 'CONDICIONADO';
+  competencePorte1: 'MUNICÍPIO' | 'ESTADO';
+  requiresPba: boolean;
+  question?: string;
+  riskIfYes?: 'ALTO' | 'MÉDIO' | 'BAIXO';
+  riskIfNo?: 'ALTO' | 'MÉDIO' | 'BAIXO';
+}
+
+/**
+ * Lista completa de CNAEs com suas regras de risco
+ * Auto-gerado a partir dos arquivos CSV
+ */
+export const CNAE_LIST: CnaeRuleData[] = [
+  {
+    "cnae": "0111301",
+    "description": "Cultivo de arroz",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0111302",
+    "description": "Cultivo de milho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0111303",
+    "description": "Cultivo de trigo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0111399",
+    "description": "Cultivo de outros cereais não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0112101",
+    "description": "Cultivo de algodão herbáceo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0112102",
+    "description": "Cultivo de juta",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0112199",
+    "description": "Cultivo de outras fibras de lavoura temporária não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0113000",
+    "description": "Cultivo de cana-de-açúcar",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0114800",
+    "description": "Cultivo de fumo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0115600",
+    "description": "Cultivo de soja",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0116401",
+    "description": "Cultivo de amendoim",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0116402",
+    "description": "Cultivo de girassol",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0116403",
+    "description": "Cultivo de mamona",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0116499",
+    "description": "Cultivo de outras oleaginosas de lavoura temporária não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119901",
+    "description": "Cultivo de abacaxi",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119902",
+    "description": "Cultivo de alho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119903",
+    "description": "Cultivo de batata-inglesa",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119904",
+    "description": "Cultivo de cebola",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119905",
+    "description": "Cultivo de feijão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119906",
+    "description": "Cultivo de mandioca",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119907",
+    "description": "Cultivo de melão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119908",
+    "description": "Cultivo de melancia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119909",
+    "description": "Cultivo de tomate rasteiro",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0119999",
+    "description": "Cultivo de outras plantas de lavoura temporária não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0121101",
+    "description": "Horticultura, exceto morango",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0121102",
+    "description": "Cultivo de morango",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0122900",
+    "description": "Cultivo de flores e plantas ornamentais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0131800",
+    "description": "Cultivo de laranja",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0132600",
+    "description": "Cultivo de uva",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133401",
+    "description": "Cultivo de açaí",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133402",
+    "description": "Cultivo de banana",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133403",
+    "description": "Cultivo de caju",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133404",
+    "description": "Cultivo de cítricos, exceto laranja",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133405",
+    "description": "Cultivo de coco-da-baía",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133406",
+    "description": "Cultivo de guaraná",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133407",
+    "description": "Cultivo de maçã",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133408",
+    "description": "Cultivo de mamão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133409",
+    "description": "Cultivo de maracujá",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133410",
+    "description": "Cultivo de manga",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133411",
+    "description": "Cultivo de pêssego",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0133499",
+    "description": "Cultivo de frutas de lavoura permanente não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0134200",
+    "description": "Cultivo de café",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0135100",
+    "description": "Cultivo de cacau",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0139301",
+    "description": "Cultivo de chá-da-índia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0139302",
+    "description": "Cultivo de erva-mate",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0139303",
+    "description": "Cultivo de pimenta-do-reino",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0139304",
+    "description": "Cultivo de plantas para condimento, exceto pimenta-do-reino",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0139305",
+    "description": "Cultivo de dendê",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0139306",
+    "description": "Cultivo de seringueira",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0139399",
+    "description": "Cultivo de outras plantas de lavoura permanente não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0141501",
+    "description": "Produção de sementes certificadas, exceto de forrageiras para pasto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0141502",
+    "description": "Produção de sementes certificadas de forrageiras para formação de pasto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0142300",
+    "description": "Produção de mudas e outras formas de propagação vegetal, certificadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0151201",
+    "description": "Criação de bovinos para corte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0151202",
+    "description": "Criação de bovinos para leite",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0151203",
+    "description": "Criação de bovinos, exceto para corte e leite",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0152101",
+    "description": "Criação de bufalinos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0152102",
+    "description": "Criação de equinos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0152103",
+    "description": "Criação de asininos e muares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0153901",
+    "description": "Criação de caprinos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0153902",
+    "description": "Criação de ovinos, inclusive para produção de lã",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0154700",
+    "description": "Criação de suínos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0155501",
+    "description": "Criação de frangos para corte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0155502",
+    "description": "Produção de pintos de um dia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0155503",
+    "description": "Criação de outros galináceos, exceto para corte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0155504",
+    "description": "Criação de aves, exceto galináceos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0155505",
+    "description": "Produção de ovos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0159801",
+    "description": "Apicultura",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0159802",
+    "description": "Criação de animais de estimação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0159803",
+    "description": "Criação de escargô",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0159804",
+    "description": "Criação de bicho-da-seda",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0159899",
+    "description": "Criação de outros animais não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0161001",
+    "description": "Serviço de pulverização e controle de pragas agrícolas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0161002",
+    "description": "Serviço de poda de árvores para lavouras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0161003",
+    "description": "Serviço de preparação de terreno, cultivo e colheita",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0161099",
+    "description": "Atividades de apoio à agricultura não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0162801",
+    "description": "Serviço de inseminação artificial em animais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0162802",
+    "description": "Serviço de tosquiamento de ovinos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0162803",
+    "description": "Serviço de manejo de animais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0162899",
+    "description": "Atividades de apoio à pecuária não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0163600",
+    "description": "Atividades de pós-colheita",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0170900",
+    "description": "Caça e serviços relacionados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210101",
+    "description": "Cultivo de eucalipto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210102",
+    "description": "Cultivo de acácia-negra",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210103",
+    "description": "Cultivo de pinus",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210104",
+    "description": "Cultivo de teca",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210105",
+    "description": "Cultivo de espécies madeireiras, exceto eucalipto, acácia-negra, pinus e teca",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210106",
+    "description": "Cultivo de mudas em viveiros florestais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210107",
+    "description": "Extração de madeira em florestas plantadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210108",
+    "description": "Produção de carvão vegetal - florestas plantadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0210109",
+    "description": "Produção de casca de acácia-negra - florestas plantadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0220901",
+    "description": "Extração de madeira em florestas nativas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0220902",
+    "description": "Produção de carvão vegetal - florestas nativas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0220903",
+    "description": "Coleta de castanha-do-pará em florestas nativas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0220904",
+    "description": "Coleta de látex em florestas nativas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0220905",
+    "description": "Coleta de palmito em florestas nativas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0220906",
+    "description": "Conservação de florestas nativas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0220999",
+    "description": "Coleta de produtos não madeireiros não especificados anteriormente em florestas nativas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0230600",
+    "description": "Atividades de apoio à produção florestal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0311601",
+    "description": "Pesca de peixes em água salgada",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0311602",
+    "description": "Pesca de crustáceos e moluscos em água salgada",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0311603",
+    "description": "Coleta de outros produtos marinhos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0311604",
+    "description": "Atividades de apoio à pesca em água salgada",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0312401",
+    "description": "Pesca de peixes em água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0312402",
+    "description": "Pesca de crustáceos e moluscos em água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0312403",
+    "description": "Coleta de outros produtos aquáticos de água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0312404",
+    "description": "Atividades de apoio à pesca em água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0321301",
+    "description": "Criação de peixes em água salgada e salobra",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0321302",
+    "description": "Criação de camarões em água salgada e salobra",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0321303",
+    "description": "Criação de ostras e mexilhões em água salgada e salobra",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0321304",
+    "description": "Criação de peixes ornamentais em água salgada e salobra",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0321305",
+    "description": "Atividades de apoio à aquicultura em água salgada e salobra",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0322101",
+    "description": "Criação de peixes em água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0322102",
+    "description": "Criação de camarões em água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0322103",
+    "description": "Criação de ostras e mexilhões em água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0322104",
+    "description": "Criação de peixes ornamentais em água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0322105",
+    "description": "Ranicultura",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0322106",
+    "description": "Criação de jacaré",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0322107",
+    "description": "Atividades de apoio à aquicultura em água doce",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0322199",
+    "description": "Cultivos e semicultivos da aquicultura em água doce não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0500301",
+    "description": "Extração de carvão mineral",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0500302",
+    "description": "Beneficiamento de carvão mineral",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0600001",
+    "description": "Extração de petróleo e gás natural",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0600002",
+    "description": "Extração e beneficiamento de xisto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0600003",
+    "description": "Extração e beneficiamento de areias betuminosas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0710301",
+    "description": "Extração de minério de ferro",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0710302",
+    "description": "Pelotização, sinterização e outros beneficiamentos de minério de ferro",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0721901",
+    "description": "Extração de minério de alumínio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0721902",
+    "description": "Beneficiamento de minério de alumínio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0722701",
+    "description": "Extração de minério de estanho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0722702",
+    "description": "Beneficiamento de minério de estanho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0723501",
+    "description": "Extração de minério de manganês",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0723502",
+    "description": "Beneficiamento de minério de manganês",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0724301",
+    "description": "Extração de minério de metais preciosos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0724302",
+    "description": "Beneficiamento de minério de metais preciosos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0725100",
+    "description": "Extração de minerais radioativos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0729401",
+    "description": "Extração de minérios de nióbio e titânio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0729402",
+    "description": "Extração de minério de tungstênio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0729403",
+    "description": "Extração de minério de níquel",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810001",
+    "description": "Extração de ardósia e beneficiamento associado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810002",
+    "description": "Extração de granito e beneficiamento associado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810003",
+    "description": "Extração de mármore e beneficiamento associado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810004",
+    "description": "Extração de calcário e dolomita e beneficiamento associado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810005",
+    "description": "Extração de gesso e caulim",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810006",
+    "description": "Extração de areia, cascalho ou pedregulho e beneficiamento associado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810007",
+    "description": "Extração de argila e beneficiamento associado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810008",
+    "description": "Extração de saibro e beneficiamento associado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810009",
+    "description": "Extração de basalto e beneficiamento associado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0810010",
+    "description": "Beneficiamento de gesso e caulim associado à extração",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0891600",
+    "description": "Extração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0892401",
+    "description": "Extração de sal marinho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0892402",
+    "description": "Extração de sal-gema",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0892403",
+    "description": "Refino e outros tratamentos do sal",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "0893200",
+    "description": "Extração de gemas (pedras preciosas e semipreciosas)",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0899101",
+    "description": "Extração de grafita",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0899102",
+    "description": "Extração de quartzo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0899103",
+    "description": "Extração de amianto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0899199",
+    "description": "Extração de outros minerais não metálicos não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0910600",
+    "description": "Atividades de apoio à extração de petróleo e gás natural",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0990401",
+    "description": "Atividades de apoio à extração de minério de ferro",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0990402",
+    "description": "Atividades de apoio à extração de minerais metálicos não ferrosos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "0990403",
+    "description": "Atividades de apoio à extração de minerais não metálicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1011201",
+    "description": "Frigorífico - abate de bovinos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1011202",
+    "description": "Frigorífico - abate de equinos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1011203",
+    "description": "Frigorífico - abate de ovinos e caprinos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1011204",
+    "description": "Frigorífico - abate de bufalinos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1011205",
+    "description": "Matadouro - abate de reses sob contrato, exceto abate de suínos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1012101",
+    "description": "Abate de aves",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1012102",
+    "description": "Abate de pequenos animais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1012103",
+    "description": "Frigorífico - abate de suínos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1012104",
+    "description": "Matadouro - abate de suínos sob contrato",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1013901",
+    "description": "Fabricação de produtos de carne",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1013902",
+    "description": "Preparação de subprodutos do abate",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1020101",
+    "description": "Preservação de peixes, crustáceos e moluscos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1020102",
+    "description": "Fabricação de conservas de peixes, crustáceos e moluscos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1031700",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1032501",
+    "description": "Fabricação de conservas de palmito",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1032599",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1033301",
+    "description": "Fabricação de sucos concentrados de frutas, hortaliças e legumes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1033302",
+    "description": "Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1041400",
+    "description": "Fabricação de óleos vegetais em bruto, exceto óleo de milho",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1042200",
+    "description": "Fabricação de óleos vegetais refinados, exceto óleo de milho",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1043100",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O produto fabricado será comestível?",
+    "riskIfYes": "MÉDIO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "1051100",
+    "description": "Preparação do leite",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1052000",
+    "description": "Fabricação de laticínios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1053800",
+    "description": "Fabricação de sorvetes e outros gelados comestíveis",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1061901",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O beneficiamento do produto será industrial?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1061902",
+    "description": "Fabricação de produtos do arroz",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1062700",
+    "description": "Moagem de trigo e fabricação de derivados",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1063500",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1064300",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1065101",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1065102",
+    "description": "Fabricação de óleo de milho em bruto",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1065103",
+    "description": "Fabricação de óleo de milho refinado",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1066000",
+    "description": "Fabricação de alimentos para animais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1069400",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1071600",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1072401",
+    "description": "Fabricação de açúcar de cana refinado",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1072402",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1081301",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1081302",
+    "description": "Torrefação e moagem de café",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1082100",
+    "description": "Fabricação de produtos à base de café",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1091101",
+    "description": "Fabricação de produtos de panificação industrial",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1091102",
+    "description": "Fabricação de produtos de padaria e confeitaria com predominância de produção própria",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1092900",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1093701",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1093702",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1094500",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1095300",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1096100",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1099601",
+    "description": "Fabricação de vinagres",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1099602",
+    "description": "Fabricação de pós-alimentícios",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1099603",
+    "description": "Fabricação de fermentos e leveduras",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1099604",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O gelo fabricado será para consumo humano ou entrará em contato com alimentos e bebidas?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "1099605",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1099606",
+    "description": "Fabricação de adoçantes naturais e artificiais",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1099607",
+    "description": "Fabricação de alimentos dietéticos e complementos alimentares",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1099699",
+    "description": "Fabricação de outros produtos alimentícios não especificados anteriormente",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1111901",
+    "description": "Fabricação de aguardente de cana-de-açúcar",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1111902",
+    "description": "Fabricação de outras aguardentes e bebidas destiladas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1112700",
+    "description": "Fabricação de vinho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1113501",
+    "description": "Fabricação de malte, inclusive malte uísque",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1113502",
+    "description": "Fabricação de cervejas e chopes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1121600",
+    "description": "Fabricação de águas envasadas",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1122401",
+    "description": "Fabricação de refrigerantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1122402",
+    "description": "Fabricação de chá mate e outros chás prontos para consumo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1122403",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade econômica será diferente de produto artesanal?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "1122404",
+    "description": "Fabricação de bebidas isotônicas",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1122499",
+    "description": "Fabricação de outras bebidas não alcoólicas não especificadas anteriormente",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1210700",
+    "description": "Processamento industrial do fumo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1220401",
+    "description": "Fabricação de cigarros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1220402",
+    "description": "Fabricação de cigarrilhas e charutos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1220403",
+    "description": "Fabricação de filtros para cigarros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1220499",
+    "description": "Fabricação de outros produtos do fumo, exceto cigarros, cigarrilhas e charutos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1311100",
+    "description": "Preparação e fiação de fibras de algodão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1312000",
+    "description": "Preparação e fiação de fibras têxteis naturais, exceto algodão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1313800",
+    "description": "Fiação de fibras artificiais e sintéticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1314600",
+    "description": "Fabricação de linhas para costurar e bordar",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1321900",
+    "description": "Tecelagem de fios de algodão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1322700",
+    "description": "Tecelagem de fios de fibras têxteis naturais, exceto algodão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1323500",
+    "description": "Tecelagem de fios de fibras artificiais e sintéticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1330800",
+    "description": "Fabricação de tecidos de malha",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1340501",
+    "description": "Estamparia e texturização em fios, tecidos, artefatos têxteis e peças do vestuário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1340502",
+    "description": "Alvejamento, tingimento e torção em fios, tecidos, artefatos têxteis e peças do vestuário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1340599",
+    "description": "Outros serviços de acabamento em fios, tecidos, artefatos têxteis e peças do vestuário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1351100",
+    "description": "Fabricação de artefatos têxteis para uso doméstico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1352900",
+    "description": "Fabricação de artefatos de tapeçaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1353700",
+    "description": "Fabricação de artefatos de cordoaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1354500",
+    "description": "Fabricação de tecidos especiais, inclusive artefatos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1359600",
+    "description": "Fabricação de outros produtos têxteis não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1411801",
+    "description": "Confecção de roupas íntimas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1411802",
+    "description": "Facção de roupas íntimas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1412602",
+    "description": "Confecção, sob medida, de peças do vestuário, exceto roupas íntimas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1412603",
+    "description": "Facção de peças do vestuário, exceto roupas íntimas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1413401",
+    "description": "Confecção de roupas profissionais, exceto sob medida",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1413402",
+    "description": "Confecção, sob medida, de roupas profissionais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1413403",
+    "description": "Facção de roupas profissionais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1414200",
+    "description": "Fabricação de acessórios do vestuário, exceto para segurança e proteção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1421500",
+    "description": "Fabricação de meias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1422300",
+    "description": "Fabricação de artigos do vestuário, produzidos em malharias e tricotagens, exceto meias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1510600",
+    "description": "Curtimento e outras preparações de couro",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1521100",
+    "description": "Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1529700",
+    "description": "Fabricação de artefatos de couro não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1531901",
+    "description": "Fabricação de calçados de couro",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1531902",
+    "description": "Acabamento de calçados de couro sob contrato",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1532700",
+    "description": "Fabricação de tênis de qualquer material",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1533500",
+    "description": "Fabricação de calçados de material sintético",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1540800",
+    "description": "Fabricação de partes para calçados, de qualquer material",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1610203",
+    "description": "Serrarias com desdobramento de madeira em bruto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1610204",
+    "description": "Serrarias sem desdobramento de madeira em bruto - Resserragem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1610205",
+    "description": "Serviço de tratamento de madeira realizado sob contrato",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1622601",
+    "description": "Fabricação de casas de madeira pré-fabricadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1622699",
+    "description": "Fabricação de outros artigos de carpintaria para construção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1623400",
+    "description": "Fabricação de artefatos de tanoaria e de embalagens de madeira",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1629301",
+    "description": "Fabricação de artefatos diversos de madeira, exceto móveis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1710900",
+    "description": "Fabricação de celulose e outras pastas para a fabricação de papel",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1721400",
+    "description": "Fabricação de papel",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1722200",
+    "description": "Fabricação de cartolina e papel-cartão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1731100",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O produto se destina a entrar em contato com alimento ou será usado para embalar produto a ser esterilizado?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "1732000",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O produto se destina a entrar em contato com alimento ou produto para saúde?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "1733800",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O produto se destina a entrar em contato com alimento ou produto para saúde?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "1741901",
+    "description": "Fabricação de formulários contínuos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1742701",
+    "description": "Fabricação de fraldas descartáveis",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "1742702",
+    "description": "Fabricação de absorventes higiênicos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "1811301",
+    "description": "Impressão de jornais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1811302",
+    "description": "Impressão de livros, revistas e outras publicações periódicas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1812100",
+    "description": "Impressão de material de segurança",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1813001",
+    "description": "Impressão de material para uso publicitário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1813099",
+    "description": "Impressão de material para outros usos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1821100",
+    "description": "Serviços de pré-impressão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1822901",
+    "description": "Serviços de encadernação e plastificação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1822999",
+    "description": "Serviços de acabamentos gráficos, exceto encadernação e plastificação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1830001",
+    "description": "Reprodução de som em qualquer suporte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1830002",
+    "description": "Reprodução de vídeo em qualquer suporte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1830003",
+    "description": "Reprodução de software em qualquer suporte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1910100",
+    "description": "Coquerias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1921700",
+    "description": "Fabricação de produtos do refino de petróleo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1922501",
+    "description": "Formulação de combustíveis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1922502",
+    "description": "Rerrefino de óleos lubrificantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1922599",
+    "description": "Fabricação de outros produtos derivados do petróleo, exceto produtos do refino",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1931400",
+    "description": "Fabricação de álcool",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "1932200",
+    "description": "Fabricação de biocombustíveis, exceto álcool",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2011800",
+    "description": "Fabricação de cloro e álcalis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2012600",
+    "description": "Fabricação de intermediários para fertilizantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2013401",
+    "description": "Fabricação de adubos e fertilizantes organo-minerais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2013402",
+    "description": "Fabricação de adubos e fertilizantes, exceto organo-minerais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2014200",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O gás fabricado será usado para fim terapêutico?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2019301",
+    "description": "Elaboração de combustíveis nucleares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2019399",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade será produto de uso ou aplicação como aditivo de alimentos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2021500",
+    "description": "Fabricação de produtos petroquímicos básicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2022300",
+    "description": "Fabricação de intermediários para plastificantes, resinas e fibras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2029100",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade será produto de uso ou aplicação como aditivo de alimentos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2031200",
+    "description": "Fabricação de resinas termoplásticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2032100",
+    "description": "Fabricação de resinas termofixas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2033900",
+    "description": "Fabricação de elastômeros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2040100",
+    "description": "Fabricação de fibras artificiais e sintéticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2051700",
+    "description": "Fabricação de defensivos agrícolas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2052500",
+    "description": "Fabricação de desinfestantes domissanitários",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2061400",
+    "description": "Fabricação de sabões e detergentes sintéticos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2062200",
+    "description": "Fabricação de produtos de limpeza e polimento",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2063100",
+    "description": "Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2071100",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade será tintas"
+  },
+  {
+    "cnae": "2072000",
+    "description": "Fabricação de tintas de impressão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2073800",
+    "description": "Fabricação de impermeabilizantes, solventes e produtos afins",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2091600",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade será utilizado para o revestimento interno de embalagens que entram em contato com alimentos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2092401",
+    "description": "Fabricação de pólvoras, explosivos e detonantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2092402",
+    "description": "Fabricação de artigos pirotécnicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2092403",
+    "description": "Fabricação de fósforos de segurança",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2093200",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade será aditivo alimentar ou insumo farmacêutico?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2094100",
+    "description": "Fabricação de catalisadores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2099199",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá fabricação de obra odontológica utilizada como produto para saúde?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2110600",
+    "description": "Fabricação de produtos farmoquímicos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2121101",
+    "description": "Fabricação de medicamentos alopáticos para uso humano",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2121102",
+    "description": "Fabricação de medicamentos homeopáticos para uso humano",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2121103",
+    "description": "Fabricação de medicamentos fitoterápicos para uso humano",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2122000",
+    "description": "Fabricação de medicamentos para uso veterinário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2123800",
+    "description": "Fabricação de preparações farmacêuticas",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2211100",
+    "description": "Fabricação de pneumáticos e de câmaras-de-ar",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2212900",
+    "description": "Reforma de pneumáticos usados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2219600",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a fabricação de produtos para saúde (como preservativos"
+  },
+  {
+    "cnae": "2221800",
+    "description": "Fabricação de laminados planos e tubulares de material plástico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2222600",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá fabricação de produto para saúde ou de embalagem de material plástico que entra em contato com alimento?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2223400",
+    "description": "Fabricação de tubos e acessórios de material plástico para uso na construção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2229301",
+    "description": "Fabricação de artefatos de material plástico para uso pessoal e doméstico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2229302",
+    "description": "Fabricação de artefatos de material plástico para usos industriais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2311700",
+    "description": "Fabricação de vidro plano e de segurança",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2312500",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a fabricação de embalagens de vidro que entram em contato com alimento?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2319200",
+    "description": "Fabricação de artigos de vidro",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2320600",
+    "description": "Fabricação de cimento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2330301",
+    "description": "Fabricação de estruturas pré-moldadas de concreto armado, em série e sob encomenda",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2330302",
+    "description": "Fabricação de artefatos de cimento para uso na construção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2330303",
+    "description": "Fabricação de artefatos de fibrocimento para uso na construção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2330304",
+    "description": "Fabricação de casas pré-moldadas de concreto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2330305",
+    "description": "Preparação de massa de concreto e argamassa para construção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2341900",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a fabricação de produtos utilizados como embalagem que entram em contato com alimento?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2342701",
+    "description": "Fabricação de azulejos e pisos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2349401",
+    "description": "Fabricação de material sanitário de cerâmica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2349499",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a fabricação de produtos utilizados como embalagem que entram em contato com alimento?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2391501",
+    "description": "Britamento de pedras, exceto associado à extração",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2391502",
+    "description": "Aparelhamento de pedras para construção, exceto associado à extração",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2392300",
+    "description": "Fabricação de cal e gesso",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2399102",
+    "description": "Fabricação de abrasivos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2411300",
+    "description": "Produção de ferro-gusa",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2412100",
+    "description": "Produção de ferroligas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2421100",
+    "description": "Produção de semiacabados de aço",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2422901",
+    "description": "Produção de laminados planos de aço ao carbono, revestidos ou não",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2422902",
+    "description": "Produção de laminados planos de aços especiais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2423701",
+    "description": "Produção de tubos de aço sem costura",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2423702",
+    "description": "Produção de laminados longos de aço, exceto tubos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2424501",
+    "description": "Produção de arames de aço",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2424502",
+    "description": "Produção de relaminados, trefilados e perfilados de aço, exceto arames",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2431800",
+    "description": "Produção de tubos de aço com costura",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2439300",
+    "description": "Produção de outros tubos de ferro e aço",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2441501",
+    "description": "Produção de alumínio e suas ligas em formas primárias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2441502",
+    "description": "Produção de laminados de alumínio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2442300",
+    "description": "Metalurgia dos metais preciosos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2443100",
+    "description": "Metalurgia do cobre",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2449101",
+    "description": "Produção de zinco em formas primárias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2449102",
+    "description": "Produção de laminados de zinco",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2449103",
+    "description": "Fabricação de ânodos para galvanoplastia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2449199",
+    "description": "Metalurgia de outros metais não ferrosos e suas ligas não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2451200",
+    "description": "Fundição de ferro e aço",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2452100",
+    "description": "Fundição de metais não ferrosos e suas ligas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2511000",
+    "description": "Fabricação de estruturas metálicas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2512800",
+    "description": "Fabricação de esquadrias de metal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2513600",
+    "description": "Fabricação de obras de caldeiraria pesada",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2521700",
+    "description": "Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2531401",
+    "description": "Produção de forjados de aço",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2531402",
+    "description": "Produção de forjados de metais não ferrosos e suas ligas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2532201",
+    "description": "Produção de artefatos estampados de metal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2532202",
+    "description": "Metalurgia do pó",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2539001",
+    "description": "Serviços de usinagem, tornearia e solda",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2539002",
+    "description": "Serviços de tratamento e revestimento em metais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2541100",
+    "description": "Fabricação de artigos de cutelaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2542000",
+    "description": "Fabricação de artigos de serralheria, exceto esquadrias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2543800",
+    "description": "Fabricação de ferramentas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2550101",
+    "description": "Fabricação de equipamento bélico pesado, exceto veículos militares de combate",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2550102",
+    "description": "Fabricação de armas de fogo, outras armas e munições",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2591800",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a fabricação de embalagens metálicas que entram em contato com alimento?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2592601",
+    "description": "Fabricação de produtos de trefilados de metal padronizados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2592602",
+    "description": "Fabricação de produtos de trefilados de metal, exceto padronizados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2593400",
+    "description": "Fabricação de artigos de metal para uso doméstico e pessoal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2599301",
+    "description": "Serviços de confecção de armações metálicas para a construção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2599302",
+    "description": "Serviço de corte e dobra de metais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2599399",
+    "description": "Fabricação de outros produtos de metal não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2610800",
+    "description": "Fabricação de componentes eletrônicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2621300",
+    "description": "Fabricação de equipamentos de informática",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2622100",
+    "description": "Fabricação de periféricos para equipamentos de informática",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2631100",
+    "description": "Fabricação de equipamentos transmissores de comunicação, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2651500",
+    "description": "Fabricação de aparelhos e equipamentos de medida, teste e controle",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2652300",
+    "description": "Fabricação de cronômetros e relógios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2660400",
+    "description": "Fabricação de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "2670101",
+    "description": "Fabricação de equipamentos e instrumentos ópticos, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2670102",
+    "description": "Fabricação de aparelhos fotográficos e cinematográficos, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2680900",
+    "description": "Fabricação de mídias virgens, magnéticas e ópticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2710401",
+    "description": "Fabricação de geradores de corrente contínua e alternada, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2710403",
+    "description": "Fabricação de motores elétricos, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2722801",
+    "description": "Fabricação de baterias e acumuladores para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2722802",
+    "description": "Recondicionamento de baterias e acumuladores para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2731700",
+    "description": "Fabricação de aparelhos e equipamentos para distribuição e controle de energia elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2732500",
+    "description": "Fabricação de material elétrico para instalações em circuito de consumo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2733300",
+    "description": "Fabricação de fios, cabos e condutores elétricos isolados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2740601",
+    "description": "Fabricação de lâmpadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2740602",
+    "description": "Fabricação de luminárias e outros equipamentos de iluminação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2759701",
+    "description": "Fabricação de aparelhos elétricos de uso pessoal, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2790202",
+    "description": "Fabricação de equipamentos para sinalização e alarme",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2813500",
+    "description": "Fabricação de válvulas, registros e dispositivos semelhantes, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2814301",
+    "description": "Fabricação de compressores para uso industrial, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2814302",
+    "description": "Fabricação de compressores para uso não industrial, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2815101",
+    "description": "Fabricação de rolamentos para fins industriais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2815102",
+    "description": "Fabricação de equipamentos de transmissão para fins industriais, exceto rolamentos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2821602",
+    "description": "Fabricação de estufas e fornos elétricos para fins industriais, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2824101",
+    "description": "Fabricação de aparelhos e equipamentos de ar condicionado para uso industrial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2824102",
+    "description": "Fabricação de aparelhos e equipamentos de ar condicionado para uso não industrial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2829199",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá fabricação de produto para saúde?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "2831300",
+    "description": "Fabricação de tratores agrícolas, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2832100",
+    "description": "Fabricação de equipamentos para irrigação agrícola, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2840200",
+    "description": "Fabricação de máquinas-ferramenta, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2853400",
+    "description": "Fabricação de tratores, peças e acessórios, exceto agrícolas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2863100",
+    "description": "Fabricação de máquinas e equipamentos para a indústria têxtil, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2866600",
+    "description": "Fabricação de máquinas e equipamentos para a indústria do plástico, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2910701",
+    "description": "Fabricação de automóveis, camionetas e utilitários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2910702",
+    "description": "Fabricação de chassis com motor para automóveis, camionetas e utilitários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2910703",
+    "description": "Fabricação de motores para automóveis, camionetas e utilitários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2920401",
+    "description": "Fabricação de caminhões e ônibus",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2920402",
+    "description": "Fabricação de motores para caminhões e ônibus",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2930101",
+    "description": "Fabricação de cabines, carrocerias e reboques para caminhões",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2930102",
+    "description": "Fabricação de carrocerias para ônibus",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2941700",
+    "description": "Fabricação de peças e acessórios para o sistema motor de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2943300",
+    "description": "Fabricação de peças e acessórios para o sistema de freios de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2945000",
+    "description": "Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2949201",
+    "description": "Fabricação de bancos e estofados para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "2950600",
+    "description": "Recondicionamento e recuperação de motores para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3011301",
+    "description": "Construção de embarcações de grande porte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3012100",
+    "description": "Construção de embarcações para esporte e lazer",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3031800",
+    "description": "Fabricação de locomotivas, vagões e outros materiais rodantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3032600",
+    "description": "Fabricação de peças e acessórios para veículos ferroviários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3041500",
+    "description": "Fabricação de aeronaves",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3042300",
+    "description": "Fabricação de turbinas, motores e outros componentes e peças para aeronaves",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3050400",
+    "description": "Fabricação de veículos militares de combate",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3091101",
+    "description": "Fabricação de motocicletas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3091102",
+    "description": "Fabricação de peças e acessórios para motocicletas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3092000",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá fabricação de produto para saúde?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "3099700",
+    "description": "Fabricação de equipamentos de transporte não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3101200",
+    "description": "Fabricação de móveis com predominância de madeira",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3102100",
+    "description": "Fabricação de móveis com predominância de metal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3103900",
+    "description": "Fabricação de móveis de outros materiais, exceto madeira e metal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3104700",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá fabricação de produto para saúde?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "3211601",
+    "description": "Lapidação de gemas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3211602",
+    "description": "Fabricação de artefatos de joalheria e ourivesaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3211603",
+    "description": "Cunhagem de moedas e medalhas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3212400",
+    "description": "Fabricação de bijuterias e artefatos semelhantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3220500",
+    "description": "Fabricação de instrumentos musicais, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3230200",
+    "description": "Fabricação de artefatos para pesca e esporte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3240001",
+    "description": "Fabricação de jogos eletrônicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3240002",
+    "description": "Fabricação de mesas de bilhar, de sinuca e acessórios não associada à locação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3240003",
+    "description": "Fabricação de mesas de bilhar, de sinuca e acessórios associada à locação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3240099",
+    "description": "Fabricação de outros brinquedos e jogos recreativos não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3250701",
+    "description": "Fabricação de instrumentos não eletrônicos e utensílios para uso médico, cirúrgico, odontológico e de laboratório",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "3250702",
+    "description": "Fabricação de mobiliário para uso médico, cirúrgico, odontológico e de laboratório",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "3250703",
+    "description": "Fabricação de aparelhos e utensílios para correção de defeitos físicos e aparelhos ortopédicos em geral sob encomenda",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "3250704",
+    "description": "Fabricação de aparelhos e utensílios para correção de defeitos físicos e aparelhos ortopédicos em geral, exceto sob encomenda",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "3250705",
+    "description": "Fabricação de materiais para medicina e odontologia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "3250706",
+    "description": "Serviços de prótese dentária",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3250707",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá fabricação de produto para saúde?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "3250709",
+    "description": "Serviço de laboratório óptico",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3291400",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício a fabricação de escova dental?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "3292201",
+    "description": "Fabricação de roupas de proteção e segurança e resistentes a fogo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3292202",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a fabricação de artefatos de tecido não tecido para uso odonto-médico-hospitalar?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "3299001",
+    "description": "Fabricação de guarda-chuvas e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3299002",
+    "description": "Fabricação de canetas, lápis e outros artigos para escritório",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3299003",
+    "description": "Fabricação de letras, letreiros e placas de qualquer material, exceto luminosos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3299004",
+    "description": "Fabricação de painéis e letreiros luminosos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3299005",
+    "description": "Fabricação de aviamentos para costura",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3299006",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a fabricação de velas",
+    "riskIfNo": "ALTO"
+  },
+  {
+    "cnae": "3299099",
+    "description": "Fabricação de produtos diversos não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3312102",
+    "description": "Manutenção e reparação de aparelhos e instrumentos de medida, teste e controle",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3312104",
+    "description": "Manutenção e reparação de equipamentos e instrumentos ópticos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3313901",
+    "description": "Manutenção e reparação de geradores, transformadores e motores elétricos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3313902",
+    "description": "Manutenção e reparação de baterias e acumuladores elétricos, exceto para veículos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314701",
+    "description": "Manutenção e reparação de máquinas motrizes não elétricas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314702",
+    "description": "Manutenção e reparação de equipamentos hidráulicos e pneumáticos, exceto válvulas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314703",
+    "description": "Manutenção e reparação de válvulas industriais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314704",
+    "description": "Manutenção e reparação de compressores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314705",
+    "description": "Manutenção e reparação de equipamentos de transmissão para fins industriais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314711",
+    "description": "Manutenção e reparação de máquinas e equipamentos para agricultura e pecuária",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314712",
+    "description": "Manutenção e reparação de tratores agrícolas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314713",
+    "description": "Manutenção e reparação de máquinas-ferramenta",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314716",
+    "description": "Manutenção e reparação de tratores, exceto agrícolas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3314722",
+    "description": "Manutenção e reparação de máquinas e aparelhos para a indústria do plástico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3315500",
+    "description": "Manutenção e reparação de veículos ferroviários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3316301",
+    "description": "Manutenção e reparação de aeronaves, exceto a manutenção na pista",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3316302",
+    "description": "Manutenção de aeronaves na pista",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3317101",
+    "description": "Manutenção e reparação de embarcações e estruturas flutuantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3317102",
+    "description": "Manutenção e reparação de embarcações para esporte e lazer",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3319800",
+    "description": "Manutenção e reparação de equipamentos e produtos não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3321000",
+    "description": "Instalação de máquinas e equipamentos industriais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3329501",
+    "description": "Serviços de montagem de móveis de qualquer material",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3329599",
+    "description": "Instalação de outros equipamentos não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3511501",
+    "description": "Geração de energia elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3512300",
+    "description": "Transmissão de energia elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3513100",
+    "description": "Comércio atacadista de energia elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3514000",
+    "description": "Distribuição de energia elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3520401",
+    "description": "\"Produção de gás",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3520402",
+    "description": "Distribuição de combustíveis gasosos por redes urbanas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3530100",
+    "description": "Produção e distribuição de vapor, água quente e ar condicionado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3600601",
+    "description": "Captação, tratamento e distribuição de água",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3600602",
+    "description": "Distribuição de água por caminhões",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3701100",
+    "description": "Gestão de redes de esgoto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3702900",
+    "description": "Atividades relacionadas a esgoto, exceto a gestão de redes",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3811400",
+    "description": "Coleta de resíduos não perigosos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3812200",
+    "description": "Coleta de resíduos perigosos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3821100",
+    "description": "Tratamento e disposição de resíduos não perigosos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3822000",
+    "description": "Tratamento e disposição de resíduos perigosos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3831901",
+    "description": "Recuperação de sucatas de alumínio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3831999",
+    "description": "Recuperação de materiais metálicos, exceto alumínio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3832700",
+    "description": "Recuperação de materiais plásticos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3839401",
+    "description": "Usinas de compostagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3839499",
+    "description": "Recuperação de materiais não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "3900500",
+    "description": "Descontaminação e outros serviços de gestão de resíduos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4110700",
+    "description": "Incorporação de empreendimentos imobiliários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4120400",
+    "description": "Construção de edifícios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4211101",
+    "description": "Construção de rodovias e ferrovias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4211102",
+    "description": "Pintura para sinalização em pistas rodoviárias e aeroportos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4212000",
+    "description": "Construção de obras de arte especiais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4213800",
+    "description": "Obras de urbanização - ruas, praças e calçadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4221901",
+    "description": "Construção de barragens e represas para geração de energia elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4221902",
+    "description": "Construção de estações e redes de distribuição de energia elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4221903",
+    "description": "Manutenção de redes de distribuição de energia elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4221904",
+    "description": "Construção de estações e redes de telecomunicações",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4221905",
+    "description": "Manutenção de estações e redes de telecomunicações",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4222702",
+    "description": "Obras de irrigação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4223500",
+    "description": "Construção de redes de transportes por dutos, exceto para água e esgoto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4291000",
+    "description": "Obras portuárias, marítimas e fluviais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4292801",
+    "description": "Montagem de estruturas metálicas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4292802",
+    "description": "Obras de montagem industrial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4299501",
+    "description": "Construção de instalações esportivas e recreativas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4299599",
+    "description": "Outras obras de engenharia civil não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4311801",
+    "description": "Demolição de edifícios e outras estruturas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4311802",
+    "description": "Preparação de canteiro e limpeza de terreno",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4312600",
+    "description": "Perfurações e sondagens",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4313400",
+    "description": "Obras de terraplenagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4319300",
+    "description": "Serviços de preparação do terreno não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4321500",
+    "description": "Instalação e manutenção elétrica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4322301",
+    "description": "Instalações hidráulicas, sanitárias e de gás",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4322303",
+    "description": "Instalações de sistema de prevenção contra incêndio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4329101",
+    "description": "Instalação de painéis publicitários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4329102",
+    "description": "Instalação de equipamentos para orientação à navegação marítima, fluvial e lacustre",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4329103",
+    "description": "Instalação, manutenção e reparação de elevadores, escadas e esteiras rolantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4329105",
+    "description": "Tratamentos térmicos, acústicos ou de vibração",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4329199",
+    "description": "Outras obras de instalações em construções não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4330401",
+    "description": "Impermeabilização em obras de engenharia civil",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4330402",
+    "description": "Instalação de portas, janelas, tetos, divisórias e armários embutidos de qualquer material",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4330403",
+    "description": "Obras de acabamento em gesso e estuque",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4330404",
+    "description": "Serviços de pintura de edifícios em geral",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4330405",
+    "description": "Aplicação de revestimentos e de resinas em interiores e exteriores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4330499",
+    "description": "Outras obras de acabamento da construção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4391600",
+    "description": "Obras de fundações",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4399101",
+    "description": "Administração de obras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4399102",
+    "description": "Montagem e desmontagem de andaimes e outras estruturas temporárias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4399103",
+    "description": "Obras de alvenaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4399105",
+    "description": "Perfuração e construção de poços de água",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4399199",
+    "description": "Serviços especializados para construção não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4511101",
+    "description": "Comércio a varejo de automóveis, camionetas e utilitários novos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4511102",
+    "description": "Comércio a varejo de automóveis, camionetas e utilitários usados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4511103",
+    "description": "Comércio por atacado de automóveis, camionetas e utilitários novos e usados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4511104",
+    "description": "Comércio por atacado de caminhões novos e usados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4511105",
+    "description": "Comércio por atacado de reboques e semireboques novos e usados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4511106",
+    "description": "Comércio por atacado de ônibus e micro-ônibus novos e usados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4512901",
+    "description": "Representantes comerciais e agentes do comércio de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4512902",
+    "description": "Comércio sob consignação de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4520001",
+    "description": "Serviços de manutenção e reparação mecânica de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4520002",
+    "description": "Serviços de lanternagem ou funilaria e pintura de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4520003",
+    "description": "Serviços de manutenção e reparação elétrica de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4520004",
+    "description": "Serviços de alinhamento e balanceamento de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4520005",
+    "description": "Serviços de lavagem, lubrificação e polimento de veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4520006",
+    "description": "Serviços de borracharia para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4520008",
+    "description": "Serviços de capotaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4530701",
+    "description": "Comércio por atacado de peças e acessórios novos para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4530702",
+    "description": "Comércio por atacado de pneumáticos e câmaras-de-ar",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4530703",
+    "description": "Comércio a varejo de peças e acessórios novos para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4530704",
+    "description": "Comércio a varejo de peças e acessórios usados para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4530705",
+    "description": "Comércio a varejo de pneumáticos e câmaras-de-ar",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4530706",
+    "description": "Representantes comerciais e agentes do comércio de peças e acessórios novos e usados para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4541201",
+    "description": "Comércio por atacado de motocicletas e motonetas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4541202",
+    "description": "Comércio por atacado de peças e acessórios para motocicletas e motonetas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4541203",
+    "description": "Comércio a varejo de motocicletas e motonetas novas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4541204",
+    "description": "Comércio a varejo de motocicletas e motonetas usadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4541206",
+    "description": "Comércio a varejo de peças e acessórios novos para motocicletas e motonetas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4541207",
+    "description": "Comércio a varejo de peças e acessórios usados para motocicletas e motonetas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4542101",
+    "description": "Representantes comerciais e agentes do comércio de motocicletas e motonetas, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4542102",
+    "description": "Comércio sob consignação de motocicletas e motonetas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4543900",
+    "description": "Manutenção e reparação de motocicletas e motonetas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4611700",
+    "description": "Representantes comerciais e agentes do comércio de matérias-primas agrícolas e animais vivos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4618402",
+    "description": "Representantes comerciais e agentes do comércio de instrumentos e materiais odonto- médico-hospitalares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4618403",
+    "description": "Representantes comerciais e agentes do comércio de jornais, revistas e outras publicações",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4619200",
+    "description": "Representantes comerciais e agentes do comércio de mercadorias em geral não especializado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4621400",
+    "description": "Comércio atacadista de café em grão",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4622200",
+    "description": "Comércio atacadista de soja",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4623101",
+    "description": "Comércio atacadista de animais vivos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4623103",
+    "description": "Comércio atacadista de algodão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4623104",
+    "description": "Comércio atacadista de fumo em folha não beneficiado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4623105",
+    "description": "Comércio atacadista de cacau",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4623106",
+    "description": "Comércio atacadista de sementes, flores, plantas e gramas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4623107",
+    "description": "Comércio atacadista de sisal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4623109",
+    "description": "Comércio atacadista de alimentos para animais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4623199",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá o comércio atacadista de ervas medicinais?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "4631100",
+    "description": "Comércio atacadista de leite e laticínios",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4632001",
+    "description": "Comércio atacadista de cereais e leguminosas beneficiados",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4632002",
+    "description": "Comércio atacadista de farinhas, amidos e féculas",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4632003",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a realização de fracionamento"
+  },
+  {
+    "cnae": "4633801",
+    "description": "Comércio atacadista de frutas, verduras, raízes, tubérculos, hortaliças e legumes frescos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4633802",
+    "description": "Comércio atacadista de aves vivas e ovos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4633803",
+    "description": "Comércio atacadista de coelhos e outros pequenos animais vivos para alimentação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4634601",
+    "description": "Comércio atacadista de carnes bovinas e suínas e derivados",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4634602",
+    "description": "Comércio atacadista de aves abatidas e derivados",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4634603",
+    "description": "Comércio atacadista de pescados e frutos do mar",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4634699",
+    "description": "Comércio atacadista de carnes e derivados de outros animais",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4635401",
+    "description": "Comércio atacadista de água mineral",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4635402",
+    "description": "Comércio atacadista de cerveja, chope e refrigerante",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4635403",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a realização de atividade de engarrafamento e/ou rotulagem consideradas etapas do processo produtivo de água mineral?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "4635499",
+    "description": "Comércio atacadista de bebidas não especificadas anteriormente",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4636201",
+    "description": "Comércio atacadista de fumo beneficiado",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4636202",
+    "description": "Comércio atacadista de cigarros, cigarrilhas e charutos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4637101",
+    "description": "Comércio atacadista de café torrado, moído e solúvel",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4637102",
+    "description": "Comércio atacadista de açúcar",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4637103",
+    "description": "Comércio atacadista de óleos e gorduras",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4637104",
+    "description": "Comércio atacadista de pães, bolos, biscoitos e similares",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4637105",
+    "description": "Comércio atacadista de massas alimentícias",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4637106",
+    "description": "Comércio atacadista de sorvetes",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4637107",
+    "description": "Comércio atacadista de chocolates, confeitos, balas, bombons e semelhantes",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4637199",
+    "description": "Comércio atacadista especializado em outros produtos alimentícios não especificados anteriormente",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4639701",
+    "description": "Comércio atacadista de produtos alimentícios em geral",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4639702",
+    "description": "Comércio atacadista de produtos alimentícios em geral, com atividade de fracionamento e acondicionamento associada",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4641901",
+    "description": "Comércio atacadista de tecidos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4641902",
+    "description": "Comércio atacadista de artigos de cama, mesa e banho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4641903",
+    "description": "Comércio atacadista de artigos de armarinho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4642702",
+    "description": "Comércio atacadista de roupas e acessórios para uso profissional e de segurança do trabalho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4643501",
+    "description": "Comércio atacadista de calçados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4643502",
+    "description": "Comércio atacadista de bolsas, malas e artigos de viagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4644301",
+    "description": "Comércio atacadista de medicamentos e drogas de uso humano",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4644302",
+    "description": "Comércio atacadista de medicamentos e drogas de uso veterinário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4645101",
+    "description": "Comércio atacadista de instrumentos e materiais para uso médico, cirúrgico, hospitalar e de laboratórios",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4645102",
+    "description": "Comércio atacadista de próteses e artigos de ortopedia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4645103",
+    "description": "Comércio atacadista de produtos odontológicos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4646001",
+    "description": "Comércio atacadista de cosméticos e produtos de perfumaria",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4646002",
+    "description": "Comércio atacadista de produtos de higiene pessoal",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4647801",
+    "description": "Comércio atacadista de artigos de escritório e de papelaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4647802",
+    "description": "Comércio atacadista de livros, jornais e outras publicações",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649401",
+    "description": "Comércio atacadista de equipamentos elétricos de uso pessoal e doméstico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649402",
+    "description": "Comércio atacadista de aparelhos eletrônicos de uso pessoal e doméstico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649403",
+    "description": "Comércio atacadista de bicicletas, triciclos e outros veículos recreativos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649404",
+    "description": "Comércio atacadista de móveis e artigos de colchoaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649405",
+    "description": "Comércio atacadista de artigos de tapeçaria, persianas e cortinas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649406",
+    "description": "Comércio atacadista de lustres, luminárias e abajures",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649407",
+    "description": "Comércio atacadista de filmes, CDs, DVDs, fitas e discos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649408",
+    "description": "Comércio atacadista de produtos de higiene, limpeza e conservação domiciliar",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649409",
+    "description": "Comércio atacadista de produtos de higiene, limpeza e conservação domiciliar, com atividade de fracionamento e acondicionamento associada",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4649410",
+    "description": "Comércio atacadista de jóias, relógios e bijuterias, inclusive pedras preciosas e semipreciosas lapidadas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4651601",
+    "description": "Comércio atacadista de equipamentos de informática",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4651602",
+    "description": "Comércio atacadista de suprimentos para informática",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4652400",
+    "description": "Comércio atacadista de componentes eletrônicos e equipamentos de telefonia e comunicação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4663000",
+    "description": "\"Comércio atacadista de máquinas e equipamentos para uso industrial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4664800",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O resultado do exercício da atividade compreenderá a comercialização de produtos para a saúde?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "4665600",
+    "description": "\"Comércio atacadista de máquinas e equipamentos para uso comercial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4669901",
+    "description": "\"Comércio atacadista de bombas e compressores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4671100",
+    "description": "Comércio atacadista de madeira e produtos derivados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4672900",
+    "description": "Comércio atacadista de ferragens e ferramentas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4673700",
+    "description": "Comércio atacadista de material elétrico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4674500",
+    "description": "Comércio atacadista de cimento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4679601",
+    "description": "Comércio atacadista de tintas, vernizes e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4679602",
+    "description": "Comércio atacadista de mármores e granitos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4679603",
+    "description": "Comércio atacadista de vidros, espelhos e vitrais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4679699",
+    "description": "Comércio atacadista de materiais de construção em geral",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4681802",
+    "description": "Comércio atacadista de combustíveis realizado por transportador retalhista (TRR)",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4681803",
+    "description": "Comércio atacadista de combustíveis de origem vegetal, exceto álcool carburante",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4681804",
+    "description": "Comércio atacadista de combustíveis de origem mineral em bruto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4681805",
+    "description": "Comércio atacadista de lubrificantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4682600",
+    "description": "Comércio atacadista de gás liquefeito de petróleo (GLP)",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4683400",
+    "description": "Comércio atacadista de defensivos agrícolas, adubos, fertilizantes e corretivos do solo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4684201",
+    "description": "Comércio atacadista de resinas e elastômeros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4684202",
+    "description": "Comércio atacadista de solventes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4685100",
+    "description": "Comércio atacadista de produtos siderúrgicos e metalúrgicos, exceto para construção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4686901",
+    "description": "Comércio atacadista de papel e papelão em bruto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4686902",
+    "description": "Comércio atacadista de embalagens",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4687701",
+    "description": "Comércio atacadista de resíduos de papel e papelão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4687702",
+    "description": "Comércio atacadista de resíduos e sucatas não metálicos, exceto de papel e papelão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4687703",
+    "description": "Comércio atacadista de resíduos e sucatas metálicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4689301",
+    "description": "Comércio atacadista de produtos da extração mineral, exceto combustíveis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4689302",
+    "description": "Comércio atacadista de fios e fibras beneficiados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4691500",
+    "description": "Comércio atacadista de mercadorias em geral, com predominância de produtos alimentícios",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4692300",
+    "description": "Comércio atacadista de mercadorias em geral, com predominância de insumos agropecuários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4711301",
+    "description": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - hipermercados",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4711302",
+    "description": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - supermercados",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4712100",
+    "description": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - minimercados, mercearias e armazéns",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4713002",
+    "description": "Lojas de variedades, exceto lojas de departamentos ou magazines",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4713004",
+    "description": "Lojas de departamentos ou magazines, exceto lojas francas (Duty free)",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4713005",
+    "description": "Lojas francas (Duty Free) de aeroportos, portos e em fronteiras terrestres",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4721102",
+    "description": "Padaria e confeitaria com predominância de revenda",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4721103",
+    "description": "Comércio varejista de laticínios e frios",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4721104",
+    "description": "Comércio varejista de doces, balas, bombons e semelhantes",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4722901",
+    "description": "Comércio varejista de carnes - açougues",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4722902",
+    "description": "Peixaria",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4723700",
+    "description": "Comércio varejista de bebidas",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4724500",
+    "description": "Comércio varejista de hortifrutigranjeiros",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4729601",
+    "description": "Tabacaria",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4729602",
+    "description": "Comércio varejista de mercadorias em lojas de conveniência",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4729699",
+    "description": "Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados anteriormente",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4731800",
+    "description": "Comércio varejista de combustíveis para veículos automotores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4732600",
+    "description": "Comércio varejista de lubrificantes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4741500",
+    "description": "Comércio varejista de tintas e materiais para pintura",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4742300",
+    "description": "Comércio varejista de material elétrico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4743100",
+    "description": "Comércio varejista de vidros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4744001",
+    "description": "Comércio varejista de ferragens e ferramentas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4744002",
+    "description": "Comércio varejista de madeira e artefatos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4744003",
+    "description": "Comércio varejista de materiais hidráulicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4744004",
+    "description": "Comércio varejista de cal, areia, pedra britada, tijolos e telhas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4744005",
+    "description": "Comércio varejista de materiais de construção não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4744006",
+    "description": "Comércio varejista de pedras para revestimento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4744099",
+    "description": "Comércio varejista de materiais de construção em geral",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4751201",
+    "description": "Comércio varejista especializado de equipamentos e suprimentos de informática",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4751202",
+    "description": "Recarga de cartuchos para equipamentos de informática",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4752100",
+    "description": "Comércio varejista especializado de equipamentos de telefonia e comunicação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4753900",
+    "description": "Comércio varejista especializado de eletrodomésticos e equipamentos de áudio e vídeo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4754701",
+    "description": "Comércio varejista de móveis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4754702",
+    "description": "Comércio varejista de artigos de colchoaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4754703",
+    "description": "Comércio varejista de artigos de iluminação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4755501",
+    "description": "Comércio varejista de tecidos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4755502",
+    "description": "Comercio varejista de artigos de armarinho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4755503",
+    "description": "Comercio varejista de artigos de cama, mesa e banho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4756300",
+    "description": "Comércio varejista especializado de instrumentos musicais e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4757100",
+    "description": "Comércio varejista especializado de peças e acessórios para aparelhos eletroeletrônicos para uso doméstico, exceto informática e comunicação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4759801",
+    "description": "Comércio varejista de artigos de tapeçaria, cortinas e persianas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4759899",
+    "description": "Comércio varejista de outros artigos de uso doméstico não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4761001",
+    "description": "Comércio varejista de livros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4761002",
+    "description": "Comércio varejista de jornais e revistas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4761003",
+    "description": "Comércio varejista de artigos de papelaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4762800",
+    "description": "Comércio varejista de discos, CDs, DVDs e fitas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4763601",
+    "description": "Comércio varejista de brinquedos e artigos recreativos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4763602",
+    "description": "Comércio varejista de artigos esportivos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4763603",
+    "description": "Comércio varejista de bicicletas e triciclos, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4763604",
+    "description": "Comércio varejista de artigos de caça, pesca e camping",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4763605",
+    "description": "Comércio varejista de embarcações e outros veículos recreativos, peças e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4771701",
+    "description": "Comércio varejista de produtos farmacêuticos, sem manipulação de fórmulas",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4771702",
+    "description": "Comércio varejista de produtos farmacêuticos, com manipulação de fórmulas",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "4771703",
+    "description": "Comércio varejista de produtos farmacêuticos homeopáticos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "4771704",
+    "description": "Comércio varejista de medicamentos veterinários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4772500",
+    "description": "Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4773300",
+    "description": "Comércio varejista de artigos médicos e ortopédicos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4774100",
+    "description": "Comércio varejista de artigos de óptica",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4781400",
+    "description": "Comércio varejista de artigos do vestuário e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4782201",
+    "description": "Comércio varejista de calçados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4782202",
+    "description": "Comércio varejista de artigos de viagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4783101",
+    "description": "Comércio varejista de artigos de joalheria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4783102",
+    "description": "Comércio varejista de artigos de relojoaria",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4784900",
+    "description": "Comércio varejista de gás liqüefeito de petróleo (GLP)",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4785701",
+    "description": "Comércio varejista de antiguidades",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4785799",
+    "description": "Comércio varejista de outros artigos usados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789001",
+    "description": "Comércio varejista de suvenires, bijuterias e artesanatos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789002",
+    "description": "Comércio varejista de plantas e flores naturais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789003",
+    "description": "Comércio varejista de objetos de arte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789004",
+    "description": "Comércio varejista de animais vivos e de artigos e alimentos para animais de estimação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789005",
+    "description": "Comércio varejista de produtos saneantes domissanitários",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789006",
+    "description": "Comércio varejista de fogos de artifício e artigos pirotécnicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789007",
+    "description": "Comércio varejista de equipamentos para escritório",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789008",
+    "description": "Comércio varejista de artigos fotográficos e para filmagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789009",
+    "description": "Comércio varejista de armas e munições",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4789099",
+    "description": "Comércio varejista de outros produtos não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4911600",
+    "description": "Transporte ferroviário de carga",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4912401",
+    "description": "Transporte ferroviário de passageiros intermunicipal e interestadual",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4912402",
+    "description": "Transporte ferroviário de passageiros municipal e em região metropolitana",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4912403",
+    "description": "Transporte metroviário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4921301",
+    "description": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, municipal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4922102",
+    "description": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, interestadual",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4922103",
+    "description": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, internacional",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4923001",
+    "description": "Serviço de táxi",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4923002",
+    "description": "Serviço de transporte de passageiros - locação de automóveis com motorista",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4924800",
+    "description": "Transporte escolar",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4929901",
+    "description": "Transporte rodoviário coletivo de passageiros, sob regime de fretamento, municipal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4929903",
+    "description": "Organização de excursões em veículos rodoviários próprios, municipal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4929999",
+    "description": "Outros transportes rodoviários de passageiros não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4930201",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que necessitem de condições especiais de temperatura e umidade (perecíveis)"
+  },
+  {
+    "cnae": "4930202",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que necessitem de condições especiais de temperatura e umidade (perecíveis)"
+  },
+  {
+    "cnae": "4930203",
+    "description": "Transporte rodoviário de produtos perigosos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4930204",
+    "description": "Transporte rodoviário de mudanças",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4940000",
+    "description": "Transporte dutoviário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "4950700",
+    "description": "Trens turísticos, teleféricos e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5011401",
+    "description": "Transporte marítimo de cabotagem - Carga",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5011402",
+    "description": "Transporte marítimo de cabotagem - passageiros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5012201",
+    "description": "Transporte marítimo de longo curso - Carga",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5012202",
+    "description": "Transporte marítimo de longo curso - Passageiros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5021101",
+    "description": "Transporte por navegação interior de carga, municipal, exceto travessia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5030101",
+    "description": "Navegação de apoio marítimo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5030102",
+    "description": "Navegação de apoio portuário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5030103",
+    "description": "Serviço de rebocadores e empurradores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5091201",
+    "description": "Transporte por navegação de travessia, municipal",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5091202",
+    "description": "Transporte por navegação de travessia, intermunicipal, interestadual e internacional",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5099801",
+    "description": "Transporte aquaviário para passeios turísticos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5099899",
+    "description": "Outros transportes aquaviários não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5111100",
+    "description": "Transporte aéreo de passageiros regular",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5112901",
+    "description": "Serviço de táxi aéreo e locação de aeronaves com tripulação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5112999",
+    "description": "Outros serviços de transporte aéreo de passageiros não regular",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5120000",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o transporte e/ou armazenamento de alimentos que necessitem de condições especiais de umidade (perecíveis)"
+  },
+  {
+    "cnae": "5130700",
+    "description": "Transporte espacial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5211701",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o armazenamento de alimentos que necessitem de condições especiais de temperatura e umidade (perecíveis)"
+  },
+  {
+    "cnae": "5211702",
+    "description": "Guarda-móveis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5211799",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o armazenamento de alimentos que necessitem de condições especiais de temperatura e umidade (perecíveis)"
+  },
+  {
+    "cnae": "5212500",
+    "description": "Carga e descarga",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5221400",
+    "description": "Concessionárias de rodovias, pontes, túneis e serviços relacionados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5222200",
+    "description": "Terminais rodoviários e ferroviários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5223100",
+    "description": "Estacionamento de veículos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5229001",
+    "description": "Serviços de apoio ao transporte por táxi, inclusive centrais de chamada",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5229002",
+    "description": "Serviços de reboque de veículos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5229099",
+    "description": "Outras atividades auxiliares dos transportes terrestres não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5231101",
+    "description": "Administração da infraestrutura portuária",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5231102",
+    "description": "Atividades do Operador Portuário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5231103",
+    "description": "Gestão de terminais aquaviários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5232000",
+    "description": "Atividades de agenciamento marítimo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5239701",
+    "description": "Serviços de praticagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5239799",
+    "description": "Atividades auxiliares dos transportes aquaviários não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5240101",
+    "description": "Operação dos aeroportos e campos de aterrissagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5250801",
+    "description": "Comissaria de despachos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5250802",
+    "description": "Atividades de despachantes aduaneiros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5250803",
+    "description": "Agenciamento de cargas, exceto para o transporte marítimo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5250804",
+    "description": "Organização logística do transporte de carga",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5250805",
+    "description": "Operador de transporte multimodal - OTM",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5310501",
+    "description": "Atividades do Correio Nacional",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5310502",
+    "description": "Atividades de franqueadas do Correio Nacional",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5320201",
+    "description": "Serviços de malote não realizados pelo Correio Nacional",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5320202",
+    "description": "Serviços de entrega rápida",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5510801",
+    "description": "Hotéis",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5510802",
+    "description": "Apart-hotéis",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5510803",
+    "description": "Motéis",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5590601",
+    "description": "Albergues, exceto assistenciais",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5590602",
+    "description": "Campings",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5590603",
+    "description": "Pensões (alojamento)",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5590699",
+    "description": "Outros alojamentos não especificados anteriormente",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5611201",
+    "description": "Restaurantes e similares",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5611203",
+    "description": "Lanchonetes, casas de chá, de sucos e similares",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5611204",
+    "description": "Bares e outros estabelecimentos especializados em servir bebidas, sem entretenimento",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5611205",
+    "description": "Bares e outros estabelecimentos especializados em servir bebidas, com entretenimento",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5612100",
+    "description": "Serviços ambulantes de alimentação",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5620102",
+    "description": "Serviços de alimentação para eventos e recepções - bufê",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5620103",
+    "description": "Cantinas - serviços de alimentação privativos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5620104",
+    "description": "Fornecimento de alimentos preparados preponderantemente para consumo domiciliar",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5811500",
+    "description": "Edição de livros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5812301",
+    "description": "Edição de jornais diários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5812302",
+    "description": "Edição de jornais não diários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5813100",
+    "description": "Edição de revistas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5819100",
+    "description": "Edição de cadastros, listas e outros produtos gráficos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5821200",
+    "description": "Edição integrada à impressão de livros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5822101",
+    "description": "Edição integrada à impressão de jornais diários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5822102",
+    "description": "Edição integrada à impressão de jornais não diários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5823900",
+    "description": "Edição integrada à impressão de revistas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5829800",
+    "description": "Edição integrada à impressão de cadastros, listas e outros produtos gráficos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5911101",
+    "description": "Estúdios cinematográficos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5911102",
+    "description": "Produção de filmes para publicidade",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5912001",
+    "description": "Serviços de dublagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5912002",
+    "description": "Serviços de mixagem sonora em produção audiovisual",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5913800",
+    "description": "Distribuição cinematográfica, de vídeo e de programas de televisão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5914600",
+    "description": "Atividades de exibição cinematográfica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "5920100",
+    "description": "Atividades de gravação de som e de edição de música",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6010100",
+    "description": "Atividades de rádio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6021700",
+    "description": "Atividades de televisão aberta",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6022501",
+    "description": "Programadoras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6022502",
+    "description": "Atividades relacionadas à televisão por assinatura, exceto programadoras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6110801",
+    "description": "Serviços de telefonia fixa comutada - STFC",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6110802",
+    "description": "Serviços de redes de transporte de telecomunicações - SRTT",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6110803",
+    "description": "Serviços de comunicação multimídia - SCM",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6110899",
+    "description": "Serviços de telecomunicações por fio não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6120501",
+    "description": "Telefonia móvel celular",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6120502",
+    "description": "Serviço móvel especializado - SME",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6120599",
+    "description": "Serviços de telecomunicações sem fio não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6130200",
+    "description": "Telecomunicações por satélite",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6141800",
+    "description": "Operadoras de televisão por assinatura por cabo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6142600",
+    "description": "Operadoras de televisão por assinatura por micro-ondas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6143400",
+    "description": "Operadoras de televisão por assinatura por satélite",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6190601",
+    "description": "Provedores de acesso às redes de comunicações",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6190602",
+    "description": "Provedores de voz sobre protocolo internet - VOIP",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6190699",
+    "description": "Outras atividades de telecomunicações não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6201501",
+    "description": "Desenvolvimento de programas de computador sob encomenda",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6201502",
+    "description": "Web design",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6202300",
+    "description": "Desenvolvimento e licenciamento de programas de computador customizáveis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6203100",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá o desenvolvimento de softwares que realizam ou influenciam diretamente no diagnóstico"
+  },
+  {
+    "cnae": "6204000",
+    "description": "Consultoria em tecnologia da informação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6209100",
+    "description": "Suporte técnico, manutenção e outros serviços em tecnologia da informação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6319400",
+    "description": "Portais, provedores de conteúdo e outros serviços de informação na Internet",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6391700",
+    "description": "Agências de notícias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6410700",
+    "description": "Banco Central",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6421200",
+    "description": "Bancos comerciais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6422100",
+    "description": "Bancos múltiplos, com carteira comercial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6423900",
+    "description": "Caixas econômicas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6424701",
+    "description": "Bancos cooperativos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6424702",
+    "description": "Cooperativas centrais de crédito",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6424703",
+    "description": "Cooperativas de crédito mútuo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6424704",
+    "description": "Cooperativas de crédito rural",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6431000",
+    "description": "Bancos múltiplos, sem carteira comercial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6432800",
+    "description": "Bancos de investimento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6433600",
+    "description": "Bancos de desenvolvimento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6434400",
+    "description": "Agências de fomento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6435201",
+    "description": "Sociedades de crédito imobiliário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6435202",
+    "description": "Associações de poupança e empréstimo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6435203",
+    "description": "Companhias hipotecárias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6436100",
+    "description": "Sociedades de crédito, financiamento e investimento - financeiras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6437900",
+    "description": "Sociedades de crédito ao microempreendedor",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6438701",
+    "description": "Bancos de câmbio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6438799",
+    "description": "Outras instituições de intermediação não monetária não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6440900",
+    "description": "Arrendamento mercantil",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6450600",
+    "description": "Sociedades de capitalização",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6461100",
+    "description": "Holdings de instituições financeiras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6462000",
+    "description": "Holdings de instituições não financeiras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6463800",
+    "description": "Outras sociedades de participação, exceto holdings",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6470101",
+    "description": "Fundos de investimento, exceto previdenciários e imobiliários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6470102",
+    "description": "Fundos de investimento previdenciários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6470103",
+    "description": "Fundos de investimento imobiliários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6491300",
+    "description": "Sociedades de fomento mercantil - factoring",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6492100",
+    "description": "Securitização de créditos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6493000",
+    "description": "Administração de consórcios para aquisição de bens e direitos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6499901",
+    "description": "Clubes de investimento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6499902",
+    "description": "Sociedades de investimento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6499903",
+    "description": "Fundo garantidor de crédito",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6499904",
+    "description": "Caixas de financiamento de corporações",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6499905",
+    "description": "Concessão de crédito pelas OSCIP",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6499999",
+    "description": "Outras atividades de serviços financeiros não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6511101",
+    "description": "Sociedade seguradora de seguros vida",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6511102",
+    "description": "Planos de auxílio-funeral",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6512000",
+    "description": "Sociedade seguradora de seguros não vida",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6520100",
+    "description": "Sociedade seguradora de seguros-saúde",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6530800",
+    "description": "Resseguros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6541300",
+    "description": "Previdência complementar fechada",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6542100",
+    "description": "Previdência complementar aberta",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6550200",
+    "description": "Planos de saúde",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6611801",
+    "description": "Bolsa de valores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6611802",
+    "description": "Bolsa de mercadorias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6611803",
+    "description": "Bolsa de mercadorias e futuros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6611804",
+    "description": "Administração de mercados de balcão organizados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6612601",
+    "description": "Corretoras de títulos e valores mobiliários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6612602",
+    "description": "Distribuidoras de títulos e valores mobiliários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6612603",
+    "description": "Corretoras de câmbio",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6612604",
+    "description": "Corretoras de contratos de mercadorias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6612605",
+    "description": "Agentes de investimentos em aplicações financeiras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6613400",
+    "description": "Administração de cartões de crédito",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6619301",
+    "description": "Serviços de liquidação e custódia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6619302",
+    "description": "Correspondentes de instituições financeiras",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6619303",
+    "description": "Representações de bancos estrangeiros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6619304",
+    "description": "Caixas eletrônicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6619305",
+    "description": "Operadoras de cartões de débito",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6619399",
+    "description": "Outras atividades auxiliares dos serviços financeiros não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6621501",
+    "description": "Peritos e avaliadores de seguros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6621502",
+    "description": "Auditoria e consultoria atuarial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6622300",
+    "description": "Corretores e agentes de seguros, de planos de previdência complementar e de saúde",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6630400",
+    "description": "Atividades de administração de fundos por contrato ou comissão",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6810201",
+    "description": "Compra e venda de imóveis próprios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6810202",
+    "description": "Aluguel de imóveis próprios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6810203",
+    "description": "Loteamento de imóveis próprios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6821801",
+    "description": "Corretagem na compra e venda e avaliação de imóveis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6821802",
+    "description": "Corretagem no aluguel de imóveis",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6822600",
+    "description": "Gestão e administração da propriedade imobiliária",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6911701",
+    "description": "Serviços advocatícios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6911702",
+    "description": "Atividades auxiliares da justiça",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6911703",
+    "description": "Agente de propriedade industrial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6912500",
+    "description": "Cartórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6920601",
+    "description": "Atividades de contabilidade",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "6920602",
+    "description": "Atividades de consultoria e auditoria contábil e tributária",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7020400",
+    "description": "Atividades de consultoria em gestão empresarial, exceto consultoria técnica específica",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7111100",
+    "description": "Serviços de arquitetura",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7112000",
+    "description": "Serviços de engenharia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7119701",
+    "description": "Serviços de cartografia, topografia e geodésia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7119702",
+    "description": "Atividades de estudos geológicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7119703",
+    "description": "Serviços de desenho técnico relacionados à arquitetura e engenharia",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7119704",
+    "description": "Serviços de perícia técnica relacionados à segurança do trabalho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7120100",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a análise de produto sujeito à Vigilância Sanitária?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "7210000",
+    "description": "Pesquisa e desenvolvimento experimental em ciências físicas e naturais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7220700",
+    "description": "Pesquisa e desenvolvimento experimental em ciências sociais e humanas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7311400",
+    "description": "Agências de publicidade",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7312200",
+    "description": "Agenciamento de espaços para publicidade, exceto em veículos de comunicação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7319001",
+    "description": "Criação de estandes para feiras e exposições",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7319002",
+    "description": "Promoção de vendas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7319003",
+    "description": "Marketing direto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7319004",
+    "description": "Consultoria em publicidade",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7319099",
+    "description": "Outras atividades de publicidade não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7320300",
+    "description": "Pesquisas de mercado e de opinião pública",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7410202",
+    "description": "Design de interiores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7410203",
+    "description": "Desing de produto",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7410299",
+    "description": "Atividades de design não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7420001",
+    "description": "Atividades de produção de fotografias, exceto aérea e submarina",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7420002",
+    "description": "Atividades de produção de fotografias aéreas e submarinas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7420003",
+    "description": "Laboratórios fotográficos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7420004",
+    "description": "Filmagem de festas e eventos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7420005",
+    "description": "Serviços de microfilmagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7490101",
+    "description": "Serviços de tradução, interpretação e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7490102",
+    "description": "Escafandria e mergulho",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7490103",
+    "description": "Serviços de agronomia e de consultoria às atividades agrícolas e pecuárias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7490104",
+    "description": "Atividades de intermediação e agenciamento de serviços e negócios em geral, exceto imobiliários",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7490105",
+    "description": "Agenciamento de profissionais para atividades esportivas, culturais e artísticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7490199",
+    "description": "Outras atividades profissionais, científicas e técnicas não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7500100",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a comercialização e/ou uso de medicamentos controlados e/ou uso de radiação ionizante?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "7711000",
+    "description": "Locação de automóveis sem condutor",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7719501",
+    "description": "Locação de embarcações sem tripulação, exceto para fins recreativos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7719502",
+    "description": "Locação de aeronaves sem tripulação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7719599",
+    "description": "Locação de outros meios de transporte não especificados anteriormente, sem condutor",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7721700",
+    "description": "Aluguel de equipamentos recreativos e esportivos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7722500",
+    "description": "Aluguel de fitas de vídeo, DVDs e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7723300",
+    "description": "Aluguel de objetos do vestuário, jóias e acessórios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7729201",
+    "description": "Aluguel de aparelhos de jogos eletrônicos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7729202",
+    "description": "Aluguel de móveis, utensílios e aparelhos de uso doméstico e pessoal, instrumentos musicais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7729203",
+    "description": "Aluguel de material médico",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7729299",
+    "description": "Aluguel de outros objetos pessoais e domésticos não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7731400",
+    "description": "Aluguel de máquinas e equipamentos agrícolas sem operador",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7732201",
+    "description": "Aluguel de máquinas e equipamentos para construção sem operador, exceto andaimes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7732202",
+    "description": "Aluguel de andaimes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7733100",
+    "description": "Aluguel de máquinas e equipamentos para escritório",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7739002",
+    "description": "Aluguel de equipamentos científicos, médicos e hospitalares, sem operador",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7739003",
+    "description": "Aluguel de palcos, coberturas e outras estruturas de uso temporário, exceto andaimes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7740300",
+    "description": "Gestão de ativos intangíveis não financeiros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7810800",
+    "description": "Seleção e agenciamento de mão de obra",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7820500",
+    "description": "Locação de mão de obra temporária",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7830200",
+    "description": "Fornecimento e gestão de recursos humanos para terceiros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7911200",
+    "description": "Agências de viagens",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7912100",
+    "description": "Operadores turísticos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "7990200",
+    "description": "Serviços de reservas e outros serviços de turismo não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8011101",
+    "description": "Atividades de vigilância e segurança privada",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8011102",
+    "description": "Serviços de adestramento de cães de guarda",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8012900",
+    "description": "Atividades de transporte de valores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8020001",
+    "description": "Atividades de monitoramento de sistemas de segurança eletrônico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8020002",
+    "description": "Outras atividades de serviços de segurança",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8030700",
+    "description": "Atividades de investigação particular",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8111700",
+    "description": "Serviços combinados para apoio a edifícios, exceto condomínios prediais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8112500",
+    "description": "Condomínios prediais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8121400",
+    "description": "Limpeza em prédios e em domicílios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8122200",
+    "description": "Imunização e controle de pragas urbanas",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8129000",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a prestação de serviços de esterilização e/ou reprocessamento de produtos relacionados à saúde por: gás óxido de etileno ou suas misturas"
+  },
+  {
+    "cnae": "8130300",
+    "description": "Atividades paisagísticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8211300",
+    "description": "Serviços combinados de escritório e apoio administrativo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8219901",
+    "description": "Fotocópias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8219999",
+    "description": "Preparação de documentos e serviços especializados de apoio administrativo não",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8220200",
+    "description": "Atividades de teleatendimento",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8230001",
+    "description": "Serviços de organização de feiras, congressos, exposições e festas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8230002",
+    "description": "Casas de festas e eventos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8291100",
+    "description": "Atividades de cobrança e informações cadastrais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8292000",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o envase"
+  },
+  {
+    "cnae": "8299701",
+    "description": "Medição de consumo de energia elétrica, gás e água",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8299702",
+    "description": "Emissão de vales-alimentação, vales-transporte e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8299703",
+    "description": "Serviços de gravação de carimbos, exceto confecção",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8299704",
+    "description": "Leiloeiros independentes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8299705",
+    "description": "Serviços de levantamento de fundos sob contrato",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8299706",
+    "description": "Casas lotéricas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8299707",
+    "description": "Salas de acesso à Internet",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8411600",
+    "description": "Administração pública em geral",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8413200",
+    "description": "Regulação das atividades econômicas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8421300",
+    "description": "Relações exteriores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8422100",
+    "description": "Defesa",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8423000",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá a prestação de serviços relacionados a administração de penitenciárias e o fornecimento de serviços correcionais"
+  },
+  {
+    "cnae": "8424800",
+    "description": "Segurança e ordem pública",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8425600",
+    "description": "Defesa Civil",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8430200",
+    "description": "Seguridade social obrigatória",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8511200",
+    "description": "Educação infantil - creche",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8512100",
+    "description": "Educação infantil - pré-escola",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8513900",
+    "description": "Ensino fundamental",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8520100",
+    "description": "Ensino médio",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8531700",
+    "description": "Educação superior - graduação",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8532500",
+    "description": "Educação superior - graduação e pós-graduação",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8533300",
+    "description": "Educação superior - pós-graduação e extensão",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8541400",
+    "description": "Educação profissional de nível técnico",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8542200",
+    "description": "Educação profissional de nível tecnológico",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8550301",
+    "description": "Administração de caixas escolares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8550302",
+    "description": "Atividades de apoio à educação, exceto caixas escolares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8591100",
+    "description": "Ensino de esportes",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8592901",
+    "description": "Ensino de dança",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8592902",
+    "description": "Ensino de artes cênicas, exceto dança",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8592903",
+    "description": "Ensino de música",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8592999",
+    "description": "Ensino de arte e cultura não especificado anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8593700",
+    "description": "Ensino de idiomas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8599601",
+    "description": "Formação de condutores",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8599602",
+    "description": "Cursos de pilotagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8599603",
+    "description": "Treinamento em informática",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8599604",
+    "description": "Treinamento em desenvolvimento profissional e gerencial",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8599605",
+    "description": "Cursos preparatórios para concursos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8599699",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o ensino de culinária e/ou estética?",
+    "riskIfNo": "BAIXO"
+  },
+  {
+    "cnae": "8610101",
+    "description": "Atividades de atendimento hospitalar, exceto pronto-socorro e unidades para atendimento a urgências",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8610102",
+    "description": "Atividades de atendimento em pronto-socorro e unidades hospitalares para atendimento a urgências",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8621601",
+    "description": "UTI móvel",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8621602",
+    "description": "Serviços móveis de atendimento a urgências, exceto por UTI móvel",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8622400",
+    "description": "Serviços de remoção de pacientes, exceto os serviços móveis de atendimento a urgências",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8630501",
+    "description": "Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8630502",
+    "description": "Atividade médica ambulatorial com recursos para realização de exames complementares",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8630503",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a realização de procedimentos invasivos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "8630504",
+    "description": "Atividade odontológica",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8630506",
+    "description": "Serviços de vacinação e imunização humana",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8630507",
+    "description": "Atividades de reprodução humana assistida",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8630599",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a realização de procedimentos invasivos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "8640201",
+    "description": "Laboratórios de anatomia patológica e citológica",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640202",
+    "description": "Laboratórios clínicos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640203",
+    "description": "Serviços de diálise e nefrologia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640204",
+    "description": "Serviços de tomografia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640205",
+    "description": "Serviços de diagnóstico por imagem com uso de radiação ionizante, exceto tomografia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640206",
+    "description": "Serviços de ressonância magnética",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640207",
+    "description": "Serviços de diagnóstico por imagem sem uso de radiação ionizante, exceto ressonância magnética",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640208",
+    "description": "Serviços de diagnóstico por registro gráfico - ECG, EEG e outros exames análogos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640209",
+    "description": "Serviços de diagnóstico por métodos ópticos - endoscopia e outros exames análogos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640210",
+    "description": "Serviços de quimioterapia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640211",
+    "description": "Serviços de radioterapia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640212",
+    "description": "Serviços de hemoterapia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640213",
+    "description": "Serviços de litotripsia",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640214",
+    "description": "Serviços de bancos de células e tecidos humanos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8640299",
+    "description": "Atividades de serviços de complementação diagnóstica e terapêutica não especificadas anteriormente",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8650001",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a realização de procedimentos invasivos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "8650002",
+    "description": "Atividades de profissionais da nutrição",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8650003",
+    "description": "Atividades de psicologia e psicanálise",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8650004",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a realização de procedimentos invasivos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "8650005",
+    "description": "Atividades de terapia ocupacional",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8650006",
+    "description": "Atividades de fonoaudiologia",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8650007",
+    "description": "Atividades de terapia de nutrição enteral e parenteral",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8650099",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a realização de procedimentos invasivos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "8660700",
+    "description": "Atividades de apoio à gestão de saúde",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8690901",
+    "description": "Atividades de práticas integrativas e complementares em saúde humana",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8690902",
+    "description": "Atividades de bancos de leite humano",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8690903",
+    "description": "Atividades de acupuntura",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8690904",
+    "description": "Atividades de podologia",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8690999",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a realização de procedimentos invasivos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "8711501",
+    "description": "Clínicas e residências geriátricas",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8711502",
+    "description": "Instituições de longa permanência para idosos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8711503",
+    "description": "Atividades de assistência a deficientes físicos, imunodeprimidos e convalescentes",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8711504",
+    "description": "Centros de apoio a pacientes com câncer e com AIDS",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8711505",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o fornecimento de serviços de alimentação",
+    "riskIfNo": "ALTO"
+  },
+  {
+    "cnae": "8712300",
+    "description": "Atividades de fornecimento de infraestrutura de apoio e assistência a paciente no domicílio",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8720401",
+    "description": "Atividades de centros de assistência psicossocial",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8720499",
+    "description": "Atividades de assistência psicossocial e à saúde a portadores de distúrbios psíquicos, deficiência mental e dependência química e grupos similares não especificadas anteriormente",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": true
+  },
+  {
+    "cnae": "8730101",
+    "description": "Orfanatos",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8730102",
+    "description": "Albergues assistenciais",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8730199",
+    "description": "Atividades de assistência social prestadas em residências coletivas e particulares não especificadas anteriormente",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "8800600",
+    "description": "Serviços de assistência social sem alojamento",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9001901",
+    "description": "Produção teatral",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9001902",
+    "description": "Produção musical",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9001903",
+    "description": "Produção de espetáculos de dança",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9001904",
+    "description": "Produção de espetáculos circenses, de marionetes e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9001905",
+    "description": "Produção de espetáculos de rodeios, vaquejadas e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9001906",
+    "description": "Atividades de sonorização e de iluminação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9001999",
+    "description": "Artes cênicas, espetáculos e atividades complementares não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9002702",
+    "description": "Restauração de obras de arte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9003500",
+    "description": "Gestão de espaços para artes cênicas, espetáculos e outras atividades artísticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9101500",
+    "description": "Atividades de bibliotecas e arquivos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9102302",
+    "description": "Restauração e conservação de lugares e prédios históricos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9200301",
+    "description": "Casas de bingo",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9200302",
+    "description": "Exploração de apostas em corridas de cavalos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9200399",
+    "description": "Exploração de jogos de azar e apostas não especificados anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9311500",
+    "description": "Gestão de instalações de esportes",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9312300",
+    "description": "Clubes sociais, esportivos e similares",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9313100",
+    "description": "Atividades de condicionamento físico",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9319101",
+    "description": "Produção e promoção de eventos esportivos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9319199",
+    "description": "Outras atividades esportivas não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9321200",
+    "description": "Parques de diversão e parques temáticos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9329801",
+    "description": "Discotecas, danceterias, salões de dança e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9329802",
+    "description": "Exploração de boliches",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9329803",
+    "description": "Exploração de jogos de sinuca, bilhar e similares",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9329804",
+    "description": "Exploração de jogos eletrônicos recreativos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9329899",
+    "description": "Outras atividades de recreação e lazer não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9411100",
+    "description": "Atividades de organizações associativas patronais e empresariais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9412001",
+    "description": "Atividades de fiscalização profissional",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9412099",
+    "description": "Outras atividades associativas profissionais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9420100",
+    "description": "Atividades de organizações sindicais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9430800",
+    "description": "Atividades de associações de defesa de direitos sociais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9491000",
+    "description": "Atividades de organizações religiosas ou filosóficas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9492800",
+    "description": "Atividades de organizações políticas",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9493600",
+    "description": "Atividades de organizações associativas ligadas à cultura e à arte",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9499500",
+    "description": "Atividades associativas não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9511800",
+    "description": "Reparação e manutenção de computadores e de equipamentos periféricos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9512600",
+    "description": "Reparação e manutenção de equipamentos de comunicação",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9521500",
+    "description": "Reparação e manutenção de equipamentos eletroeletrônicos de uso pessoal e doméstico",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9529101",
+    "description": "Reparação de calçados, bolsas e artigos de viagem",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9529102",
+    "description": "Chaveiros",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9529103",
+    "description": "Reparação de relógios",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9529104",
+    "description": "Reparação de bicicletas, triciclos e outros veículos não motorizados",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9529105",
+    "description": "Reparação de artigos do mobiliário",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9529106",
+    "description": "Reparação de joias",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9601701",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "O exercício da atividade compreenderá lavanderia"
+  },
+  {
+    "cnae": "9601702",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o processamento de roupa hospitalar?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "9601703",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade o processamento de roupa hospitalar?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "9602501",
+    "description": "Cabeleireiros, manicure e pedicure",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9602502",
+    "description": "",
+    "risk": "CONDICIONADO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false,
+    "question": "Haverá no exercício da atividade a realização de procedimentos invasivos?",
+    "riskIfYes": "ALTO",
+    "riskIfNo": "MÉDIO"
+  },
+  {
+    "cnae": "9603301",
+    "description": "Gestão e manutenção de cemitérios",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9603302",
+    "description": "Serviços de cremação",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9603303",
+    "description": "Serviços de sepultamento",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9603304",
+    "description": "Serviços de funerárias",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9603305",
+    "description": "Serviços de somatoconservação",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9603399",
+    "description": "Atividades funerárias e serviços relacionados não especificados anteriormente",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9609202",
+    "description": "Agências matrimoniais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9609204",
+    "description": "Exploração de máquinas de serviços pessoais acionadas por moeda",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9609205",
+    "description": "Atividades de sauna e banhos",
+    "risk": "MÉDIO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9609206",
+    "description": "Serviços de tatuagem e colocação de piercing",
+    "risk": "ALTO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9609207",
+    "description": "Alojamento de animais domésticos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9609208",
+    "description": "Higiene e embelezamento de animais domésticos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9609299",
+    "description": "Outras atividades de serviços pessoais não especificadas anteriormente",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9700500",
+    "description": "Serviços domésticos",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  },
+  {
+    "cnae": "9900800",
+    "description": "Organismos internacionais e outras instituições extraterritoriais",
+    "risk": "BAIXO",
+    "competencePorte1": "MUNICÍPIO",
+    "requiresPba": false
+  }
+];

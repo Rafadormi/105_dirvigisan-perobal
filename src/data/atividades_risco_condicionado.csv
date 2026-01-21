@@ -1,0 +1,71 @@
+CNAE,DESCRICAO,CLA_RISCO_BASE,PBA_OBRIGATORIO,PBA_CONDICIONAL
+1031-7/00,Fabricação de conservas de frutas,Risco Condicionado,NÃO,N/A
+1032-5/99,Fabricação de conservas de legumes e outros vegetais, exceto palmito,Risco Condicionado,NÃO,N/A
+1043-1/00,Fabricação de margarina e outras gorduras vegetais e de óleos não comestíveis de animais,Risco Condicionado,NÃO,N/A
+1061-9/01,Beneficiamento de arroz,Risco Condicionado,NÃO,N/A
+1063-5/00,Fabricação de farinha de mandioca e derivados,Risco Condicionado,NÃO,N/A
+1064-3/00,Fabricação de farinha de milho e derivados, exceto óleos de milho,Risco Condicionado,NÃO,N/A
+1065-1/01,Fabricação de amidos e féculas de vegetais,Risco Condicionado,NÃO,N/A
+1069-4/00,Moagem e fabricação de produtos de origem vegetal não especificados anteriormente,Risco Condicionado,NÃO,N/A
+1071-6/00,Fabricação de açúcar em bruto,Risco Condicionado,NÃO,N/A
+1072-4/02,Fabricação de açúcar de cereais (dextrose) e de beterraba,Risco Condicionado,NÃO,N/A
+1081-3/01,Beneficiamento de café,Risco Condicionado,NÃO,N/A
+1092-9/00,Fabricação de biscoitos e bolachas,Risco Condicionado,NÃO,N/A
+1093-7/01,Fabricação de produtos derivados do cacau e de chocolates,Risco Condicionado,NÃO,N/A
+1093-7/02,Fabricação de frutas cristalizadas, balas e semelhantes,Risco Condicionado,NÃO,N/A
+1094-5/00,Fabricação de massas alimentícias,Risco Condicionado,NÃO,N/A
+1095-3/00,Fabricação de especiarias, molhos, temperos e condimentos,Risco Condicionado,NÃO,N/A
+1096-1/00,Fabricação de alimentos e pratos prontos,Risco Condicionado,NÃO,N/A
+1099-6/04,Fabricação de gelo comum,Risco Condicionado,NÃO,N/A
+1099-6/05,Fabricação de produtos para infusão (chá, mate, etc.),Risco Condicionado,NÃO,N/A
+1122-4/03,Fabricação de refrescos, xaropes e pós para refrescos, exceto refrescos de frutas,Risco Condicionado,NÃO,N/A
+1731-1/00,Fabricação de embalagens de papel,Risco Condicionado,NÃO,N/A
+1732-0/00,Fabricação de embalagens de cartolina e papel-cartão,Risco Condicionado,NÃO,N/A
+1733-8/00,Fabricação de chapas e de embalagens de papelão ondulado,Risco Condicionado,NÃO,N/A
+2014-2/00,Fabricação de gases industriais,Risco Condicionado,CONDICIONAL,Se Alto Risco
+2019-3/99,Fabricação de outros produtos químicos inorgânicos não especificados anteriormente,Risco Condicionado,NÃO,N/A
+2029-1/00,Fabricação de produtos químicos orgânicos não especificados anteriormente,Risco Condicionado,NÃO,N/A
+2071-1/00,Fabricação de tintas, vernizes, esmaltes e lacas,Risco Condicionado,NÃO,N/A
+2091-6/00,Fabricação de adesivos e selantes,Risco Condicionado,NÃO,N/A
+2093-2/00,Fabricação de aditivos de uso industrial,Risco Condicionado,CONDICIONAL,Se insumo farmacêutico
+2099-1/99,Fabricação de outros produtos químicos não especificados anteriormente,Risco Condicionado,CONDICIONAL,Se Alto Risco
+2219-6/00,Fabricação de artefatos de borracha não especificados anteriormente,Risco Condicionado,CONDICIONAL,Se produto para saúde
+2222-6/00,Fabricação de embalagens de material plástico,Risco Condicionado,CONDICIONAL,Se produto para saúde
+2312-5/00,Fabricação de embalagens de vidro,Risco Condicionado,NÃO,N/A
+2341-9/00,Fabricação de produtos cerâmicos refratários,Risco Condicionado,NÃO,N/A
+2349-4/99,Fabricação de produtos cerâmicos não refratários não especificados anteriormente,Risco Condicionado,NÃO,N/A
+2591-8/00,Fabricação de embalagens metálicas,Risco Condicionado,NÃO,N/A
+2829-1/99,Fabricação de outras máquinas e equipamentos de uso geral não especificados anteriormente, peças e acessórios,Risco Condicionado,CONDICIONAL,Se Alto Risco
+3092-0/00,Fabricação de bicicletas e triciclos não motorizados, peças e acessórios,Risco Condicionado,CONDICIONAL,Se Alto Risco
+3104-7/00,Fabricação de colchões,Risco Condicionado,CONDICIONAL,Se Alto Risco
+3250-7/07,Fabricação de artigos ópticos,Risco Condicionado,CONDICIONAL,Se Alto Risco
+3291-4/00,Fabricação de escovas, pincéis e vassouras,Risco Condicionado,CONDICIONAL,Se Alto Risco
+3292-2/02,Fabricação de equipamentos e acessórios para segurança pessoal e profissional,Risco Condicionado,CONDICIONAL,Se Alto Risco
+3299-0/06,Fabricação de velas, inclusive decorativas,Risco Condicionado,CONDICIONAL,Se Alto Risco
+4623-1/99,Comércio atacadista de matérias primas agrícolas não especificadas anteriormente,Risco Condicionado,NÃO,N/A
+4632-0/03,Comércio atacadista de cereais e leguminosas beneficiados, farinhas, amidos e féculas, com atividade de fracionamento e acondicionamento associada,Risco Condicionado,NÃO,N/A
+4635-4/03,Comércio atacadista de bebidas com atividade de fracionamento e acondicionamento associada,Risco Condicionado,NÃO,N/A
+4664-8/00,Comércio atacadista de máquinas, aparelhos e equipamentos para uso odonto-médico-hospitalar; partes e peças,Risco Condicionado,NÃO,N/A
+4930-2/01,Transporte rodoviário de carga, exceto produtos perigosos e mudanças, municipal,Risco Condicionado,NÃO,N/A
+4930-2/02,Transporte rodoviário de carga, exceto produtos perigosos e mudanças, intermunicipal, interestadual e internacional,Risco Condicionado,NÃO,N/A
+5120-0/00,Transporte aéreo de carga,Risco Condicionado,NÃO,N/A
+5211-7/01,Armazéns gerais - emissão de warrant,Risco Condicionado,NÃO,N/A
+5211-7/99,Depósitos de mercadorias para terceiros, exceto armazéns gerais e guarda-móveis,Risco Condicionado,NÃO,N/A
+6203-1/00,Desenvolvimento e licenciamento de programas de computador não customizáveis,Risco Condicionado,CONDICIONAL,Se Alto Risco
+7120-1/00,Testes e análises técnicas,Risco Condicionado,CONDICIONAL,Se Alto Risco
+7500-1/00,Atividades veterinárias,Risco Condicionado,CONDICIONAL,Se uso de radiação ionizante, demanda projeto de radioproteção
+8129-0/00,Atividades de limpeza não especificadas anteriormente,Risco Condicionado,CONDICIONAL,Se houver prestação de serviços de esterilização e/ou reprocessamento de produtos relacionados à saúde por: gás óxido de etileno ou suas misturas, radiação ionizante, ou outro meio de esterilização.
+8423-0/00,Justiça,Risco Condicionado,CONDICIONAL,Se Alto Risco
+8292-0/00,Envasamento e empacotamento sob contrato,Risco Condicionado,CONDICIONAL,Se medicamento, cosmético, perfume, produto de higiene, saneante e/ou produto para saúde.
+8599-6/99,Outras atividades de ensino não especificadas anteriormente,Risco Condicionado,CONDICIONAL,Se Alto Risco
+8630-5/03,Atividade médica ambulatorial restrita a consultas,Risco Condicionado,CONDICIONAL,Se Alto Risco
+8630-5/99,Atividades de atenção ambulatorial não especificadas anteriormente,Risco Condicionado,CONDICIONAL,Se Alto Risco
+8650-0/01,Atividades de enfermagem,Risco Condicionado,CONDICIONAL,Se Alto Risco
+8650-0/04,Atividades de fisioterapia,Risco Condicionado,CONDICIONAL,Se Alto Risco
+8650-0/99,Atividades de profissionais da área de saúde não especificadas anteriormente,Risco Condicionado,CONDICIONAL,Se Alto Risco
+8690-9/99,Outras atividades de atenção à saúde humana não especificadas anteriormente,Risco Condicionado,CONDICIONAL,Se Alto Risco
+8711-5/05,Condomínios residenciais para idosos,Risco Condicionado,CONDICIONAL,Se Alto Risco
+9601-7/01,Lavanderias,Risco Condicionado,CONDICIONAL,Se Alto Risco
+9601-7/02,Tinturaria,Risco Condicionado,CONDICIONAL,Se Alto Risco
+9601-7/03,Toalheiros,Risco Condicionado,CONDICIONAL,Se Alto Risco
+9602-5/02,Atividades de estética e outros serviços de cuidados com a beleza,Risco Condicionado,CONDICIONAL,Se Alto Risco

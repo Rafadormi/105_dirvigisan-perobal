@@ -1,0 +1,959 @@
+COD_CNAE;DISC_CNAE;CLA_RISCO
+0111301;Cultivo de arroz;Baixo Risco
+0111302;Cultivo de milho;Baixo Risco
+0111303;Cultivo de trigo;Baixo Risco
+0111399;Cultivo de outros cereais não especificados anteriormente;Baixo Risco
+0112101;Cultivo de algodão herbáceo;Baixo Risco
+0112102;Cultivo de juta;Baixo Risco
+0112199;Cultivo de outras fibras de lavoura temporária não especificadas anteriormente;Baixo Risco
+0113000;Cultivo de cana-de-açúcar;Baixo Risco
+0114800;Cultivo de fumo;Baixo Risco
+0115600;Cultivo de soja;Baixo Risco
+0116401;Cultivo de amendoim;Baixo Risco
+0116402;Cultivo de girassol;Baixo Risco
+0116403;Cultivo de mamona;Baixo Risco
+0116499;Cultivo de outras oleaginosas de lavoura temporária não especificadas anteriormente;Baixo Risco
+0119901;Cultivo de abacaxi;Baixo Risco
+0119902;Cultivo de alho;Baixo Risco
+0119903;Cultivo de batata-inglesa;Baixo Risco
+0119904;Cultivo de cebola;Baixo Risco
+0119905;Cultivo de feijão;Baixo Risco
+0119906;Cultivo de mandioca;Baixo Risco
+0119907;Cultivo de melão;Baixo Risco
+0119908;Cultivo de melancia;Baixo Risco
+0119909;Cultivo de tomate rasteiro;Baixo Risco
+0119999;Cultivo de outras plantas de lavoura temporária não especificadas anteriormente;Baixo Risco
+0121102;Cultivo de morango;Baixo Risco
+0122900;Cultivo de flores e plantas ornamentais;Baixo Risco
+0131800;Cultivo de laranja;Baixo Risco
+0132600;Cultivo de uva;Baixo Risco
+0133401;Cultivo de açaí;Baixo Risco
+0133402;Cultivo de banana;Baixo Risco
+0133403;Cultivo de caju;Baixo Risco
+0133404;Cultivo de cítricos, exceto laranja;Baixo Risco
+0133405;Cultivo de coco-da-baía;Baixo Risco
+0133406;Cultivo de guaraná;Baixo Risco
+0133407;Cultivo de maçã;Baixo Risco
+0133408;Cultivo de mamão;Baixo Risco
+0133409;Cultivo de maracujá;Baixo Risco
+0133410;Cultivo de manga;Baixo Risco
+0133411;Cultivo de pêssego;Baixo Risco
+0133499;Cultivo de frutas de lavoura permanente não especificadas anteriormente;Baixo Risco
+0134200;Cultivo de café;Baixo Risco
+0135100;Cultivo de cacau;Baixo Risco
+0139301;Cultivo de chá-da-índia;Baixo Risco
+0139302;Cultivo de erva-mate;Baixo Risco
+0139303;Cultivo de pimenta-do-reino;Baixo Risco
+0139304;Cultivo de plantas para condimento, exceto pimenta-do-reino;Baixo Risco
+0139305;Cultivo de dendê;Baixo Risco
+0139306;Cultivo de seringueira;Baixo Risco
+0139399;Cultivo de outras plantas de lavoura permanente não especificadas anteriormente;Baixo Risco
+0141501;Produção de sementes certificadas, exceto de forrageiras para pasto;Baixo Risco
+0141502;Produção de sementes certificadas de forrageiras para formação de pasto;Baixo Risco
+0142300;Produção de mudas e outras formas de propagação vegetal, certificadas;Baixo Risco
+0151201;Criação de bovinos para corte;Baixo Risco
+0151202;Criação de bovinos para leite;Baixo Risco
+0151203;Criação de bovinos, exceto para corte e leite;Baixo Risco
+0152101;Criação de bufalinos;Baixo Risco
+0152102;Criação de equinos;Baixo Risco
+0152103;Criação de asininos e muares;Baixo Risco
+0153901;Criação de caprinos;Baixo Risco
+0153902;Criação de ovinos, inclusive para produção de lã;Baixo Risco
+0154700;Criação de suínos;Baixo Risco
+0155501;Criação de frangos para corte;Baixo Risco
+0155502;Produção de pintos de um dia;Baixo Risco
+0155503;Criação de outros galináceos, exceto para corte;Baixo Risco
+0155504;Criação de aves, exceto galináceos;Baixo Risco
+0155505;Produção de ovos;Baixo Risco
+0159801;Apicultura;Baixo Risco
+0159802;Criação de animais de estimação;Baixo Risco
+0159803;Criação de escargô;Baixo Risco
+0159804;Criação de bicho-da-seda;Baixo Risco
+0159899;Criação de outros animais não especificados anteriormente;Baixo Risco
+0161001;Serviço de pulverização e controle de pragas agrícolas;Baixo Risco
+0161002;Serviço de poda de árvores para lavouras;Baixo Risco
+0161003;Serviço de preparação de terreno, cultivo e colheita;Baixo Risco
+0161099;Atividades de apoio à agricultura não especificadas anteriormente;Baixo Risco
+0162801;Serviço de inseminação artificial em animais;Baixo Risco
+0162802;Serviço de tosquiamento de ovinos;Baixo Risco
+0162803;Serviço de manejo de animais;Baixo Risco
+0162899;Atividades de apoio à pecuária não especificadas anteriormente;Baixo Risco
+0163600;Atividades de pós-colheita;Baixo Risco
+0170900;Caça e serviços relacionados;Baixo Risco
+0210101;Cultivo de eucalipto;Baixo Risco
+0210102;Cultivo de acácia-negra;Baixo Risco
+0210103;Cultivo de pinus;Baixo Risco
+0210104;Cultivo de teca;Baixo Risco
+0210105;Cultivo de espécies madeireiras, exceto eucalipto, acácia-negra, pinus e teca;Baixo Risco
+0210106;Cultivo de mudas em viveiros florestais;Baixo Risco
+0210107;Extração de madeira em florestas plantadas;Baixo Risco
+0210108;Produção de carvão vegetal - florestas plantadas;Baixo Risco
+0210109;Produção de casca de acácia-negra - florestas plantadas;Baixo Risco
+0220901;Extração de madeira em florestas nativas;Baixo Risco
+0220902;Produção de carvão vegetal - florestas nativas;Baixo Risco
+0220903;Coleta de castanha-do-pará em florestas nativas;Baixo Risco
+0220904;Coleta de látex em florestas nativas;Baixo Risco
+0220905;Coleta de palmito em florestas nativas;Baixo Risco
+0220906;Conservação de florestas nativas;Baixo Risco
+0220999;Coleta de produtos não madeireiros não especificados anteriormente em florestas nativas;Baixo Risco
+0230600;Atividades de apoio à produção florestal;Baixo Risco
+0311601;Pesca de peixes em água salgada;Baixo Risco
+0311602;Pesca de crustáceos e moluscos em água salgada;Baixo Risco
+0311603;Coleta de outros produtos marinhos;Baixo Risco
+0311604;Atividades de apoio à pesca em água salgada;Baixo Risco
+0312401;Pesca de peixes em água doce;Baixo Risco
+0312402;Pesca de crustáceos e moluscos em água doce;Baixo Risco
+0312403;Coleta de outros produtos aquáticos de água doce;Baixo Risco
+0312404;Atividades de apoio à pesca em água doce;Baixo Risco
+0321301;Criação de peixes em água salgada e salobra;Baixo Risco
+0321302;Criação de camarões em água salgada e salobra;Baixo Risco
+0321303;Criação de ostras e mexilhões em água salgada e salobra;Baixo Risco
+0321304;Criação de peixes ornamentais em água salgada e salobra;Baixo Risco
+0321305;Atividades de apoio à aquicultura em água salgada e salobra;Baixo Risco
+0322101;Criação de peixes em água doce;Baixo Risco
+0322102;Criação de camarões em água doce;Baixo Risco
+0322103;Criação de ostras e mexilhões em água doce;Baixo Risco
+0322104;Criação de peixes ornamentais em água doce;Baixo Risco
+0322105;Ranicultura;Baixo Risco
+0322106;Criação de jacaré;Baixo Risco
+0322107;Atividades de apoio à aquicultura em água doce;Baixo Risco
+0322199;Cultivos e semicultivos da aquicultura em água doce não especificados anteriormente;Baixo Risco
+0500301;Extração de carvão mineral;Baixo Risco
+0500302;Beneficiamento de carvão mineral;Baixo Risco
+0600001;Extração de petróleo e gás natural;Baixo Risco
+0600002;Extração e beneficiamento de xisto;Baixo Risco
+0600003;Extração e beneficiamento de areias betuminosas;Baixo Risco
+0710301;Extração de minério de ferro;Baixo Risco
+0710302;Pelotização, sinterização e outros beneficiamentos de minério de ferro;Baixo Risco
+0721901;Extração de minério de alumínio;Baixo Risco
+0721902;Beneficiamento de minério de alumínio;Baixo Risco
+0722701;Extração de minério de estanho;Baixo Risco
+0722702;Beneficiamento de minério de estanho;Baixo Risco
+0723501;Extração de minério de manganês;Baixo Risco
+0723502;Beneficiamento de minério de manganês;Baixo Risco
+0724301;Extração de minério de metais preciosos;Baixo Risco
+0724302;Beneficiamento de minério de metais preciosos;Baixo Risco
+0725100;Extração de minerais radioativos;Baixo Risco
+0729401;Extração de minérios de nióbio e titânio;Baixo Risco
+0729402;Extração de minério de tungstênio;Baixo Risco
+0729403;Extração de minério de níquel;Baixo Risco
+0810001;Extração de ardósia e beneficiamento associado;Baixo Risco
+0810002;Extração de granito e beneficiamento associado;Baixo Risco
+0810003;Extração de mármore e beneficiamento associado;Baixo Risco
+0810004;Extração de calcário e dolomita e beneficiamento associado;Baixo Risco
+0810005;Extração de gesso e caulim;Baixo Risco
+0810006;Extração de areia, cascalho ou pedregulho e beneficiamento associado;Baixo Risco
+0810007;Extração de argila e beneficiamento associado;Baixo Risco
+0810008;Extração de saibro e beneficiamento associado;Baixo Risco
+0810009;Extração de basalto e beneficiamento associado;Baixo Risco
+0810010;Beneficiamento de gesso e caulim associado à extração;Baixo Risco
+0891600;Extração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos;Baixo Risco
+0892401;Extração de sal marinho;Baixo Risco
+0892402;Extração de sal-gema;Baixo Risco
+0893200;Extração de gemas (pedras preciosas e semipreciosas);Baixo Risco
+0899101;Extração de grafita;Baixo Risco
+0899102;Extração de quartzo;Baixo Risco
+0899103;Extração de amianto;Baixo Risco
+0899199;Extração de outros minerais não metálicos não especificados anteriormente;Baixo Risco
+0910600;Atividades de apoio à extração de petróleo e gás natural;Baixo Risco
+0990401;Atividades de apoio à extração de minério de ferro;Baixo Risco
+0990402;Atividades de apoio à extração de minerais metálicos não ferrosos;Baixo Risco
+0990403;Atividades de apoio à extração de minerais não metálicos;Baixo Risco
+1011201;Frigorífico - abate de bovinos;Baixo Risco
+1011202;Frigorífico - abate de equinos;Baixo Risco
+1011203;Frigorífico - abate de ovinos e caprinos;Baixo Risco
+1011204;Frigorífico - abate de bufalinos;Baixo Risco
+1011205;Matadouro - abate de reses sob contrato, exceto abate de suínos;Baixo Risco
+1012101;Abate de aves;Baixo Risco
+1012102;Abate de pequenos animais;Baixo Risco
+1012103;Frigorífico - abate de suínos;Baixo Risco
+1012104;Matadouro - abate de suínos sob contrato;Baixo Risco
+1013901;Fabricação de produtos de carne;Baixo Risco
+1013902;Preparação de subprodutos do abate;Baixo Risco
+1020101;Preservação de peixes, crustáceos e moluscos;Baixo Risco
+1020102;Fabricação de conservas de peixes, crustáceos e moluscos;Baixo Risco
+1033301;Fabricação de sucos concentrados de frutas, hortaliças e legumes;Baixo Risco
+1033302;Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados;Baixo Risco
+1051100;Preparação do leite;Baixo Risco
+1052000;Fabricação de laticínios;Baixo Risco
+1066000;Fabricação de alimentos para animais;Baixo Risco
+1099601;Fabricação de vinagres;Baixo Risco
+1111901;Fabricação de aguardente de cana-de-açúcar;Baixo Risco
+1111902;Fabricação de outras aguardentes e bebidas destiladas;Baixo Risco
+1112700;Fabricação de vinho;Baixo Risco
+1113501;Fabricação de malte, inclusive malte uísque;Baixo Risco
+1113502;Fabricação de cervejas e chopes;Baixo Risco
+1122401;Fabricação de refrigerantes;Baixo Risco
+1122402;Fabricação de chá mate e outros chás prontos para consumo;Baixo Risco
+1311100;Preparação e fiação de fibras de algodão;Baixo Risco
+1312000;Preparação e fiação de fibras têxteis naturais, exceto algodão;Baixo Risco
+1313800;Fiação de fibras artificiais e sintéticas;Baixo Risco
+1314600;Fabricação de linhas para costurar e bordar;Baixo Risco
+1321900;Tecelagem de fios de algodão;Baixo Risco
+1322700;Tecelagem de fios de fibras têxteis naturais, exceto algodão;Baixo Risco
+1323500;Tecelagem de fios de fibras artificiais e sintéticas;Baixo Risco
+1330800;Fabricação de tecidos de malha;Baixo Risco
+1340501;Estamparia e texturização em fios, tecidos, artefatos têxteis e peças do vestuário;Baixo Risco
+1340502;Alvejamento, tingimento e torção em fios, tecidos, artefatos têxteis e peças do vestuário;Baixo Risco
+1351100;Fabricação de artefatos têxteis para uso doméstico;Baixo Risco
+1352900;Fabricação de artefatos de tapeçaria;Baixo Risco
+1353700;Fabricação de artefatos de cordoaria;Baixo Risco
+1354500;Fabricação de tecidos especiais, inclusive artefatos;Baixo Risco
+1421500;Fabricação de meias;Baixo Risco
+1510600;Curtimento e outras preparações de couro;Baixo Risco
+1521100;Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material;Baixo Risco
+1531901;Fabricação de calçados de couro;Baixo Risco
+1531902;Acabamento de calçados de couro sob contrato;Baixo Risco
+1532700;Fabricação de tênis de qualquer material;Baixo Risco
+1533500;Fabricação de calçados de material sintético;Baixo Risco
+1540800;Fabricação de partes para calçados, de qualquer material;Baixo Risco
+1610203;Serrarias com desdobramento de madeira em bruto;Baixo Risco
+1610204;Serrarias sem desdobramento de madeira em bruto - Resserragem;Baixo Risco
+1610205;Serviço de tratamento de madeira realizado sob contrato;Baixo Risco
+1622601;Fabricação de casas de madeira pré-fabricadas;Baixo Risco
+1622699;Fabricação de outros artigos de carpintaria para construção;Baixo Risco
+1623400;Fabricação de artefatos de tanoaria e de embalagens de madeira;Baixo Risco
+1629301;Fabricação de artefatos diversos de madeira, exceto móveis;Baixo Risco
+1710900;Fabricação de celulose e outras pastas para a fabricação de papel;Baixo Risco
+1721400;Fabricação de papel;Baixo Risco
+1722200;Fabricação de cartolina e papel-cartão;Baixo Risco
+1741901;Fabricação de formulários contínuos;Baixo Risco
+1811301;Impressão de jornais;Baixo Risco
+1811302;Impressão de livros, revistas e outras publicações periódicas;Baixo Risco
+1812100;Impressão de material de segurança;Baixo Risco
+1813001;Impressão de material para uso publicitário;Baixo Risco
+1813099;Impressão de material para outros usos;Baixo Risco
+1821100;Serviços de pré-impressão;Baixo Risco
+1830001;Reprodução de som em qualquer suporte;Baixo Risco
+1830002;Reprodução de vídeo em qualquer suporte;Baixo Risco
+1830003;Reprodução de software em qualquer suporte;Baixo Risco
+1910100;Coquerias;Baixo Risco
+1921700;Fabricação de produtos do refino de petróleo;Baixo Risco
+1922501;Formulação de combustíveis;Baixo Risco
+1922502;Rerrefino de óleos lubrificantes;Baixo Risco
+1922599;Fabricação de outros produtos derivados do petróleo, exceto produtos do refino;Baixo Risco
+1931400;Fabricação de álcool;Baixo Risco
+1932200;Fabricação de biocombustíveis, exceto álcool;Baixo Risco
+2011800;Fabricação de cloro e álcalis;Baixo Risco
+2012600;Fabricação de intermediários para fertilizantes;Baixo Risco
+2013401;Fabricação de adubos e fertilizantes organo-minerais;Baixo Risco
+2013402;Fabricação de adubos e fertilizantes, exceto organo-minerais;Baixo Risco
+2019301;Elaboração de combustíveis nucleares;Baixo Risco
+2021500;Fabricação de produtos petroquímicos básicos;Baixo Risco
+2022300;Fabricação de intermediários para plastificantes, resinas e fibras;Baixo Risco
+2031200;Fabricação de resinas termoplásticas;Baixo Risco
+2032100;Fabricação de resinas termofixas;Baixo Risco
+2033900;Fabricação de elastômeros;Baixo Risco
+2040100;Fabricação de fibras artificiais e sintéticas;Baixo Risco
+2051700;Fabricação de defensivos agrícolas;Baixo Risco
+2072000;Fabricação de tintas de impressão;Baixo Risco
+2073800;Fabricação de impermeabilizantes, solventes e produtos afins;Baixo Risco
+2092401;Fabricação de pólvoras, explosivos e detonantes;Baixo Risco
+2092402;Fabricação de artigos pirotécnicos;Baixo Risco
+2092403;Fabricação de fósforos de segurança;Baixo Risco
+2094100;Fabricação de catalisadores;Baixo Risco
+2211100;Fabricação de pneumáticos e de câmaras-de-ar;Baixo Risco
+2212900;Reforma de pneumáticos usados;Baixo Risco
+2221800;Fabricação de laminados planos e tubulares de material plástico;Baixo Risco
+2223400;Fabricação de tubos e acessórios de material plástico para uso na construção;Baixo Risco
+2229301;Fabricação de artefatos de material plástico para uso pessoal e doméstico;Baixo Risco
+2229302;Fabricação de artefatos de material plástico para usos industriais;Baixo Risco
+2311700;Fabricação de vidro plano e de segurança;Baixo Risco
+2319200;Fabricação de artigos de vidro;Baixo Risco
+2320600;Fabricação de cimento;Baixo Risco
+2330301;Fabricação de estruturas pré-moldadas de concreto armado, em série e sob encomenda;Baixo Risco
+2330302;Fabricação de artefatos de cimento para uso na construção;Baixo Risco
+2330303;Fabricação de artefatos de fibrocimento para uso na construção;Baixo Risco
+2330304;Fabricação de casas pré-moldadas de concreto;Baixo Risco
+2330305;Preparação de massa de concreto e argamassa para construção;Baixo Risco
+2342701;Fabricação de azulejos e pisos;Baixo Risco
+2349401;Fabricação de material sanitário de cerâmica;Baixo Risco
+2391501;Britamento de pedras, exceto associado à extração;Baixo Risco
+2391502;Aparelhamento de pedras para construção, exceto associado à extração;Baixo Risco
+2392300;Fabricação de cal e gesso;Baixo Risco
+2399102;Fabricação de abrasivos;Baixo Risco
+2411300;Produção de ferro-gusa;Baixo Risco
+2412100;Produção de ferroligas;Baixo Risco
+2421100;Produção de semiacabados de aço;Baixo Risco
+2422901;Produção de laminados planos de aço ao carbono, revestidos ou não;Baixo Risco
+2422902;Produção de laminados planos de aços especiais;Baixo Risco
+2423701;Produção de tubos de aço sem costura;Baixo Risco
+2423702;Produção de laminados longos de aço, exceto tubos;Baixo Risco
+2424501;Produção de arames de aço;Baixo Risco
+2424502;Produção de relaminados, trefilados e perfilados de aço, exceto arames;Baixo Risco
+2431800;Produção de tubos de aço com costura;Baixo Risco
+2439300;Produção de outros tubos de ferro e aço;Baixo Risco
+2441501;Produção de alumínio e suas ligas em formas primárias;Baixo Risco
+2441502;Produção de laminados de alumínio;Baixo Risco
+2442300;Metalurgia dos metais preciosos;Baixo Risco
+2443100;Metalurgia do cobre;Baixo Risco
+2449101;Produção de zinco em formas primárias;Baixo Risco
+2449102;Produção de laminados de zinco;Baixo Risco
+2449103;Fabricação de ânodos para galvanoplastia;Baixo Risco
+2449199;Metalurgia de outros metais não ferrosos e suas ligas não especificados anteriormente;Baixo Risco
+2451200;Fundição de ferro e aço;Baixo Risco
+2452100;Fundição de metais não ferrosos e suas ligas;Baixo Risco
+2511000;Fabricação de estruturas metálicas;Baixo Risco
+2512800;Fabricação de esquadrias de metal;Baixo Risco
+2513600;Fabricação de obras de caldeiraria pesada;Baixo Risco
+2521700;Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central;Baixo Risco
+2531401;Produção de forjados de aço;Baixo Risco
+2531402;Produção de forjados de metais não ferrosos e suas ligas;Baixo Risco
+2532201;Produção de artefatos estampados de metal;Baixo Risco
+2532202;Metalurgia do pó;Baixo Risco
+2539001;Serviços de usinagem, tornearia e solda;Baixo Risco
+2541100;Fabricação de artigos de cutelaria;Baixo Risco
+2542000;Fabricação de artigos de serralheria, exceto esquadrias;Baixo Risco
+2543800;Fabricação de ferramentas;Baixo Risco
+2550101;Fabricação de equipamento bélico pesado, exceto veículos militares de combate;Baixo Risco
+2550102;Fabricação de armas de fogo, outras armas e munições;Baixo Risco
+2592601;Fabricação de produtos de trefilados de metal padronizados;Baixo Risco
+2592602;Fabricação de produtos de trefilados de metal, exceto padronizados;Baixo Risco
+2593400;Fabricação de artigos de metal para uso doméstico e pessoal;Baixo Risco
+2599301;Serviços de confecção de armações metálicas para a construção;Baixo Risco
+2599302;Serviço de corte e dobra de metais;Baixo Risco
+2599399;Fabricação de outros produtos de metal não especificados anteriormente;Baixo Risco
+2610800;Fabricação de componentes eletrônicos;Baixo Risco
+2621300;Fabricação de equipamentos de informática;Baixo Risco
+2622100;Fabricação de periféricos para equipamentos de informática;Baixo Risco
+2631100;Fabricação de equipamentos transmissores de comunicação, peças e acessórios;Baixo Risco
+2651500;Fabricação de aparelhos e equipamentos de medida, teste e controle;Baixo Risco
+2652300;Fabricação de cronômetros e relógios;Baixo Risco
+2670101;Fabricação de equipamentos e instrumentos ópticos, peças e acessórios;Baixo Risco
+2670102;Fabricação de aparelhos fotográficos e cinematográficos, peças e acessórios;Baixo Risco
+2680900;Fabricação de mídias virgens, magnéticas e ópticas;Baixo Risco
+2710401;Fabricação de geradores de corrente contínua e alternada, peças e acessórios;Baixo Risco
+2710403;Fabricação de motores elétricos, peças e acessórios;Baixo Risco
+2722801;Fabricação de baterias e acumuladores para veículos automotores;Baixo Risco
+2722802;Recondicionamento de baterias e acumuladores para veículos automotores;Baixo Risco
+2731700;Fabricação de aparelhos e equipamentos para distribuição e controle de energia elétrica;Baixo Risco
+2732500;Fabricação de material elétrico para instalações em circuito de consumo;Baixo Risco
+2733300;Fabricação de fios, cabos e condutores elétricos isolados;Baixo Risco
+2740601;Fabricação de lâmpadas;Baixo Risco
+2740602;Fabricação de luminárias e outros equipamentos de iluminação;Baixo Risco
+2759701;Fabricação de aparelhos elétricos de uso pessoal, peças e acessórios;Baixo Risco
+2790202;Fabricação de equipamentos para sinalização e alarme;Baixo Risco
+2813500;Fabricação de válvulas, registros e dispositivos semelhantes, peças e acessórios;Baixo Risco
+2814301;Fabricação de compressores para uso industrial, peças e acessórios;Baixo Risco
+2814302;Fabricação de compressores para uso não industrial, peças e acessórios;Baixo Risco
+2815101;Fabricação de rolamentos para fins industriais;Baixo Risco
+2815102;Fabricação de equipamentos de transmissão para fins industriais, exceto rolamentos;Baixo Risco
+2821602;Fabricação de estufas e fornos elétricos para fins industriais, peças e acessórios;Baixo Risco
+2824101;Fabricação de aparelhos e equipamentos de ar condicionado para uso industrial;Baixo Risco
+2824102;Fabricação de aparelhos e equipamentos de ar condicionado para uso não industrial;Baixo Risco
+2831300;Fabricação de tratores agrícolas, peças e acessórios;Baixo Risco
+2832100;Fabricação de equipamentos para irrigação agrícola, peças e acessórios;Baixo Risco
+2840200;Fabricação de máquinas-ferramenta, peças e acessórios;Baixo Risco
+2853400;Fabricação de tratores, peças e acessórios, exceto agrícolas;Baixo Risco
+2863100;Fabricação de máquinas e equipamentos para a indústria têxtil, peças e acessórios;Baixo Risco
+2866600;Fabricação de máquinas e equipamentos para a indústria do plástico, peças e acessórios;Baixo Risco
+2910701;Fabricação de automóveis, camionetas e utilitários;Baixo Risco
+2910702;Fabricação de chassis com motor para automóveis, camionetas e utilitários;Baixo Risco
+2910703;Fabricação de motores para automóveis, camionetas e utilitários;Baixo Risco
+2920401;Fabricação de caminhões e ônibus;Baixo Risco
+2920402;Fabricação de motores para caminhões e ônibus;Baixo Risco
+2930101;Fabricação de cabines, carrocerias e reboques para caminhões;Baixo Risco
+2930102;Fabricação de carrocerias para ônibus;Baixo Risco
+2941700;Fabricação de peças e acessórios para o sistema motor de veículos automotores;Baixo Risco
+2943300;Fabricação de peças e acessórios para o sistema de freios de veículos automotores;Baixo Risco
+2945000;Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias;Baixo Risco
+2949201;Fabricação de bancos e estofados para veículos automotores;Baixo Risco
+2950600;Recondicionamento e recuperação de motores para veículos automotores;Baixo Risco
+3011301;Construção de embarcações de grande porte;Baixo Risco
+3012100;Construção de embarcações para esporte e lazer;Baixo Risco
+3031800;Fabricação de locomotivas, vagões e outros materiais rodantes;Baixo Risco
+3032600;Fabricação de peças e acessórios para veículos ferroviários;Baixo Risco
+3041500;Fabricação de aeronaves;Baixo Risco
+3042300;Fabricação de turbinas, motores e outros componentes e peças para aeronaves;Baixo Risco
+3050400;Fabricação de veículos militares de combate;Baixo Risco
+3091101;Fabricação de motocicletas;Baixo Risco
+3091102;Fabricação de peças e acessórios para motocicletas;Baixo Risco
+3099700;Fabricação de equipamentos de transporte não especificados anteriormente;Baixo Risco
+3101200;Fabricação de móveis com predominância de madeira;Baixo Risco
+3102100;Fabricação de móveis com predominância de metal;Baixo Risco
+3103900;Fabricação de móveis de outros materiais, exceto madeira e metal;Baixo Risco
+3211601;Lapidação de gemas;Baixo Risco
+3211602;Fabricação de artefatos de joalheria e ourivesaria;Baixo Risco
+3211603;Cunhagem de moedas e medalhas;Baixo Risco
+3212400;Fabricação de bijuterias e artefatos semelhantes;Baixo Risco
+3220500;Fabricação de instrumentos musicais, peças e acessórios;Baixo Risco
+3230200;Fabricação de artefatos para pesca e esporte;Baixo Risco
+3240001;Fabricação de jogos eletrônicos;Baixo Risco
+3240002;Fabricação de mesas de bilhar, de sinuca e acessórios não associada à locação;Baixo Risco
+3240003;Fabricação de mesas de bilhar, de sinuca e acessórios associada à locação;Baixo Risco
+3240099;Fabricação de outros brinquedos e jogos recreativos não especificados anteriormente;Baixo Risco
+3292201;Fabricação de roupas de proteção e segurança e resistentes a fogo;Baixo Risco
+3299001;Fabricação de guarda-chuvas e similares;Baixo Risco
+3299002;Fabricação de canetas, lápis e outros artigos para escritório;Baixo Risco
+3299003;Fabricação de letras, letreiros e placas de qualquer material, exceto luminosos;Baixo Risco
+3299004;Fabricação de painéis e letreiros luminosos;Baixo Risco
+3299005;Fabricação de aviamentos para costura;Baixo Risco
+3299099;Fabricação de produtos diversos não especificados anteriormente;Baixo Risco
+3313901;Manutenção e reparação de geradores, transformadores e motores elétricos;Baixo Risco
+3314701;Manutenção e reparação de máquinas motrizes não elétricas;Baixo Risco
+3314704;Manutenção e reparação de compressores;Baixo Risco
+3314705;Manutenção e reparação de equipamentos de transmissão para fins industriais;Baixo Risco
+3314711;Manutenção e reparação de máquinas e equipamentos para agricultura e pecuária;Baixo Risco
+3314716;Manutenção e reparação de tratores, exceto agrícolas;Baixo Risco
+3314722;Manutenção e reparação de máquinas e aparelhos para a indústria do plástico;Baixo Risco
+3315500;Manutenção e reparação de veículos ferroviários;Baixo Risco
+3316301;Manutenção e reparação de aeronaves, exceto a manutenção na pista;Baixo Risco
+3316302;Manutenção de aeronaves na pista;Baixo Risco
+3317101;Manutenção e reparação de embarcações e estruturas flutuantes;Baixo Risco
+3317102;Manutenção e reparação de embarcações para esporte e lazer;Baixo Risco
+3319800;Manutenção e reparação de equipamentos e produtos não especificados anteriormente;Baixo Risco
+3321000;Instalação de máquinas e equipamentos industriais;Baixo Risco
+3329599;Instalação de outros equipamentos não especificados anteriormente;Baixo Risco
+3511501;Geração de energia elétrica;Baixo Risco
+3512300;Transmissão de energia elétrica;Baixo Risco
+3513100;Comércio atacadista de energia elétrica;Baixo Risco
+3514000;Distribuição de energia elétrica;Baixo Risco
+3520401;"Produção de gás; processamento de gás natural";Baixo Risco
+3520402;Distribuição de combustíveis gasosos por redes urbanas;Baixo Risco
+3530100;Produção e distribuição de vapor, água quente e ar condicionado;Baixo Risco
+3600601;Captação, tratamento e distribuição de água;Baixo Risco
+3701100;Gestão de redes de esgoto;Baixo Risco
+3831901;Recuperação de sucatas de alumínio;Baixo Risco
+3839401;Usinas de compostagem;Baixo Risco
+3839499;Recuperação de materiais não especificados anteriormente;Baixo Risco
+3900500;Descontaminação e outros serviços de gestão de resíduos;Baixo Risco
+4110700;Incorporação de empreendimentos imobiliários;Baixo Risco
+4120400;Construção de edifícios;Baixo Risco
+4211101;Construção de rodovias e ferrovias;Baixo Risco
+4211102;Pintura para sinalização em pistas rodoviárias e aeroportos;Baixo Risco
+4212000;Construção de obras de arte especiais;Baixo Risco
+4213800;Obras de urbanização - ruas, praças e calçadas;Baixo Risco
+4221901;Construção de barragens e represas para geração de energia elétrica;Baixo Risco
+4221902;Construção de estações e redes de distribuição de energia elétrica;Baixo Risco
+4221903;Manutenção de redes de distribuição de energia elétrica;Baixo Risco
+4221904;Construção de estações e redes de telecomunicações;Baixo Risco
+4221905;Manutenção de estações e redes de telecomunicações;Baixo Risco
+4222702;Obras de irrigação;Baixo Risco
+4223500;Construção de redes de transportes por dutos, exceto para água e esgoto;Baixo Risco
+4291000;Obras portuárias, marítimas e fluviais;Baixo Risco
+4292801;Montagem de estruturas metálicas;Baixo Risco
+4292802;Obras de montagem industrial;Baixo Risco
+4299501;Construção de instalações esportivas e recreativas;Baixo Risco
+4299599;Outras obras de engenharia civil não especificadas anteriormente;Baixo Risco
+4311801;Demolição de edifícios e outras estruturas;Baixo Risco
+4311802;Preparação de canteiro e limpeza de terreno;Baixo Risco
+4312600;Perfurações e sondagens;Baixo Risco
+4313400;Obras de terraplenagem;Baixo Risco
+4319300;Serviços de preparação do terreno não especificados anteriormente;Baixo Risco
+4321500;Instalação e manutenção elétrica;Baixo Risco
+4322301;Instalações hidráulicas, sanitárias e de gás;Baixo Risco
+4322303;Instalações de sistema de prevenção contra incêndio;Baixo Risco
+4329101;Instalação de painéis publicitários;Baixo Risco
+4329102;Instalação de equipamentos para orientação à navegação marítima, fluvial e lacustre;Baixo Risco
+4329103;Instalação, manutenção e reparação de elevadores, escadas e esteiras rolantes;Baixo Risco
+4329105;Tratamentos térmicos, acústicos ou de vibração;Baixo Risco
+4329199;Outras obras de instalações em construções não especificadas anteriormente;Baixo Risco
+4330401;Impermeabilização em obras de engenharia civil;Baixo Risco
+4330402;Instalação de portas, janelas, tetos, divisórias e armários embutidos de qualquer material;Baixo Risco
+4330403;Obras de acabamento em gesso e estuque;Baixo Risco
+4330404;Serviços de pintura de edifícios em geral;Baixo Risco
+4330405;Aplicação de revestimentos e de resinas em interiores e exteriores;Baixo Risco
+4330499;Outras obras de acabamento da construção;Baixo Risco
+4391600;Obras de fundações;Baixo Risco
+4399101;Administração de obras;Baixo Risco
+4399102;Montagem e desmontagem de andaimes e outras estruturas temporárias;Baixo Risco
+4399103;Obras de alvenaria;Baixo Risco
+4399105;Perfuração e construção de poços de água;Baixo Risco
+4399199;Serviços especializados para construção não especificados anteriormente;Baixo Risco
+4511101;Comércio a varejo de automóveis, camionetas e utilitários novos;Baixo Risco
+4511102;Comércio a varejo de automóveis, camionetas e utilitários usados;Baixo Risco
+4511103;Comércio por atacado de automóveis, camionetas e utilitários novos e usados;Baixo Risco
+4511104;Comércio por atacado de caminhões novos e usados;Baixo Risco
+4511105;Comércio por atacado de reboques e semireboques novos e usados;Baixo Risco
+4511106;Comércio por atacado de ônibus e micro-ônibus novos e usados;Baixo Risco
+4512901;Representantes comerciais e agentes do comércio de veículos automotores;Baixo Risco
+4512902;Comércio sob consignação de veículos automotores;Baixo Risco
+4530701;Comércio por atacado de peças e acessórios novos para veículos automotores;Baixo Risco
+4530702;Comércio por atacado de pneumáticos e câmaras-de-ar;Baixo Risco
+4541201;Comércio por atacado de motocicletas e motonetas;Baixo Risco
+4541202;Comércio por atacado de peças e acessórios para motocicletas e motonetas;Baixo Risco
+4541203;Comércio a varejo de motocicletas e motonetas novas;Baixo Risco
+4541204;Comércio a varejo de motocicletas e motonetas usadas;Baixo Risco
+4541206;Comércio a varejo de peças e acessórios novos para motocicletas e motonetas;Baixo Risco
+4541207;Comércio a varejo de peças e acessórios usados para motocicletas e motonetas;Baixo Risco
+4623101;Comércio atacadista de animais vivos;Baixo Risco
+4623103;Comércio atacadista de algodão;Baixo Risco
+4623104;Comércio atacadista de fumo em folha não beneficiado;Baixo Risco
+4623106;Comércio atacadista de sementes, flores, plantas e gramas;Baixo Risco
+4623107;Comércio atacadista de sisal;Baixo Risco
+4623109;Comércio atacadista de alimentos para animais;Baixo Risco
+4633803;Comércio atacadista de coelhos e outros pequenos animais vivos para alimentação;Baixo Risco
+4649401;Comércio atacadista de equipamentos elétricos de uso pessoal e doméstico;Baixo Risco
+4649402;Comércio atacadista de aparelhos eletrônicos de uso pessoal e doméstico;Baixo Risco
+4649403;Comércio atacadista de bicicletas, triciclos e outros veículos recreativos;Baixo Risco
+4663000;"Comércio atacadista de máquinas e equipamentos para uso industrial; partes e peças";Baixo Risco
+4665600;"Comércio atacadista de máquinas e equipamentos para uso comercial; partes e peças";Baixo Risco
+4669901;"Comércio atacadista de bombas e compressores; partes e peças";Baixo Risco
+4671100;Comércio atacadista de madeira e produtos derivados;Baixo Risco
+4672900;Comércio atacadista de ferragens e ferramentas;Baixo Risco
+4673700;Comércio atacadista de material elétrico;Baixo Risco
+4674500;Comércio atacadista de cimento;Baixo Risco
+4679601;Comércio atacadista de tintas, vernizes e similares;Baixo Risco
+4679602;Comércio atacadista de mármores e granitos;Baixo Risco
+4679603;Comércio atacadista de vidros, espelhos e vitrais;Baixo Risco
+4679699;Comércio atacadista de materiais de construção em geral;Baixo Risco
+4681802;Comércio atacadista de combustíveis realizado por transportador retalhista (TRR);Baixo Risco
+4681803;Comércio atacadista de combustíveis de origem vegetal, exceto álcool carburante;Baixo Risco
+4681804;Comércio atacadista de combustíveis de origem mineral em bruto;Baixo Risco
+4681805;Comércio atacadista de lubrificantes;Baixo Risco
+4682600;Comércio atacadista de gás liquefeito de petróleo (GLP);Baixo Risco
+4683400;Comércio atacadista de defensivos agrícolas, adubos, fertilizantes e corretivos do solo;Baixo Risco
+4684201;Comércio atacadista de resinas e elastômeros;Baixo Risco
+4684202;Comércio atacadista de solventes;Baixo Risco
+4685100;Comércio atacadista de produtos siderúrgicos e metalúrgicos, exceto para construção;Baixo Risco
+4687702;Comércio atacadista de resíduos e sucatas não metálicos, exceto de papel e papelão;Baixo Risco
+4689301;Comércio atacadista de produtos da extração mineral, exceto combustíveis;Baixo Risco
+4713002;Lojas de variedades, exceto lojas de departamentos ou magazines;Baixo Risco
+4713004;Lojas de departamentos ou magazines, exceto lojas francas (Duty free);Baixo Risco
+4713005;Lojas francas (Duty Free) de aeroportos, portos e em fronteiras terrestres;Baixo Risco
+4731800;Comércio varejista de combustíveis para veículos automotores;Baixo Risco
+4732600;Comércio varejista de lubrificantes;Baixo Risco
+4744002;Comércio varejista de madeira e artefatos;Baixo Risco
+4744004;Comércio varejista de cal, areia, pedra britada, tijolos e telhas;Baixo Risco
+4744005;Comércio varejista de materiais de construção não especificados anteriormente;Baixo Risco
+4784900;Comércio varejista de gás liqüefeito de petróleo (GLP);Baixo Risco
+4789006;Comércio varejista de fogos de artifício e artigos pirotécnicos;Baixo Risco
+4789009;Comércio varejista de armas e munições;Baixo Risco
+4789099;Comércio varejista de outros produtos não especificados anteriormente;Baixo Risco
+4911600;Transporte ferroviário de carga;Baixo Risco
+4912401;Transporte ferroviário de passageiros intermunicipal e interestadual;Baixo Risco
+4912402;Transporte ferroviário de passageiros municipal e em região metropolitana;Baixo Risco
+4912403;Transporte metroviário;Baixo Risco
+4921301;Transporte rodoviário coletivo de passageiros, com itinerário fixo, municipal;Baixo Risco
+4922102;Transporte rodoviário coletivo de passageiros, com itinerário fixo, interestadual;Baixo Risco
+4922103;Transporte rodoviário coletivo de passageiros, com itinerário fixo, internacional;Baixo Risco
+4923001;Serviço de táxi;Baixo Risco
+4923002;Serviço de transporte de passageiros - locação de automóveis com motorista;Baixo Risco
+4924800;Transporte escolar;Baixo Risco
+4929901;Transporte rodoviário coletivo de passageiros, sob regime de fretamento, municipal;Baixo Risco
+4929903;Organização de excursões em veículos rodoviários próprios, municipal;Baixo Risco
+4929999;Outros transportes rodoviários de passageiros não especificados anteriormente;Baixo Risco
+4930203;Transporte rodoviário de produtos perigosos;Baixo Risco
+4930204;Transporte rodoviário de mudanças;Baixo Risco
+4940000;Transporte dutoviário;Baixo Risco
+4950700;Trens turísticos, teleféricos e similares;Baixo Risco
+5011401;Transporte marítimo de cabotagem - Carga;Baixo Risco
+5011402;Transporte marítimo de cabotagem - passageiros;Baixo Risco
+5012201;Transporte marítimo de longo curso - Carga;Baixo Risco
+5012202;Transporte marítimo de longo curso - Passageiros;Baixo Risco
+5021101;Transporte por navegação interior de carga, municipal, exceto travessia;Baixo Risco
+5030101;Navegação de apoio marítimo;Baixo Risco
+5030102;Navegação de apoio portuário;Baixo Risco
+5030103;Serviço de rebocadores e empurradores;Baixo Risco
+5091201;Transporte por navegação de travessia, municipal;Baixo Risco
+5091202;Transporte por navegação de travessia, intermunicipal, interestadual e internacional;Baixo Risco
+5099801;Transporte aquaviário para passeios turísticos;Baixo Risco
+5099899;Outros transportes aquaviários não especificados anteriormente;Baixo Risco
+5111100;Transporte aéreo de passageiros regular;Baixo Risco
+5112901;Serviço de táxi aéreo e locação de aeronaves com tripulação;Baixo Risco
+5112999;Outros serviços de transporte aéreo de passageiros não regular;Baixo Risco
+5130700;Transporte espacial;Baixo Risco
+5211702;Guarda-móveis;Baixo Risco
+5212500;Carga e descarga;Baixo Risco
+5221400;Concessionárias de rodovias, pontes, túneis e serviços relacionados;Baixo Risco
+5222200;Terminais rodoviários e ferroviários;Baixo Risco
+5223100;Estacionamento de veículos;Baixo Risco
+5229001;Serviços de apoio ao transporte por táxi, inclusive centrais de chamada;Baixo Risco
+5229002;Serviços de reboque de veículos;Baixo Risco
+5229099;Outras atividades auxiliares dos transportes terrestres não especificadas anteriormente;Baixo Risco
+5231101;Administração da infraestrutura portuária;Baixo Risco
+5231102;Atividades do Operador Portuário;Baixo Risco
+5231103;Gestão de terminais aquaviários;Baixo Risco
+5239701;Serviços de praticagem;Baixo Risco
+5239799;Atividades auxiliares dos transportes aquaviários não especificadas anteriormente;Baixo Risco
+5240101;Operação dos aeroportos e campos de aterrissagem;Baixo Risco
+5250801;Comissaria de despachos;Baixo Risco
+5250802;Atividades de despachantes aduaneiros;Baixo Risco
+5250803;Agenciamento de cargas, exceto para o transporte marítimo;Baixo Risco
+5250804;Organização logística do transporte de carga;Baixo Risco
+5250805;Operador de transporte multimodal - OTM;Baixo Risco
+5310501;Atividades do Correio Nacional;Baixo Risco
+5310502;Atividades de franqueadas do Correio Nacional;Baixo Risco
+5320201;Serviços de malote não realizados pelo Correio Nacional;Baixo Risco
+5320202;Serviços de entrega rápida;Baixo Risco
+5811500;Edição de livros;Baixo Risco
+5821200;Edição integrada à impressão de livros;Baixo Risco
+5822101;Edição integrada à impressão de jornais diários;Baixo Risco
+5822102;Edição integrada à impressão de jornais não diários;Baixo Risco
+5823900;Edição integrada à impressão de revistas;Baixo Risco
+5829800;Edição integrada à impressão de cadastros, listas e outros produtos gráficos;Baixo Risco
+5911101;Estúdios cinematográficos;Baixo Risco
+5913800;Distribuição cinematográfica, de vídeo e de programas de televisão;Baixo Risco
+5914600;Atividades de exibição cinematográfica;Baixo Risco
+6010100;Atividades de rádio;Baixo Risco
+6021700;Atividades de televisão aberta;Baixo Risco
+6022501;Programadoras;Baixo Risco
+6022502;Atividades relacionadas à televisão por assinatura, exceto programadoras;Baixo Risco
+6110801;Serviços de telefonia fixa comutada - STFC;Baixo Risco
+6110802;Serviços de redes de transporte de telecomunicações - SRTT;Baixo Risco
+6110803;Serviços de comunicação multimídia - SCM;Baixo Risco
+6110899;Serviços de telecomunicações por fio não especificados anteriormente;Baixo Risco
+6120501;Telefonia móvel celular;Baixo Risco
+6120502;Serviço móvel especializado - SME;Baixo Risco
+6120599;Serviços de telecomunicações sem fio não especificados anteriormente;Baixo Risco
+6130200;Telecomunicações por satélite;Baixo Risco
+6141800;Operadoras de televisão por assinatura por cabo;Baixo Risco
+6142600;Operadoras de televisão por assinatura por micro-ondas;Baixo Risco
+6143400;Operadoras de televisão por assinatura por satélite;Baixo Risco
+6190601;Provedores de acesso às redes de comunicações;Baixo Risco
+6190602;Provedores de voz sobre protocolo internet - VOIP;Baixo Risco
+6190699;Outras atividades de telecomunicações não especificadas anteriormente;Baixo Risco
+6201501;Desenvolvimento de programas de computador sob encomenda;Baixo Risco
+6202300;Desenvolvimento e licenciamento de programas de computador customizáveis;Baixo Risco
+6319400;Portais, provedores de conteúdo e outros serviços de informação na Internet;Baixo Risco
+6410700;Banco Central;Baixo Risco
+6421200;Bancos comerciais;Baixo Risco
+6422100;Bancos múltiplos, com carteira comercial;Baixo Risco
+6423900;Caixas econômicas;Baixo Risco
+6424701;Bancos cooperativos;Baixo Risco
+6424702;Cooperativas centrais de crédito;Baixo Risco
+6424703;Cooperativas de crédito mútuo;Baixo Risco
+6424704;Cooperativas de crédito rural;Baixo Risco
+6431000;Bancos múltiplos, sem carteira comercial;Baixo Risco
+6432800;Bancos de investimento;Baixo Risco
+6433600;Bancos de desenvolvimento;Baixo Risco
+6434400;Agências de fomento;Baixo Risco
+6435201;Sociedades de crédito imobiliário;Baixo Risco
+6435202;Associações de poupança e empréstimo;Baixo Risco
+6435203;Companhias hipotecárias;Baixo Risco
+6436100;Sociedades de crédito, financiamento e investimento - financeiras;Baixo Risco
+6437900;Sociedades de crédito ao microempreendedor;Baixo Risco
+6438701;Bancos de câmbio;Baixo Risco
+6438799;Outras instituições de intermediação não monetária não especificadas anteriormente;Baixo Risco
+6440900;Arrendamento mercantil;Baixo Risco
+6450600;Sociedades de capitalização;Baixo Risco
+6461100;Holdings de instituições financeiras;Baixo Risco
+6462000;Holdings de instituições não financeiras;Baixo Risco
+6463800;Outras sociedades de participação, exceto holdings;Baixo Risco
+6470101;Fundos de investimento, exceto previdenciários e imobiliários;Baixo Risco
+6470102;Fundos de investimento previdenciários;Baixo Risco
+6470103;Fundos de investimento imobiliários;Baixo Risco
+6491300;Sociedades de fomento mercantil - factoring;Baixo Risco
+6492100;Securitização de créditos;Baixo Risco
+6493000;Administração de consórcios para aquisição de bens e direitos;Baixo Risco
+6499901;Clubes de investimento;Baixo Risco
+6499902;Sociedades de investimento;Baixo Risco
+6499903;Fundo garantidor de crédito;Baixo Risco
+6499904;Caixas de financiamento de corporações;Baixo Risco
+6499905;Concessão de crédito pelas OSCIP;Baixo Risco
+6499999;Outras atividades de serviços financeiros não especificadas anteriormente;Baixo Risco
+6511101;Sociedade seguradora de seguros vida;Baixo Risco
+6512000;Sociedade seguradora de seguros não vida;Baixo Risco
+6520100;Sociedade seguradora de seguros-saúde;Baixo Risco
+6530800;Resseguros;Baixo Risco
+6541300;Previdência complementar fechada;Baixo Risco
+6542100;Previdência complementar aberta;Baixo Risco
+6550200;Planos de saúde;Baixo Risco
+6611801;Bolsa de valores;Baixo Risco
+6611802;Bolsa de mercadorias;Baixo Risco
+6611803;Bolsa de mercadorias e futuros;Baixo Risco
+6611804;Administração de mercados de balcão organizados;Baixo Risco
+6612601;Corretoras de títulos e valores mobiliários;Baixo Risco
+6612602;Distribuidoras de títulos e valores mobiliários;Baixo Risco
+6612603;Corretoras de câmbio;Baixo Risco
+6612604;Corretoras de contratos de mercadorias;Baixo Risco
+6612605;Agentes de investimentos em aplicações financeiras;Baixo Risco
+6613400;Administração de cartões de crédito;Baixo Risco
+6619301;Serviços de liquidação e custódia;Baixo Risco
+6619302;Correspondentes de instituições financeiras;Baixo Risco
+6619303;Representações de bancos estrangeiros;Baixo Risco
+6619304;Caixas eletrônicos;Baixo Risco
+6619305;Operadoras de cartões de débito;Baixo Risco
+6619399;Outras atividades auxiliares dos serviços financeiros não especificadas anteriormente;Baixo Risco
+6622300;Corretores e agentes de seguros, de planos de previdência complementar e de saúde;Baixo Risco
+6630400;Atividades de administração de fundos por contrato ou comissão;Baixo Risco
+6810203;Loteamento de imóveis próprios;Baixo Risco
+6911702;Atividades auxiliares da justiça;Baixo Risco
+6911703;Agente de propriedade industrial;Baixo Risco
+6912500;Cartórios;Baixo Risco
+7020400;Atividades de consultoria em gestão empresarial, exceto consultoria técnica específica;Baixo Risco
+7112000;Serviços de engenharia;Baixo Risco
+7119701;Serviços de cartografia, topografia e geodésia;Baixo Risco
+7119702;Atividades de estudos geológicos;Baixo Risco
+7119704;Serviços de perícia técnica relacionados à segurança do trabalho;Baixo Risco
+7311400;Agências de publicidade;Baixo Risco
+7312200;Agenciamento de espaços para publicidade, exceto em veículos de comunicação;Baixo Risco
+7319001;Criação de estandes para feiras e exposições;Baixo Risco
+7319099;Outras atividades de publicidade não especificadas anteriormente;Baixo Risco
+7410203;Desing de produto;Baixo Risco
+7420001;Atividades de produção de fotografias, exceto aérea e submarina;Baixo Risco
+7420002;Atividades de produção de fotografias aéreas e submarinas;Baixo Risco
+7490102;Escafandria e mergulho;Baixo Risco
+7490105;Agenciamento de profissionais para atividades esportivas, culturais e artísticas;Baixo Risco
+7490199;Outras atividades profissionais, científicas e técnicas não especificadas anteriormente;Baixo Risco
+7711000;Locação de automóveis sem condutor;Baixo Risco
+7719501;Locação de embarcações sem tripulação, exceto para fins recreativos;Baixo Risco
+7719502;Locação de aeronaves sem tripulação;Baixo Risco
+7719599;Locação de outros meios de transporte não especificados anteriormente, sem condutor;Baixo Risco
+7731400;Aluguel de máquinas e equipamentos agrícolas sem operador;Baixo Risco
+7732201;Aluguel de máquinas e equipamentos para construção sem operador, exceto andaimes;Baixo Risco
+7732202;Aluguel de andaimes;Baixo Risco
+7733100;Aluguel de máquinas e equipamentos para escritório;Baixo Risco
+7739003;Aluguel de palcos, coberturas e outras estruturas de uso temporário, exceto andaimes;Baixo Risco
+7740300;Gestão de ativos intangíveis não financeiros;Baixo Risco
+7810800;Seleção e agenciamento de mão de obra;Baixo Risco
+7820500;Locação de mão de obra temporária;Baixo Risco
+7830200;Fornecimento e gestão de recursos humanos para terceiros;Baixo Risco
+7912100;Operadores turísticos;Baixo Risco
+7990200;Serviços de reservas e outros serviços de turismo não especificados anteriormente;Baixo Risco
+8011101;Atividades de vigilância e segurança privada;Baixo Risco
+8012900;Atividades de transporte de valores;Baixo Risco
+8020001;Atividades de monitoramento de sistemas de segurança eletrônico;Baixo Risco
+8020002;Outras atividades de serviços de segurança;Baixo Risco
+8111700;Serviços combinados para apoio a edifícios, exceto condomínios prediais;Baixo Risco
+8112500;Condomínios prediais;Baixo Risco
+8121400;Limpeza em prédios e em domicílios;Baixo Risco
+8130300;Atividades paisagísticas;Baixo Risco
+8230001;Serviços de organização de feiras, congressos, exposições e festas;Baixo Risco
+8230002;Casas de festas e eventos;Baixo Risco
+8299701;Medição de consumo de energia elétrica, gás e água;Baixo Risco
+8299702;Emissão de vales-alimentação, vales-transporte e similares;Baixo Risco
+8299704;Leiloeiros independentes;Baixo Risco
+8299705;Serviços de levantamento de fundos sob contrato;Baixo Risco
+8299706;Casas lotéricas;Baixo Risco
+8299707;Salas de acesso à Internet;Baixo Risco
+8411600;Administração pública em geral;Baixo Risco
+8413200;Regulação das atividades econômicas;Baixo Risco
+8421300;Relações exteriores;Baixo Risco
+8422100;Defesa;Baixo Risco
+8424800;Segurança e ordem pública;Baixo Risco
+8425600;Defesa Civil;Baixo Risco
+8430200;Seguridade social obrigatória;Baixo Risco
+8550301;Administração de caixas escolares;Baixo Risco
+8550302;Atividades de apoio à educação, exceto caixas escolares;Baixo Risco
+8593700;Ensino de idiomas;Baixo Risco
+8599601;Formação de condutores;Baixo Risco
+8599602;Cursos de pilotagem;Baixo Risco
+8660700;Atividades de apoio à gestão de saúde;Baixo Risco
+9001901;Produção teatral;Baixo Risco
+9001902;Produção musical;Baixo Risco
+9001904;Produção de espetáculos circenses, de marionetes e similares;Baixo Risco
+9001905;Produção de espetáculos de rodeios, vaquejadas e similares;Baixo Risco
+9001906;Atividades de sonorização e de iluminação;Baixo Risco
+9001999;Artes cênicas, espetáculos e atividades complementares não especificados anteriormente;Baixo Risco
+9003500;Gestão de espaços para artes cênicas, espetáculos e outras atividades artísticas;Baixo Risco
+9101500;Atividades de bibliotecas e arquivos;Baixo Risco
+9200301;Casas de bingo;Baixo Risco
+9200302;Exploração de apostas em corridas de cavalos;Baixo Risco
+9200399;Exploração de jogos de azar e apostas não especificados anteriormente;Baixo Risco
+9311500;Gestão de instalações de esportes;Baixo Risco
+9319101;Produção e promoção de eventos esportivos;Baixo Risco
+9319199;Outras atividades esportivas não especificadas anteriormente;Baixo Risco
+9329801;Discotecas, danceterias, salões de dança e similares;Baixo Risco
+9329802;Exploração de boliches;Baixo Risco
+9329899;Outras atividades de recreação e lazer não especificadas anteriormente;Baixo Risco
+9411100;Atividades de organizações associativas patronais e empresariais;Baixo Risco
+9412001;Atividades de fiscalização profissional;Baixo Risco
+9412099;Outras atividades associativas profissionais;Baixo Risco
+9420100;Atividades de organizações sindicais;Baixo Risco
+9491000;Atividades de organizações religiosas ou filosóficas;Baixo Risco
+9492800;Atividades de organizações políticas;Baixo Risco
+9493600;Atividades de organizações associativas ligadas à cultura e à arte;Baixo Risco
+9499500;Atividades associativas não especificadas anteriormente;Baixo Risco
+9511800;Reparação e manutenção de computadores e de equipamentos periféricos;Baixo Risco
+9512600;Reparação e manutenção de equipamentos de comunicação;Baixo Risco
+9521500;Reparação e manutenção de equipamentos eletroeletrônicos de uso pessoal e doméstico;Baixo Risco
+9529104;Reparação de bicicletas, triciclos e outros veículos não motorizados;Baixo Risco
+9529105;Reparação de artigos do mobiliário;Baixo Risco
+9609204;Exploração de máquinas de serviços pessoais acionadas por moeda;Baixo Risco
+9609208;Higiene e embelezamento de animais domésticos;Baixo Risco
+9609299;Outras atividades de serviços pessoais não especificadas anteriormente;Baixo Risco
+9700500;Serviços domésticos;Baixo Risco
+9900800;Organismos internacionais e outras instituições extraterritoriais;Baixo Risco
+0121101;Horticultura, exceto morango;Baixo Risco
+1210700;Processamento industrial do fumo;Baixo Risco
+1220401;Fabricação de cigarros;Baixo Risco
+1220402;Fabricação de cigarrilhas e charutos;Baixo Risco
+1220403;Fabricação de filtros para cigarros;Baixo Risco
+1220499;Fabricação de outros produtos do fumo, exceto cigarros, cigarrilhas e charutos;Baixo Risco
+1340599;Outros serviços de acabamento em fios, tecidos, artefatos têxteis e peças do vestuário;Baixo Risco
+1359600;Fabricação de outros produtos têxteis não especificados anteriormente;Baixo Risco
+1411801;Confecção de roupas íntimas;Baixo Risco
+1411802;Facção de roupas íntimas;Baixo Risco
+1412602;Confecção, sob medida, de peças do vestuário, exceto roupas íntimas;Baixo Risco
+1412603;Facção de peças do vestuário, exceto roupas íntimas;Baixo Risco
+1413401;Confecção de roupas profissionais, exceto sob medida;Baixo Risco
+1413402;Confecção, sob medida, de roupas profissionais;Baixo Risco
+1413403;Facção de roupas profissionais;Baixo Risco
+1414200;Fabricação de acessórios do vestuário, exceto para segurança e proteção;Baixo Risco
+1422300;Fabricação de artigos do vestuário, produzidos em malharias e tricotagens, exceto meias;Baixo Risco
+1529700;Fabricação de artefatos de couro não especificados anteriormente;Baixo Risco
+1822901;Serviços de encadernação e plastificação;Baixo Risco
+1822999;Serviços de acabamentos gráficos, exceto encadernação e plastificação;Baixo Risco
+2122000;Fabricação de medicamentos para uso veterinário;Baixo Risco
+2539002;Serviços de tratamento e revestimento em metais;Baixo Risco
+3312102;Manutenção e reparação de aparelhos e instrumentos de medida, teste e controle;Baixo Risco
+3312104;Manutenção e reparação de equipamentos e instrumentos ópticos;Baixo Risco
+3313902;Manutenção e reparação de baterias e acumuladores elétricos, exceto para veículos;Baixo Risco
+3314702;Manutenção e reparação de equipamentos hidráulicos e pneumáticos, exceto válvulas;Baixo Risco
+3314703;Manutenção e reparação de válvulas industriais;Baixo Risco
+3314712;Manutenção e reparação de tratores agrícolas;Baixo Risco
+3314713;Manutenção e reparação de máquinas-ferramenta;Baixo Risco
+3329501;Serviços de montagem de móveis de qualquer material;Baixo Risco
+3831999;Recuperação de materiais metálicos, exceto alumínio;Baixo Risco
+3832700;Recuperação de materiais plásticos;Baixo Risco
+4520001;Serviços de manutenção e reparação mecânica de veículos automotores;Baixo Risco
+4520002;Serviços de lanternagem ou funilaria e pintura de veículos automotores;Baixo Risco
+4520003;Serviços de manutenção e reparação elétrica de veículos automotores;Baixo Risco
+4520004;Serviços de alinhamento e balanceamento de veículos automotores;Baixo Risco
+4520005;Serviços de lavagem, lubrificação e polimento de veículos automotores;Baixo Risco
+4520006;Serviços de borracharia para veículos automotores;Baixo Risco
+4520008;Serviços de capotaria;Baixo Risco
+4530703;Comércio a varejo de peças e acessórios novos para veículos automotores;Baixo Risco
+4530704;Comércio a varejo de peças e acessórios usados para veículos automotores;Baixo Risco
+4530705;Comércio a varejo de pneumáticos e câmaras-de-ar;Baixo Risco
+4530706;Representantes comerciais e agentes do comércio de peças e acessórios novos e usados para veículos automotores;Baixo Risco
+4542101;Representantes comerciais e agentes do comércio de motocicletas e motonetas, peças e acessórios;Baixo Risco
+4542102;Comércio sob consignação de motocicletas e motonetas;Baixo Risco
+4543900;Manutenção e reparação de motocicletas e motonetas;Baixo Risco
+4611700;Representantes comerciais e agentes do comércio de matérias-primas agrícolas e animais vivos;Baixo Risco
+4618402;Representantes comerciais e agentes do comércio de instrumentos e materiais odonto- médico-hospitalares;Baixo Risco
+4618403;Representantes comerciais e agentes do comércio de jornais, revistas e outras publicações;Baixo Risco
+4619200;Representantes comerciais e agentes do comércio de mercadorias em geral não especializado;Baixo Risco
+4636201;Comércio atacadista de fumo beneficiado;Baixo Risco
+4641901;Comércio atacadista de tecidos;Baixo Risco
+4641902;Comércio atacadista de artigos de cama, mesa e banho;Baixo Risco
+4641903;Comércio atacadista de artigos de armarinho;Baixo Risco
+4642702;Comércio atacadista de roupas e acessórios para uso profissional e de segurança do trabalho;Baixo Risco
+4643501;Comércio atacadista de calçados;Baixo Risco
+4643502;Comércio atacadista de bolsas, malas e artigos de viagem;Baixo Risco
+4644302;Comércio atacadista de medicamentos e drogas de uso veterinário;Baixo Risco
+4647801;Comércio atacadista de artigos de escritório e de papelaria;Baixo Risco
+4647802;Comércio atacadista de livros, jornais e outras publicações;Baixo Risco
+4649404;Comércio atacadista de móveis e artigos de colchoaria;Baixo Risco
+4649405;Comércio atacadista de artigos de tapeçaria, persianas e cortinas;Baixo Risco
+4649406;Comércio atacadista de lustres, luminárias e abajures;Baixo Risco
+4649407;Comércio atacadista de filmes, CDs, DVDs, fitas e discos;Baixo Risco
+4649410;Comércio atacadista de jóias, relógios e bijuterias, inclusive pedras preciosas e semipreciosas lapidadas;Baixo Risco
+4651601;Comércio atacadista de equipamentos de informática;Baixo Risco
+4651602;Comércio atacadista de suprimentos para informática;Baixo Risco
+4652400;Comércio atacadista de componentes eletrônicos e equipamentos de telefonia e comunicação;Baixo Risco
+4686901;Comércio atacadista de papel e papelão em bruto;Baixo Risco
+4686902;Comércio atacadista de embalagens;Baixo Risco
+4687701;Comércio atacadista de resíduos de papel e papelão;Baixo Risco
+4687703;Comércio atacadista de resíduos e sucatas metálicos;Baixo Risco
+4689302;Comércio atacadista de fios e fibras beneficiados;Baixo Risco
+4692300;Comércio atacadista de mercadorias em geral, com predominância de insumos agropecuários;Baixo Risco
+4741500;Comércio varejista de tintas e materiais para pintura;Baixo Risco
+4742300;Comércio varejista de material elétrico;Baixo Risco
+4743100;Comércio varejista de vidros;Baixo Risco
+4744001;Comércio varejista de ferragens e ferramentas;Baixo Risco
+4744003;Comércio varejista de materiais hidráulicos;Baixo Risco
+4744006;Comércio varejista de pedras para revestimento;Baixo Risco
+4744099;Comércio varejista de materiais de construção em geral;Baixo Risco
+4751201;Comércio varejista especializado de equipamentos e suprimentos de informática;Baixo Risco
+4751202;Recarga de cartuchos para equipamentos de informática;Baixo Risco
+4752100;Comércio varejista especializado de equipamentos de telefonia e comunicação;Baixo Risco
+4753900;Comércio varejista especializado de eletrodomésticos e equipamentos de áudio e vídeo;Baixo Risco
+4754701;Comércio varejista de móveis;Baixo Risco
+4754702;Comércio varejista de artigos de colchoaria;Baixo Risco
+4754703;Comércio varejista de artigos de iluminação;Baixo Risco
+4755501;Comércio varejista de tecidos;Baixo Risco
+4755502;Comercio varejista de artigos de armarinho;Baixo Risco
+4755503;Comercio varejista de artigos de cama, mesa e banho;Baixo Risco
+4756300;Comércio varejista especializado de instrumentos musicais e acessórios;Baixo Risco
+4757100;Comércio varejista especializado de peças e acessórios para aparelhos eletroeletrônicos para uso doméstico, exceto informática e comunicação;Baixo Risco
+4759801;Comércio varejista de artigos de tapeçaria, cortinas e persianas;Baixo Risco
+4759899;Comércio varejista de outros artigos de uso doméstico não especificados anteriormente;Baixo Risco
+4761001;Comércio varejista de livros;Baixo Risco
+4761002;Comércio varejista de jornais e revistas;Baixo Risco
+4761003;Comércio varejista de artigos de papelaria;Baixo Risco
+4762800;Comércio varejista de discos, CDs, DVDs e fitas;Baixo Risco
+4763601;Comércio varejista de brinquedos e artigos recreativos;Baixo Risco
+4763602;Comércio varejista de artigos esportivos;Baixo Risco
+4763603;Comércio varejista de bicicletas e triciclos, peças e acessórios;Baixo Risco
+4763604;Comércio varejista de artigos de caça, pesca e camping;Baixo Risco
+4763605;Comércio varejista de embarcações e outros veículos recreativos, peças e acessórios;Baixo Risco
+4771704;Comércio varejista de medicamentos veterinários;Baixo Risco
+4781400;Comércio varejista de artigos do vestuário e acessórios;Baixo Risco
+4782201;Comércio varejista de calçados;Baixo Risco
+4782202;Comércio varejista de artigos de viagem;Baixo Risco
+4783101;Comércio varejista de artigos de joalheria;Baixo Risco
+4783102;Comércio varejista de artigos de relojoaria;Baixo Risco
+4785701;Comércio varejista de antiguidades;Baixo Risco
+4785799;Comércio varejista de outros artigos usados;Baixo Risco
+4789001;Comércio varejista de suvenires, bijuterias e artesanatos;Baixo Risco
+4789002;Comércio varejista de plantas e flores naturais;Baixo Risco
+4789003;Comércio varejista de objetos de arte;Baixo Risco
+4789004;Comércio varejista de animais vivos e de artigos e alimentos para animais de estimação;Baixo Risco
+4789007;Comércio varejista de equipamentos para escritório;Baixo Risco
+4789008;Comércio varejista de artigos fotográficos e para filmagem;Baixo Risco
+5232000;Atividades de agenciamento marítimo;Baixo Risco
+5812301;Edição de jornais diários;Baixo Risco
+5812302;Edição de jornais não diários;Baixo Risco
+5813100;Edição de revistas;Baixo Risco
+5819100;Edição de cadastros, listas e outros produtos gráficos;Baixo Risco
+5911102;Produção de filmes para publicidade;Baixo Risco
+5912001;Serviços de dublagem;Baixo Risco
+5912002;Serviços de mixagem sonora em produção audiovisual;Baixo Risco
+5920100;Atividades de gravação de som e de edição de música;Baixo Risco
+6201502;Web design;Baixo Risco
+6204000;Consultoria em tecnologia da informação;Baixo Risco
+6209100;Suporte técnico, manutenção e outros serviços em tecnologia da informação;Baixo Risco
+6391700;Agências de notícias;Baixo Risco
+6511102;Planos de auxílio-funeral;Baixo Risco
+6621501;Peritos e avaliadores de seguros;Baixo Risco
+6621502;Auditoria e consultoria atuarial;Baixo Risco
+6810201;Compra e venda de imóveis próprios;Baixo Risco
+6810202;Aluguel de imóveis próprios;Baixo Risco
+6821801;Corretagem na compra e venda e avaliação de imóveis;Baixo Risco
+6821802;Corretagem no aluguel de imóveis;Baixo Risco
+6822600;Gestão e administração da propriedade imobiliária;Baixo Risco
+6911701;Serviços advocatícios;Baixo Risco
+6920601;Atividades de contabilidade;Baixo Risco
+6920602;Atividades de consultoria e auditoria contábil e tributária;Baixo Risco
+7111100;Serviços de arquitetura;Baixo Risco
+7119703;Serviços de desenho técnico relacionados à arquitetura e engenharia;Baixo Risco
+7210000;Pesquisa e desenvolvimento experimental em ciências físicas e naturais;Baixo Risco
+7220700;Pesquisa e desenvolvimento experimental em ciências sociais e humanas;Baixo Risco
+7319002;Promoção de vendas;Baixo Risco
+7319003;Marketing direto;Baixo Risco
+7319004;Consultoria em publicidade;Baixo Risco
+7320300;Pesquisas de mercado e de opinião pública;Baixo Risco
+7410202;Design de interiores;Baixo Risco
+7410299;Atividades de design não especificadas anteriormente;Baixo Risco
+7420003;Laboratórios fotográficos;Baixo Risco
+7420004;Filmagem de festas e eventos;Baixo Risco
+7420005;Serviços de microfilmagem;Baixo Risco
+7490101;Serviços de tradução, interpretação e similares;Baixo Risco
+7490103;Serviços de agronomia e de consultoria às atividades agrícolas e pecuárias;Baixo Risco
+7490104;Atividades de intermediação e agenciamento de serviços e negócios em geral, exceto imobiliários;Baixo Risco
+7721700;Aluguel de equipamentos recreativos e esportivos;Baixo Risco
+7722500;Aluguel de fitas de vídeo, DVDs e similares;Baixo Risco
+7723300;Aluguel de objetos do vestuário, jóias e acessórios;Baixo Risco
+7729201;Aluguel de aparelhos de jogos eletrônicos;Baixo Risco
+7729202;Aluguel de móveis, utensílios e aparelhos de uso doméstico e pessoal, instrumentos musicais;Baixo Risco
+7729299;Aluguel de outros objetos pessoais e domésticos não especificados anteriormente;Baixo Risco
+7911200;Agências de viagens;Baixo Risco
+8011102;Serviços de adestramento de cães de guarda;Baixo Risco
+8030700;Atividades de investigação particular;Baixo Risco
+8211300;Serviços combinados de escritório e apoio administrativo;Baixo Risco
+8219901;Fotocópias;Baixo Risco
+8219999;Preparação de documentos e serviços especializados de apoio administrativo não;Baixo Risco
+8220200;Atividades de teleatendimento;Baixo Risco
+8291100;Atividades de cobrança e informações cadastrais;Baixo Risco
+8299703;Serviços de gravação de carimbos, exceto confecção;Baixo Risco
+8592901;Ensino de dança;Baixo Risco
+8592902;Ensino de artes cênicas, exceto dança;Baixo Risco
+8592903;Ensino de música;Baixo Risco
+8592999;Ensino de arte e cultura não especificado anteriormente;Baixo Risco
+8599603;Treinamento em informática;Baixo Risco
+8599604;Treinamento em desenvolvimento profissional e gerencial;Baixo Risco
+8599605;Cursos preparatórios para concursos;Baixo Risco
+9001903;Produção de espetáculos de dança;Baixo Risco
+9002702;Restauração de obras de arte;Baixo Risco
+9102302;Restauração e conservação de lugares e prédios históricos;Baixo Risco
+9329803;Exploração de jogos de sinuca, bilhar e similares;Baixo Risco
+9329804;Exploração de jogos eletrônicos recreativos;Baixo Risco
+9430800;Atividades de associações de defesa de direitos sociais;Baixo Risco
+9529101;Reparação de calçados, bolsas e artigos de viagem;Baixo Risco
+9529102;Chaveiros;Baixo Risco
+9529103;Reparação de relógios;Baixo Risco
+9529106;Reparação de joias;Baixo Risco
+9609202;Agências matrimoniais;Baixo Risco
+9609207;Alojamento de animais domésticos;Baixo Risco

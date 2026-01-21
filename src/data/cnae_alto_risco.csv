@@ -1,0 +1,90 @@
+COD_CNAE;DISC_CNAE;CLA_RISCO;REQUER_PBA
+0892403;Refino e outros tratamentos do sal;Alto Risco;Sim
+1032501;Fabricação de conservas de palmito;Alto Risco;Não
+1041400;Fabricação de óleos vegetais em bruto, exceto óleo de milho;Alto Risco;Não
+1042200;Fabricação de óleos vegetais refinados, exceto óleo de milho;Alto Risco;Não
+1053800;Fabricação de sorvetes e outros gelados comestíveis;Alto Risco;Não
+1061902;Fabricação de produtos do arroz;Alto Risco;Não
+1062700;Moagem de trigo e fabricação de derivados;Alto Risco;Não
+1065102;Fabricação de óleo de milho em bruto;Alto Risco;Não
+1065103;Fabricação de óleo de milho refinado;Alto Risco;Não
+1072401;Fabricação de açúcar de cana refinado;Alto Risco;Não
+1081302;Torrefação e moagem de café;Alto Risco;Não
+1082100;Fabricação de produtos à base de café;Alto Risco;Não
+1091101;Fabricação de produtos de panificação industrial;Alto Risco;Não
+1099602;Fabricação de pós-alimentícios;Alto Risco;Não
+1099603;Fabricação de fermentos e leveduras;Alto Risco;Não
+1099606;Fabricação de adoçantes naturais e artificiais;Alto Risco;Não
+1099607;Fabricação de alimentos dietéticos e complementos alimentares;Alto Risco;Não
+1099699;Fabricação de outros produtos alimentícios não especificados anteriormente;Alto Risco;Não
+1121600;Fabricação de águas envasadas;Alto Risco;Não
+1122404;Fabricação de bebidas isotônicas;Alto Risco;Não
+1122499;Fabricação de outras bebidas não alcoólicas não especificadas anteriormente;Alto Risco;Não
+1742701;Fabricação de fraldas descartáveis;Alto Risco;Sim
+1742702;Fabricação de absorventes higiênicos;Alto Risco;Sim
+2052500;Fabricação de desinfestantes domissanitários;Alto Risco;Sim
+2061400;Fabricação de sabões e detergentes sintéticos;Alto Risco;Sim
+2062200;Fabricação de produtos de limpeza e polimento;Alto Risco;Sim
+2063100;Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal;Alto Risco;Sim
+2110600;Fabricação de produtos farmoquímicos;Alto Risco;Sim
+2121101;Fabricação de medicamentos alopáticos para uso humano;Alto Risco;Sim
+2121102;Fabricação de medicamentos homeopáticos para uso humano;Alto Risco;Sim
+2121103;Fabricação de medicamentos fitoterápicos para uso humano;Alto Risco;Sim
+2123800;Fabricação de preparações farmacêuticas;Alto Risco;Sim
+2660400;Fabricação de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação;Alto Risco;Sim
+3250701;Fabricação de instrumentos não eletrônicos e utensílios para uso médico, cirúrgico, odontológico e de laboratório;Alto Risco;Sim
+3250702;Fabricação de mobiliário para uso médico, cirúrgico, odontológico e de laboratório;Alto Risco;Sim
+3250703;Fabricação de aparelhos e utensílios para correção de defeitos físicos e aparelhos ortopédicos em geral sob encomenda;Alto Risco;Sim
+3250704;Fabricação de aparelhos e utensílios para correção de defeitos físicos e aparelhos ortopédicos em geral, exceto sob encomenda;Alto Risco;Sim
+3250705;Fabricação de materiais para medicina e odontologia;Alto Risco;Sim
+3250709;Serviço de laboratório óptico;Alto Risco;Não
+3600602;Distribuição de água por caminhões;Alto Risco;Não
+4639702;Comércio atacadista de produtos alimentícios em geral, com atividade de fracionamento e acondicionamento associada;Alto Risco;Não
+4644301;Comércio atacadista de medicamentos e drogas de uso humano;Alto Risco;Não
+4645101;Comércio atacadista de instrumentos e materiais para uso médico, cirúrgico, hospitalar e de laboratórios;Alto Risco;Não
+4645102;Comércio atacadista de próteses e artigos de ortopedia;Alto Risco;Não
+4645103;Comércio atacadista de produtos odontológicos;Alto Risco;Não
+4646001;Comércio atacadista de cosméticos e produtos de perfumaria;Alto Risco;Não
+4646002;Comércio atacadista de produtos de higiene pessoal;Alto Risco;Não
+4649408;Comércio atacadista de produtos de higiene, limpeza e conservação domiciliar;Alto Risco;Não
+4649409;Comércio atacadista de produtos de higiene, limpeza e conservação domiciliar, com atividade de fracionamento e acondicionamento associada;Alto Risco;Não
+4771701;Comércio varejista de produtos farmacêuticos, sem manipulação de fórmulas;Alto Risco;Não
+4771702;Comércio varejista de produtos farmacêuticos, com manipulação de fórmulas;Alto Risco;Sim
+4771703;Comércio varejista de produtos farmacêuticos homeopáticos;Alto Risco;Sim
+8122200;Imunização e controle de pragas urbanas;Alto Risco;Sim
+8511200;Educação infantil - creche;Alto Risco;Sim
+8610101;Atividades de atendimento hospitalar, exceto pronto-socorro e unidades para atendimento a urgências;Alto Risco;Sim
+8610102;Atividades de atendimento em pronto-socorro e unidades hospitalares para atendimento a urgências;Alto Risco;Sim
+8621601;UTI móvel;Alto Risco;Sim
+8621602;Serviços móveis de atendimento a urgências, exceto por UTI móvel;Alto Risco;Sim
+8630501;Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos;Alto Risco;Sim
+8630502;Atividade médica ambulatorial com recursos para realização de exames complementares;Alto Risco;Sim
+8630504;Atividade odontológica;Alto Risco;Sim
+8630506;Serviços de vacinação e imunização humana;Alto Risco;Sim
+8630507;Atividades de reprodução humana assistida;Alto Risco;Sim
+8640201;Laboratórios de anatomia patológica e citológica;Alto Risco;Sim
+8640202;Laboratórios clínicos;Alto Risco;Sim
+8640203;Serviços de diálise e nefrologia;Alto Risco;Sim
+8640204;Serviços de tomografia;Alto Risco;Sim
+8640205;Serviços de diagnóstico por imagem com uso de radiação ionizante, exceto tomografia;Alto Risco;Sim
+8640206;Serviços de ressonância magnética;Alto Risco;Sim
+8640207;Serviços de diagnóstico por imagem sem uso de radiação ionizante, exceto ressonância magnética;Alto Risco;Sim
+8640208;Serviços de diagnóstico por registro gráfico - ECG, EEG e outros exames análogos;Alto Risco;Sim
+8640209;Serviços de diagnóstico por métodos ópticos - endoscopia e outros exames análogos;Alto Risco;Sim
+8640210;Serviços de quimioterapia;Alto Risco;Sim
+8640211;Serviços de radioterapia;Alto Risco;Sim
+8640212;Serviços de hemoterapia;Alto Risco;Sim
+8640213;Serviços de litotripsia;Alto Risco;Sim
+8640214;Serviços de bancos de células e tecidos humanos;Alto Risco;Sim
+8640299;Atividades de serviços de complementação diagnóstica e terapêutica não especificadas anteriormente;Alto Risco;Sim
+8650007;Atividades de terapia de nutrição enteral e parenteral;Alto Risco;Sim
+8690902;Atividades de bancos de leite humano;Alto Risco;Sim
+8711501;Clínicas e residências geriátricas;Alto Risco;Sim
+8711502;Instituições de longa permanência para idosos;Alto Risco;Sim
+8711503;Atividades de assistência a deficientes físicos, imunodeprimidos e convalescentes;Alto Risco;Sim
+8712300;Atividades de fornecimento de infraestrutura de apoio e assistência a paciente no domicílio;Alto Risco;Sim
+8720499;Atividades de assistência psicossocial e à saúde a portadores de distúrbios psíquicos, deficiência mental e dependência química e grupos similares não especificadas anteriormente;Alto Risco;Sim
+8730101;Orfanatos;Alto Risco;Não
+8730199;Atividades de assistência social prestadas em residências coletivas e particulares não especificadas anteriormente;Alto Risco;Não
+9603305;Serviços de somatoconservação;Alto Risco;Não
+9609206;Serviços de tatuagem e colocação de piercing;Alto Risco;Não
