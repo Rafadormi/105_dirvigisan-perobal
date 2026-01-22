@@ -61,10 +61,16 @@ export class CnpjService {
           bairro: data.bairro,
           cnae_fiscal: String(data.atividade_principal?.[0]?.code || '').replace(/\D/g, ''),
           cnae_fiscal_descricao: data.atividade_principal?.[0]?.text || '',
-          cnaes_secundarios: (data.atividades_secundarias || []).map((item: any) => ({
-            codigo: String(item.code).replace(/\D/g, ''),
-            descricao: item.text
-          })),
+          cnaes_secundarios: (data.atividades_secundarias || [])
+            .map((item: any) => ({
+              codigo: String(item.code).replace(/\D/g, ''),
+              descricao: item.text
+            }))
+            .filter((item: any) => {
+              // Filter out invalid or placeholder CNAEs often returned by API when empty
+              const code = item.codigo;
+              return code && code !== '0000000' && code !== '00000000' && item.descricao !== 'Não informada';
+            }),
           fetchedAt: new Date().toISOString()
         } as CompanyData;
       }),

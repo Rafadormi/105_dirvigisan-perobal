@@ -26,8 +26,6 @@ interface BatchResult {
   imports: [CommonModule, FormsModule, StatCardComponent, ActionCardComponent],
   templateUrl: './app.component.html',
   styles: [`
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
     .animate-fade-in { animation: fadeIn 0.5s ease-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   `]
@@ -78,6 +76,17 @@ export class AppComponent implements AfterViewChecked {
   manualOverrideReason = signal('');
   selectedManualRisk = signal<RiskLevel | null>(null);
 
+  // Rule Editor Modal (CNAE CRUD)
+  showRuleModal = signal(false);
+  isEditingRule = signal(false);
+  ruleForm = signal<CnaeRule>({
+    cnae: '',
+    description: '',
+    risk: 'BAIXO',
+    competencePorte1: 'MUNICÍPIO',
+    requiresPba: false
+  });
+
   cnpjInput = signal('');
   loading = signal(false);
   errorMessage = signal<string | null>(null);
@@ -96,6 +105,11 @@ export class AppComponent implements AfterViewChecked {
   private cooldownTimer: any = null;
   
   companyData = signal<CompanyData | null>(null);
+  
+  // Dynamic list of CNAEs for the current analysis (allows adding/removing)
+  currentAnalysisCnaes = signal<string[]>([]);
+  manualCnaeInput = signal('');
+
   riskResult = signal<RiskAnalysisResult | null>(null);
   userAnswers = signal<Record<string, RiskLevel>>({}); 
 
@@ -109,6 +123,7 @@ export class AppComponent implements AfterViewChecked {
   licenseExpiryDate = signal('');
   legalRepresentative = signal('');
   technicalRepresentative = signal('');
+  cnesNumber = signal('');
 
   historyList = signal<SavedProcess[]>([]);
   historySearchTerm = signal('');
@@ -199,6 +214,10 @@ export class AppComponent implements AfterViewChecked {
     );
   });
 
+  isCurrentDataStale = computed(() => {
+    return this.isDataStale(this.companyData()?.fetchedAt);
+  });
+
   apiStatusTooltip = computed(() => {
     const status = this.apiStatus();
     const message = this.apiStatusMessage();
@@ -223,8 +242,10 @@ export class AppComponent implements AfterViewChecked {
   });
 
   constructor() {
-    this.storageService.initializeLegacyData(legacyCompanies);
-    this.refreshHistory();
+    this.storageService.initializeLegacyData(legacyCompanies).then(() => {
+        this.refreshHistory();
+    });
+    
     const savedReceitaWs = localStorage.getItem('dirvigisan_receitaws_token');
     
     if (savedReceitaWs) {
@@ -254,6 +275,18 @@ export class AppComponent implements AfterViewChecked {
     }
   }
 
+  isDataStale(isoDate: string | undefined): boolean {
+    if (!isoDate) {
+      return true; // If no date, assume it's stale
+    }
+    const oneYearAgo = new Date();
+    oneYearAgo.setDate(oneYearAgo.getDate() - 365);
+    
+    const dataDate = new Date(isoDate);
+    
+    return dataDate < oneYearAgo;
+  }
+
   private scrollToBottom(): void {
     try {
       if (this.logContainer && this.isBatchProcessing()) {
@@ -263,8 +296,9 @@ export class AppComponent implements AfterViewChecked {
     } catch (err) { }
   }
 
-  refreshHistory() {
-    this.historyList.set(this.storageService.getAll());
+  async refreshHistory() {
+    const data = await this.storageService.getAll();
+    this.historyList.set(data);
   }
 
   navigate(viewName: string) {
@@ -372,12 +406,11 @@ export class AppComponent implements AfterViewChecked {
     this.cnpjInputSubject.next(val);
   }
 
-  search(overrideValue?: string) {
-    if (this.searchCooldown() > 0) {
-      alert(`Por favor, aguarde ${this.searchCooldown()} segundos para a próxima consulta.`);
-      return;
-    }
-    
+  /**
+   * Executa a busca.
+   * forceUpdate = true ignora o cache local e obriga consulta à API.
+   */
+  async search(overrideValue?: string, forceUpdate: boolean = false) {
     let term = overrideValue !== undefined ? overrideValue : this.cnpjInput();
     term = term.replace(/\D/g, ''); 
     
@@ -390,15 +423,53 @@ export class AppComponent implements AfterViewChecked {
        this.cnpjInput.set(term);
     }
 
+    // --- CHECK LOCAL STORAGE FIRST ---
+    // Se não for atualização forçada, verifica se existe dados válidos (< 1 ano)
+    if (!forceUpdate) {
+        try {
+            const existingProcess = await this.storageService.get(term);
+            
+            if (existingProcess && !existingProcess.isLegacy) {
+                const fetchedAt = existingProcess.company.fetchedAt ? new Date(existingProcess.company.fetchedAt) : null;
+                if (fetchedAt) {
+                    const oneYearAgo = new Date();
+                    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+                    
+                    // Se o dado for recente (menos de 1 ano), carrega da memória e NÃO chama API
+                    if (fetchedAt > oneYearAgo) {
+                        this.loadProcess(existingProcess);
+                        return; // Encerra aqui para não acionar cooldown
+                    }
+                }
+            }
+        } catch (e) {
+            console.error("Erro ao verificar storage local", e);
+        }
+    }
+
+    // --- API CALL FLOW ---
+    if (this.searchCooldown() > 0) {
+      alert(`Por favor, aguarde ${this.searchCooldown()} segundos para a próxima consulta.`);
+      return;
+    }
+
     this.loading.set(true);
     this.errorMessage.set(null);
-    this.resetFields();
+    
+    // Se for uma nova busca (sem override), limpa tudo. Se for um refresh, não limpa para evitar piscar a tela.
+    if(overrideValue === undefined) {
+      this.resetFields();
+    }
     this.view = 'search';
 
     this.cnpjService.fetchCompany(term).subscribe({
       next: async (data) => {
         this.companyData.set(data);
-        await this.analyzeRisk(data);
+        // Initialize dynamic list
+        const initialCnaes = [data.cnae_fiscal, ...data.cnaes_secundarios.map(s => String(s.codigo))];
+        this.currentAnalysisCnaes.set(initialCnaes);
+        
+        await this.analyzeRisk(initialCnaes);
         this.loading.set(false);
         this.apiStatus.set('active');
         this.apiStatusMessage.set('Conexão estabelecida.');
@@ -414,10 +485,35 @@ export class AppComponent implements AfterViewChecked {
     });
   }
 
-  async analyzeRisk(data: CompanyData) {
-    const cnaes = [data.cnae_fiscal, ...data.cnaes_secundarios.map(s => String(s.codigo))];
+  async analyzeRisk(cnaes: string[]) {
+    // We pass the string array to the service
     const analysis = await this.riskService.analyze(cnaes, this.userAnswers());
     this.riskResult.set(analysis);
+  }
+
+  addCnaeToAnalysis() {
+    const code = this.manualCnaeInput().replace(/\D/g, '');
+    if (code.length < 7) {
+      alert('Digite um código CNAE válido (7 dígitos).');
+      return;
+    }
+    
+    if (this.currentAnalysisCnaes().includes(code)) {
+      alert('Este CNAE já está na lista.');
+      return;
+    }
+
+    this.currentAnalysisCnaes.update(list => [...list, code]);
+    this.analyzeRisk(this.currentAnalysisCnaes());
+    this.manualCnaeInput.set('');
+  }
+
+  removeCnaeFromAnalysis(codeToRemove: string) {
+    // Prevent removing main CNAE? No, let user control everything for flexibility.
+    const cleanCode = codeToRemove.replace(/\D/g, '');
+    
+    this.currentAnalysisCnaes.update(list => list.filter(c => c !== cleanCode));
+    this.analyzeRisk(this.currentAnalysisCnaes());
   }
 
   // Answer a conditioned rule with Yes/No
@@ -437,11 +533,11 @@ export class AppComponent implements AfterViewChecked {
     }));
 
     if (this.companyData()) {
-      await this.analyzeRisk(this.companyData()!);
+      await this.analyzeRisk(this.currentAnalysisCnaes());
     }
   }
 
-  saveProcess() {
+  async saveProcess() {
     const data = this.companyData();
     const risk = this.riskResult();
     
@@ -451,6 +547,11 @@ export class AppComponent implements AfterViewChecked {
     }
 
     if (data && risk) {
+      // Create a copy of company data with the *modified* CNAEs list if needed
+      // Ideally we store the modified list. For now we just store the analysis.
+      // The current system stores 'CompanyData' which has fixed structure.
+      // We can rely on 'riskResult.cnaeDetails' for the final list in history.
+      
       const process: SavedProcess = {
         id: data.cnpj,
         company: data,
@@ -464,9 +565,10 @@ export class AppComponent implements AfterViewChecked {
         licenseExpiryDate: this.licenseExpiryDate(),
         legalRepresentative: this.legalRepresentative(),
         technicalRepresentative: this.technicalRepresentative(),
+        cnesNumber: this.cnesNumber(),
         userAnswers: this.userAnswers(), // Persist answers
       };
-      this.storageService.save(process);
+      await this.storageService.save(process);
       alert('Processo salvo com sucesso!');
       this.refreshHistory();
     }
@@ -474,7 +576,8 @@ export class AppComponent implements AfterViewChecked {
 
   loadProcess(process: SavedProcess) {
     if (process.isLegacy) {
-      this.search(process.id);
+      // If legacy, we must force search because data is incomplete
+      this.search(process.id, true); 
       return;
     }
 
@@ -485,6 +588,11 @@ export class AppComponent implements AfterViewChecked {
 
     this.companyData.set(company as CompanyData);
     this.riskResult.set(process.riskAnalysis);
+    
+    // Restore the list of CNAEs from the saved analysis details
+    const savedCnaes = process.riskAnalysis.cnaeDetails.map(d => d.code.replace(/\D/g, ''));
+    this.currentAnalysisCnaes.set(savedCnaes);
+
     this.processNotes.set(process.notes || '');
     this.cnpjInput.set(process.id);
     this.showAllCnaes.set(false);
@@ -495,6 +603,7 @@ export class AppComponent implements AfterViewChecked {
     this.licenseExpiryDate.set(process.licenseExpiryDate || '');
     this.legalRepresentative.set(process.legalRepresentative || '');
     this.technicalRepresentative.set(process.technicalRepresentative || '');
+    this.cnesNumber.set(process.cnesNumber || '');
     this.view = 'search';
   }
 
@@ -504,10 +613,10 @@ export class AppComponent implements AfterViewChecked {
     this.showDeleteModal.set(true);
   }
 
-  confirmDelete() {
+  async confirmDelete() {
     const cnpj = this.itemToDelete();
     if (cnpj) {
-      this.storageService.delete(cnpj);
+      await this.storageService.delete(cnpj);
       this.refreshHistory();
     }
     this.closeDeleteModal();
@@ -553,6 +662,54 @@ export class AppComponent implements AfterViewChecked {
     });
     this.closeOverrideModal();
   }
+
+  // --- RULE MANAGEMENT CRUD ---
+
+  openRuleModal(rule?: CnaeRule) {
+    if (rule) {
+      this.isEditingRule.set(true);
+      this.ruleForm.set({ ...rule }); // Clone data
+    } else {
+      this.isEditingRule.set(false);
+      this.ruleForm.set({
+        cnae: '',
+        description: '',
+        risk: 'BAIXO',
+        competencePorte1: 'MUNICÍPIO',
+        requiresPba: false
+      });
+    }
+    this.showRuleModal.set(true);
+  }
+
+  closeRuleModal() {
+    this.showRuleModal.set(false);
+  }
+
+  saveRule() {
+    const rule = this.ruleForm();
+    if (!rule.cnae || !rule.description) {
+      alert('Preencha o Código CNAE e a Descrição.');
+      return;
+    }
+    
+    // Normalize code
+    rule.cnae = rule.cnae.replace(/\D/g, '');
+
+    this.riskService.saveRule(rule);
+    alert('Regra salva com sucesso!');
+    this.closeRuleModal();
+    this.loadCnaesForView(); // Refresh list
+  }
+
+  deleteRule(rule: CnaeRule) {
+    if(confirm(`Tem certeza que deseja excluir a regra do CNAE ${rule.cnae}?`)) {
+      this.riskService.deleteRule(rule.cnae);
+      this.loadCnaesForView(); // Refresh list
+    }
+  }
+
+  // --- BATCH PROCESSING ---
 
   async processBatch() {
     const rawText = this.batchInputText();
@@ -721,6 +878,7 @@ export class AppComponent implements AfterViewChecked {
 
   private resetFields() {
     this.companyData.set(null);
+    this.currentAnalysisCnaes.set([]);
     this.riskResult.set(null);
     this.errorMessage.set(null);
     this.processNotes.set('');
@@ -731,6 +889,7 @@ export class AppComponent implements AfterViewChecked {
     this.licenseExpiryDate.set('');
     this.legalRepresentative.set('');
     this.technicalRepresentative.set('');
+    this.cnesNumber.set('');
     this.userAnswers.set({}); 
   }
 
@@ -800,41 +959,41 @@ export class AppComponent implements AfterViewChecked {
   }
 
   getRiskCardClass(level: string) {
-    const base = "rounded-xl p-6 text-white shadow-lg transition-all border-l-8 ";
+    const base = "rounded-xl p-6 text-white shadow-lg transition-all border-l-4 ";
     if (this.riskResult()?.override) {
-      return base + "bg-gradient-to-br from-purple-600 to-purple-700 border-purple-900";
+      return base + "bg-gradient-to-br from-purple-600 to-purple-800 border-purple-400";
     }
     switch (level) {
-      case 'BAIXO': return base + "bg-gradient-to-br from-green-500 to-green-600 border-green-800";
-      case 'MÉDIO': return base + "bg-gradient-to-br from-yellow-400 to-yellow-500 border-yellow-700 text-yellow-900";
-      case 'ALTO': return base + "bg-gradient-to-br from-red-600 to-red-700 border-red-900";
-      case 'CONDICIONADO': return base + "bg-gray-500 border-gray-700";
-      case 'PENDENTE DE ANÁLISE': return base + "bg-slate-700 border-slate-900"; 
-      default: return base + "bg-gray-500";
+      case 'BAIXO': return base + "bg-gradient-to-br from-green-600 to-green-800 border-green-400";
+      case 'MÉDIO': return base + "bg-gradient-to-br from-amber-500 to-amber-700 border-amber-300";
+      case 'ALTO': return base + "bg-gradient-to-br from-red-600 to-red-800 border-red-400";
+      case 'CONDICIONADO': return base + "bg-gradient-to-br from-sky-600 to-sky-800 border-sky-400";
+      case 'PENDENTE DE ANÁLISE': return base + "bg-gradient-to-br from-slate-600 to-slate-800 border-slate-400"; 
+      default: return base + "bg-gray-700";
     }
   }
 
   getBadgeClass(risk: string) {
     const base = "px-2 py-1 rounded text-xs font-bold ";
     switch (risk) {
-      case 'ALTO': return base + "bg-red-100 text-red-700";
-      case 'MÉDIO': return base + "bg-yellow-100 text-yellow-800";
-      case 'BAIXO': return base + "bg-green-100 text-green-700";
-      case 'CONDICIONADO': return base + "bg-gray-200 text-gray-700";
-      case 'INDEFINIDO': return base + "bg-orange-100 text-orange-800 border border-orange-200"; 
-      default: return base + "bg-gray-100 text-gray-500";
+      case 'ALTO': return base + "bg-red-500/10 text-red-400 border border-red-500/20";
+      case 'MÉDIO': return base + "bg-amber-500/10 text-amber-400 border border-amber-500/20";
+      case 'BAIXO': return base + "bg-green-500/10 text-green-400 border border-green-500/20";
+      case 'CONDICIONADO': return base + "bg-sky-500/10 text-sky-400 border border-sky-500/20";
+      case 'INDEFINIDO': return base + "bg-orange-500/10 text-orange-400 border border-orange-500/20"; 
+      default: return base + "bg-slate-500/10 text-slate-400 border border-slate-500/20";
     }
   }
   
   getLicenseStatusBadgeClass(status?: string) {
     const base = "px-2 py-1 rounded text-xs font-bold ";
     switch (status) {
-      case 'Ativa': return base + "bg-green-100 text-green-700";
-      case 'Vencida': return base + "bg-red-100 text-red-700";
-      case 'Em Renovação': return base + "bg-yellow-100 text-yellow-800";
-      case 'Suspensa': return base + "bg-orange-100 text-orange-800";
-      case 'Pendente': return base + "bg-blue-100 text-blue-800";
-      default: return base + "bg-gray-100 text-gray-500";
+      case 'Ativa': return base + "bg-green-500/10 text-green-400";
+      case 'Vencida': return base + "bg-red-500/10 text-red-400";
+      case 'Em Renovação': return base + "bg-yellow-500/10 text-yellow-400";
+      case 'Suspensa': return base + "bg-orange-500/10 text-orange-400";
+      case 'Pendente': return base + "bg-blue-500/10 text-blue-400";
+      default: return base + "bg-gray-500/10 text-gray-400";
     }
   }
 
@@ -1208,7 +1367,7 @@ export class AppComponent implements AfterViewChecked {
   <div class="a4-page">
     <header>
       <div class="header-left">
-        <img src="https://i.postimg.cc/529vS7wJ/brasao-municipio.png" alt="Brasão">
+        <img src="https://i.postimg.cc/529vS7wJ/brasao_municipio.png" alt="Brasão">
         <div class="titles">
           <h1>Prefeitura Municipal de Perobal</h1>
           <h2>Diretoria de Vigilância em Saúde</h2>
@@ -1294,8 +1453,8 @@ export class AppComponent implements AfterViewChecked {
       <div class="footer-left-brand">
         <img src="https://i.ibb.co/4nPDxkqx/Logo-adminstr.png" alt="Logo Administração">
       </div>
-      <span id="timestamp-dvs">DILIGÊNCIA ADMINISTRATIVA - ${this.getDateTime()}</span>
-      <span>ARGOS PANOPTES - PÁGINA 1 DE 1</span>
+      <span id="timestamp-dvs">EMISSÃO: ${this.getDateTime()}</span>
+      <span>ARGOS³⁶⁰ - Inteligência e Vigilância Aplicada</span>
     </footer>
   </div>
 

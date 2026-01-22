@@ -6,13 +6,13 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="bg-white border border-slate-200 rounded-xl p-6 flex items-center gap-4">
-      <div [class]="'p-3 rounded-full ' + colorClass()">
-        <span class="material-symbols-outlined">{{ icon() }}</span>
+    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 flex items-center gap-4 hover:border-slate-600 transition-colors">
+      <div [class]="'p-3 rounded-lg ' + colorClass()">
+        <span class="material-symbols-outlined text-3xl">{{ icon() }}</span>
       </div>
       <div>
-        <p class="text-3xl font-bold text-slate-800">{{ value() }}</p>
-        <p class="text-sm text-slate-500">{{ label() }}</p>
+        <p class="text-3xl font-bold text-slate-100">{{ value() }}</p>
+        <p class="text-sm text-slate-400">{{ label() }}</p>
       </div>
     </div>
   `,

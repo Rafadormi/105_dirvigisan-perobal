@@ -1,7 +1,7 @@
-
 import { Injectable } from '@angular/core';
 import { CompanyData } from './cnpj.service';
 import { RiskAnalysisResult, RiskLevel } from './risk.service';
+import { supabase } from '../supabase-client';
 
 export interface SavedProcess {
   id: string; // CNPJ or CPF
@@ -16,6 +16,7 @@ export interface SavedProcess {
   licenseExpiryDate?: string; // YYYY-MM-DD
   legalRepresentative?: string;
   technicalRepresentative?: string;
+  cnesNumber?: string;
   userAnswers?: Record<string, RiskLevel>; // Stores Yes/No answers for conditional risks
 }
 
@@ -23,72 +24,97 @@ export interface SavedProcess {
   providedIn: 'root'
 })
 export class StorageService {
-  private readonly STORAGE_KEY = 'dirvigisan_history_v1';
+  private readonly PROCESSES_TABLE = 'processes';
 
-  initializeLegacyData(legacyData: any[]): void {
-    // Only initialize if the storage is empty
-    if (localStorage.getItem(this.STORAGE_KEY)) {
-      return;
-    }
+  async initializeLegacyData(legacyData: any[]): Promise<void> {
+    try {
+      const { count } = await supabase.from(this.PROCESSES_TABLE).select('*', { count: 'exact', head: true });
 
-    const placeholderRiskAnalysis: RiskAnalysisResult = {
-      riskLevel: 'PENDENTE DE ANÁLISE',
-      competence: 'ANÁLISE MANUAL',
-      requiresPba: false,
-      cnaeDetails: [],
-      pendingResolutions: []
-    };
-
-    const legacyProcesses: SavedProcess[] = legacyData
-      .map((item): SavedProcess | null => {
-        const id = (item.cnpj || '').replace(/\D/g, '');
-        if (id.length !== 14 && id.length !== 11) {
-          return null;
-        }
-
-        return {
-          id: id,
-          company: {
-            cnpj: id,
-            razao_social: item.razao_social,
-          },
-          riskAnalysis: placeholderRiskAnalysis,
-          timestamp: new Date().toISOString(),
-          notes: 'Registro importado do sistema legado. Requer análise completa.',
-          isLegacy: true,
-          licenseStatus: 'Pendente',
+      if (count === 0) {
+        console.log('Banco de dados vazio, populando com dados legados...');
+        const placeholderRiskAnalysis: RiskAnalysisResult = {
+          riskLevel: 'PENDENTE DE ANÁLISE',
+          competence: 'ANÁLISE MANUAL',
+          requiresPba: false,
+          cnaeDetails: [],
+          pendingResolutions: []
         };
-      })
-      .filter((item): item is SavedProcess => item !== null);
 
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(legacyProcesses));
-  }
+        const legacyProcesses: SavedProcess[] = legacyData
+          .map((item): SavedProcess | null => {
+            const id = (item.cnpj || '').replace(/\D/g, '');
+            if (id.length !== 14 && id.length !== 11) {
+              return null;
+            }
 
-  save(process: SavedProcess): void {
-    const history = this.getAll();
-    // Update if exists or add new
-    const index = history.findIndex(p => p.id === process.id);
-    if (index >= 0) {
-      history[index] = process;
-    } else {
-      history.unshift(process);
+            return {
+              id: id,
+              company: {
+                cnpj: id,
+                razao_social: item.razao_social,
+              },
+              riskAnalysis: placeholderRiskAnalysis,
+              timestamp: new Date().toISOString(),
+              notes: 'Registro importado do sistema legado. Requer análise completa.',
+              isLegacy: true,
+              licenseStatus: 'Pendente',
+            };
+          })
+          .filter((item): item is SavedProcess => item !== null);
+
+        const { error } = await supabase.from(this.PROCESSES_TABLE).insert(legacyProcesses);
+        if (error) {
+          console.error('Erro ao inserir dados legados no Supabase:', error);
+        } else {
+          console.log(`${legacyProcesses.length} registros legados inseridos com sucesso.`);
+        }
+      } else {
+        console.log('Banco de dados já contém dados. Nenhuma ação de inicialização necessária.');
+      }
+    } catch (error) {
+      console.error("Falha ao inicializar dados legados:", error);
     }
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(history));
   }
 
-  getAll(): SavedProcess[] {
-    const data = localStorage.getItem(this.STORAGE_KEY);
-    const processes: SavedProcess[] = data ? JSON.parse(data) : [];
-    // Sort by date, newest first
-    return processes.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+  async save(process: SavedProcess): Promise<void> {
+    const { error } = await supabase.from(this.PROCESSES_TABLE).upsert(process, { onConflict: 'id' });
+    if (error) {
+      console.error('Erro ao salvar processo:', error);
+      throw error;
+    }
   }
 
-  delete(cnpj: string): void {
-    const history = this.getAll().filter(p => p.id !== cnpj);
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(history));
+  async getAll(): Promise<SavedProcess[]> {
+    const { data, error } = await supabase
+      .from(this.PROCESSES_TABLE)
+      .select('*')
+      .order('timestamp', { ascending: false });
+
+    if (error) {
+      console.error('Erro ao buscar todos os processos:', error);
+      return [];
+    }
+    return data || [];
   }
 
-  get(cnpj: string): SavedProcess | undefined {
-    return this.getAll().find(p => p.id === cnpj);
+  async delete(cnpj: string): Promise<void> {
+    const { error } = await supabase.from(this.PROCESSES_TABLE).delete().eq('id', cnpj);
+    if (error) {
+      console.error('Erro ao deletar processo:', error);
+      throw error;
+    }
+  }
+
+  async get(cnpj: string): Promise<SavedProcess | undefined> {
+    const { data, error } = await supabase
+      .from(this.PROCESSES_TABLE)
+      .select('*')
+      .eq('id', cnpj)
+      .single();
+
+    if (error && error.code !== 'PGRST116') { // PGRST116 = 'No rows found'
+      console.error('Erro ao buscar processo:', error);
+    }
+    return data || undefined;
   }
 }

@@ -1,7 +1,7 @@
-
 import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CNAE_LIST, CnaeRuleData } from '../data/cnae-db';
+import { supabase } from '../supabase-client';
 
 export type CnaeRule = CnaeRuleData;
 
@@ -40,43 +40,110 @@ export interface RiskAnalysisResult {
   providedIn: 'root'
 })
 export class RiskService {
-  private http = inject(HttpClient);
-  // Mapa otimizado: Chave = CNAE apenas números, Valor = Regra
+  private readonly RULES_TABLE = 'cnae_rules';
   private rulesMap = new Map<string, CnaeRule>();
   private rulesLoaded = signal(false);
 
   public cnaeRulesCount = computed(() => this.rulesMap.size);
 
   constructor() {
-    this.initRules();
+    // A inicialização agora é assíncrona e deve ser chamada externamente.
   }
 
   private normalizeCnae(cnae: string): string {
-    // Remove tudo que não for dígito
     return String(cnae).replace(/[^\d]/g, '');
   }
+  
+  async initialize(): Promise<void> {
+    if (this.rulesLoaded()) {
+      return;
+    }
 
-  private initRules(): void {
     try {
-      this.rulesMap.clear();
-      CNAE_LIST.forEach(rule => {
-        // Normaliza a chave ao carregar para garantir o match
-        const cleanKey = this.normalizeCnae(rule.cnae);
-        if (cleanKey) {
-          this.rulesMap.set(cleanKey, rule);
-        }
-      });
+      console.log('Buscando regras de CNAE do Supabase...');
+      const { data, error } = await supabase.from(this.RULES_TABLE).select('*');
       
+      if (error) {
+        throw error;
+      }
+
+      if (data && data.length > 0) {
+        this.rulesMap.clear();
+        data.forEach((rule: CnaeRule) => {
+          const cleanKey = this.normalizeCnae(rule.cnae);
+          if (cleanKey) {
+            this.rulesMap.set(cleanKey, rule);
+          }
+        });
+        console.log(`Supabase: ${this.rulesMap.size} regras carregadas e indexadas.`);
+      } else {
+        console.warn('Nenhuma regra encontrada no Supabase, usando fallback local.');
+        this.loadFromLocalFallback();
+        // Opcional: Tentar enviar as regras locais para o Supabase se a tabela estiver vazia
+        await this.seedSupabaseIfNeeded();
+      }
+
       this.rulesLoaded.set(true);
-      console.log(`Regras carregadas e indexadas: ${this.rulesMap.size}`);
+
     } catch (error) {
-      console.error('Falha ao carregar as regras de CNAE do arquivo estático.', error);
+      console.error('Falha ao carregar regras do Supabase. Usando fallback local.', error);
+      this.loadFromLocalFallback();
     }
   }
 
-  // Returns all rules as an array for display purposes
+  private loadFromLocalFallback(): void {
+    this.rulesMap.clear();
+    CNAE_LIST.forEach(rule => {
+      const cleanKey = this.normalizeCnae(rule.cnae);
+      if (cleanKey) this.rulesMap.set(cleanKey, rule);
+    });
+    console.log(`Fallback: ${this.rulesMap.size} regras carregadas do arquivo local.`);
+    this.rulesLoaded.set(true);
+  }
+
+  private async seedSupabaseIfNeeded(): Promise<void> {
+    try {
+      const { error } = await supabase.from(this.RULES_TABLE).insert(CNAE_LIST);
+      if (error) {
+        console.error('Falha ao tentar popular o Supabase com as regras locais.', error);
+      } else {
+        console.log('Supabase populado com sucesso a partir do fallback local.');
+      }
+    } catch (e) {
+      console.error('Exceção ao popular o Supabase.', e);
+    }
+  }
+
+  public async saveRule(rule: CnaeRule): Promise<void> {
+    const cleanKey = this.normalizeCnae(rule.cnae);
+    if (!cleanKey) return;
+    
+    const { error } = await supabase.from(this.RULES_TABLE).upsert(rule, { onConflict: 'cnae' });
+    if (error) {
+      console.error('Falha ao salvar regra no Supabase', error);
+      throw error;
+    }
+    
+    // Atualiza o mapa local para consistência imediata
+    this.rulesMap.set(cleanKey, rule);
+  }
+
+  public async deleteRule(cnaeCode: string): Promise<void> {
+    const cleanKey = this.normalizeCnae(cnaeCode);
+    const { error } = await supabase.from(this.RULES_TABLE).delete().eq('cnae', cleanKey);
+
+    if(error) {
+      console.error('Falha ao deletar regra no Supabase', error);
+      throw error;
+    }
+
+    if (this.rulesMap.has(cleanKey)) {
+      this.rulesMap.delete(cleanKey);
+    }
+  }
+
   public getAllRules(): CnaeRule[] {
-    return Array.from(this.rulesMap.values());
+    return Array.from(this.rulesMap.values()).sort((a, b) => a.cnae.localeCompare(b.cnae));
   }
 
   private getCnaeRule(code: string): CnaeRule | undefined {
@@ -84,12 +151,9 @@ export class RiskService {
     return this.rulesMap.get(cleanCode);
   }
 
-  /**
-   * Analisa CNAEs com normalização rigorosa e Fallback Automático (Regra 1).
-   */
-  async analyze(cnaes: string[], userAnswers: Record<string, RiskLevel> = {}): Promise<RiskAnalysisResult> {
+  async analyze(cnaes: (string | {codigo: string})[], userAnswers: Record<string, RiskLevel> = {}): Promise<RiskAnalysisResult> {
     if (!this.rulesLoaded()) {
-      this.initRules();
+      await this.initialize();
     }
 
     let highestRisk: RiskLevel = 'BAIXO';
@@ -100,9 +164,14 @@ export class RiskService {
     const details: any[] = [];
     const pendingResolutions: PendingResolution[] = [];
 
-    for (const rawCode of cnaes) {
-      // Normaliza para busca (remove pontuação)
+    for (const cnaeItem of cnaes) {
+      const rawCode = typeof cnaeItem === 'string' ? cnaeItem : cnaeItem.codigo;
       const cleanCode = this.normalizeCnae(rawCode);
+      
+      if (!cleanCode || /^0+$/.test(cleanCode)) {
+        continue;
+      }
+
       const rule = this.rulesMap.get(cleanCode);
       
       let risk: RiskLevel = 'BAIXO'; 
@@ -110,7 +179,6 @@ export class RiskService {
       let isFallback = false;
       let description = '';
 
-      // 1. Verifica Respostas do Usuário (Se for um condicionado já respondido)
       if (userAnswers[cleanCode]) {
         risk = userAnswers[cleanCode];
         isResolved = true;
@@ -121,14 +189,13 @@ export class RiskService {
            if (rule.competencePorte1 === 'ESTADO') hasStateCompetence = true;
         }
       } 
-      // 2. Regra Existente na Base
       else if (rule) {
         description = rule.description;
         
         if (rule.risk === 'CONDICIONADO') {
           risk = 'CONDICIONADO';
           pendingResolutions.push({
-            cnae: rawCode, // Mantém formatação original visual
+            cnae: rawCode,
             description: rule.description,
             type: 'CONDITION',
             question: rule.question || 'Esta atividade possui condições específicas. O risco é Alto?',
@@ -140,18 +207,15 @@ export class RiskService {
           if (rule.requiresPba) requiresPba = true;
         }
       } 
-      // 3. FALLBACK AUTOMÁTICO (Regra 1: Analogia)
-      // Se não achou regra, define como MÉDIO automaticamente, sem perguntar.
       else {
         risk = 'MÉDIO';
         isFallback = true;
         hasFallback = true;
         description = 'Atividade não catalogada (Classificação por Analogia)';
-        // Assume competência Municipal no fallback
       }
 
       details.push({ 
-        code: rawCode, // Exibe o código original
+        code: rawCode,
         risk, 
         sourceRule: rule, 
         resolved: isResolved, 
@@ -159,7 +223,6 @@ export class RiskService {
         description 
       });
 
-      // Cálculo de Risco Máximo
       if (risk === 'ALTO') highestRisk = 'ALTO';
       else if (risk === 'CONDICIONADO' && highestRisk !== 'ALTO') highestRisk = 'CONDICIONADO';
       else if (risk === 'MÉDIO' && highestRisk !== 'ALTO' && highestRisk !== 'CONDICIONADO') highestRisk = 'MÉDIO';
